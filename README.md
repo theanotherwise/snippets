@@ -7,12 +7,12 @@ find /var/log -mindepth 1 -maxdepth 1 -type f -exec grep -Iq . {} 2>/dev/null \;
 
 ## Print specified column 
 
-### `awk`
+#### `awk`
 ```bash
 echo -e "Lorem\tipsum\tdolor\tsit\tamet" | awk '{print $2}'
 ```
 
-### `cut`
+#### `cut`
 ```bash
 echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d" " -f1
 echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d$'\t' -f3
