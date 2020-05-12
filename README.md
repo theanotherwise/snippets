@@ -12,6 +12,10 @@ echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d$'\t' -f3
 echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d$'\t' -f1-2
 ```
 
+```bash
+for i in `seq 0 7` ; do VAR=1elk$i.localdomain && echo -e '#!/bin/bash '"\n\nssh root@$VAR" > $VAR; done
+```
+
 #### `python2`
 ```bash
 alias urlencode='python2 -c "import urllib, sys; print urllib.quote(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read()[0:-1])"'
