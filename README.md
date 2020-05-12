@@ -20,8 +20,8 @@ mkdir -p $CONF_PATH
 mkdir -p $SESS_PATH
 
 cd $SESS_PATH
-for i in `seq 0 7` ; do VAR=1elk$i && echo -e '#!/bin/bash '"\n\nssh root@$VAR.localdomain" > $VAR; done
-for i in `seq 0 7` ; do VAR=1ans$i && echo -e '#!/bin/bash '"\n\nssh root@$VAR.localdomain" > $VAR; done
+for i in `seq 0 7` ; do VAR=1elk$i.localdomain && echo -e '#!/bin/bash '"\n\nssh root@$VAR" > $VAR; done
+for i in `seq 0 7` ; do VAR=1ans$i.localdomain && echo -e '#!/bin/bash '"\n\nssh root@$VAR" > $VAR; done
 
 cd $CONF_PATH
 for i in `seq 0 7` ; do VAR=1elk$i && echo "title: $VAR;; workdir: ~/Configurations/konsole;; command: /bin/bash sessions/$VAR.localdomain" ; done > elk-nodes 
