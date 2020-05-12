@@ -14,21 +14,22 @@ echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d$'\t' -f1-2
 
 ```bash
 CONF_PATH=~/configurations
-SESS_PATH=$CONF_PATH/sessions
+KONS_PATH=$CONF_PATH/konsole
+SESS_PATH=$KONS_PATH/sessions
 
 mkdir -p $CONF_PATH
+mkdir -p $KONS_PATH
 mkdir -p $SESS_PATH
 
 cd $SESS_PATH
 
 for i in `seq 0 7` ; do VAR=1elk$i.localdomain && echo -e '#!/bin/bash '"\n\nssh root@$VAR" > $VAR; done
-for i in `seq 0 7` ; do VAR=1ans$i.localdomain && echo -e '#!/bin/bash '"\n\nssh root@$VAR" > $VAR; done
 
-cd $CONF_PATH
+cd $KONS_PATH
 
 for i in `seq 0 7` ; do 
   VAR=1elk$i 
-  echo "title: $VAR;; workdir: ~/Configurations/konsole;; command: /bin/bash sessions/$VAR.localdomain" 
+  echo "title: $VAR;; workdir: $KONS_PATH;; command: /bin/bash $SESS_PATH/$VAR.localdomain" 
 done > konsole.elk-nodes
 ```
 
