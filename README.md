@@ -29,7 +29,7 @@ for i in `seq 0 7` ; do VAR=1pup$i.localdomain && echo -e '#!/bin/bash '"\n\nssh
 
 cd $KONS_PATH
 
-for i in `seq 0 7` ; do 
+for i in `seq 0 9` ; do 
   VAR=1elk$i 
   echo "title: $VAR;; workdir: $KONS_PATH;; command: /bin/bash $SESS_PATH/$VAR.localdomain" 
 done > konsole.elk-nodes
