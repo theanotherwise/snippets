@@ -28,7 +28,7 @@ cd $CONF_PATH
 for i in `seq 0 7` ; do 
   VAR=1elk$i 
   echo "title: $VAR;; workdir: ~/Configurations/konsole;; command: /bin/bash sessions/$VAR.localdomain" 
-done > elk-nodes.konsole
+done > konsole.elk-nodes
 ```
 
 ```bash
