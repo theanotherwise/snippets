@@ -13,10 +13,14 @@ echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d$'\t' -f1-2
 ```
 
 ```bash
-for i in `seq 0 7` ; do VAR=1elk$i.localdomain && echo -e '#!/bin/bash '"\n\nssh root@$VAR" > $VAR; done
-```
+mkdir -p ~/Configurations
+mkdir -p ~/Configurations/sessions
 
-```bash
+cd ~/Configurations/sessions
+for i in `seq 0 7` ; do VAR=1elk$i && echo -e '#!/bin/bash '"\n\nssh root@$VAR.localdomain" > $VAR; done
+for i in `seq 0 7` ; do VAR=1ans$i && echo -e '#!/bin/bash '"\n\nssh root@$VAR.localdomain" > $VAR; done
+
+cd ~/Configurations
 for i in `seq 0 7` ; do VAR=1elk$i && echo "title: $VAR;; workdir: ~/Configurations/konsole;; command: /bin/bash sessions/$VAR.localdomain" ; done > elk-nodes 
 ```
 
