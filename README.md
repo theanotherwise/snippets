@@ -17,6 +17,10 @@ for i in `seq 0 7` ; do VAR=1elk$i.localdomain && echo -e '#!/bin/bash '"\n\nssh
 ```
 
 ```bash
+for i in `seq 0 7` ; do VAR=1elk$i && echo "title: $VAR;; workdir: ~/Configurations/konsole;; command: /bin/bash sessions/$VAR.localdomain" ; done > elk-nodes 
+```
+
+```bash
 alias urlencode='python2 -c "import urllib, sys; print urllib.quote(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read()[0:-1])"'
 alias urldecode='python2 -c "import urllib, sys; print urllib.unquote(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read()[0:-1])"'
 ```
