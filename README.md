@@ -24,7 +24,11 @@ for i in `seq 0 7` ; do VAR=1elk$i.localdomain && echo -e '#!/bin/bash '"\n\nssh
 for i in `seq 0 7` ; do VAR=1ans$i.localdomain && echo -e '#!/bin/bash '"\n\nssh root@$VAR" > $VAR; done
 
 cd $CONF_PATH
-for i in `seq 0 7` ; do VAR=1elk$i && echo "title: $VAR;; workdir: ~/Configurations/konsole;; command: /bin/bash sessions/$VAR.localdomain" ; done > elk-nodes 
+
+for i in `seq 0 7` ; do 
+  VAR=1elk$i 
+  echo "title: $VAR;; workdir: ~/Configurations/konsole;; command: /bin/bash sessions/$VAR.localdomain" 
+done > elk-nodes.konsole
 ```
 
 ```bash
