@@ -33,6 +33,8 @@ for i in `seq 0 9` ; do
   VAR=1elk$i 
   echo "title: $VAR;; workdir: $KONS_PATH;; command: /bin/bash $SESS_PATH/$VAR.localdomain" 
 done > konsole.elk-nodes
+
+konsole --tabs-from-file $KONS_PATH/konsole.elk-nodes
 ```
 
 ```bash
