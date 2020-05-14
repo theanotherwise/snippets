@@ -54,3 +54,13 @@ for i in `seq 1 100` ; do
         nohup bash -c 'for i in `seq 1 1000` ; do VAR=`date +"%H%M%S%d%m%Y%N"` && touch $VAR && dd if=/dev/urandom of=$VAR bs=1KB count=`echo $RANDOM % 100 + 1 | bc` > /dev/null 2>&1 ; done' > /dev/null 2>&1 &
 done
 ```
+
+```bash
+docker container stop `docker ps -a | tail -n +2 | awk '{print $1}'`
+docker container rm `docker ps -a | tail -n +2 | awk '{print $1}'
+
+```bash
+docker image rm `docker images -a | tail -n +2 | awk '{print $3}'`
+```bash
+
+```
