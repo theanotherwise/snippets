@@ -72,7 +72,7 @@ docker build --rm --force-rm --no-cache -t test .
 NET_CIDR=172.27.1.0
 NET_GW=172.27.1.1
 NET_MASK=24
-NET_NAME
+NET_NAME=test
 
 docker network create --driver=bridge --subnet $NET_CIDR/$MASK --gateway=$NET_GW --ip-range=$NET_CIDR/$NET_MASK $NET_NAME
 ```
