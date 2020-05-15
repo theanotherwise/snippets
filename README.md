@@ -65,20 +65,22 @@ docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 ```
 
 ```bash
-docker build --rm --force-rm --no-cache -t test .
-```
+DNAME=test
 
-```bash
-NET_NAME=test
+NNAME=test
 
-NET_CIDR=172.27.1.0
-NET_GW=172.27.1.1
-NET_MASK=24
+NCIDR=172.27.1.0
+NHALF=172.27.1.
+NGW=172.27.1.1
+NMASK=24
 
-docker rm network $NET_NAME
 docker network create --driver=bridge \
-                      --subnet $NET_CIDR/$NET_MASK \
-                      --gateway=$NET_GW \
-                      --ip-range=$NET_CIDR/$NET_MASK \
-                      $NET_NAME
+                      --subnet $NCIDR/$NMASK \
+                      --gateway=$NGW \
+                      --ip-range=$NCIDR/$NMASK \
+                      $NNAME
+
+docker build --rm --force-rm --no-cache -t test .
+
+docker run -it --rm --network $NET_NAME --ip ${NHALF}1 test
 ```
