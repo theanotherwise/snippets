@@ -65,11 +65,13 @@ docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 ```
 
 ```bash
-NNAME=test
+NNAME=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1`
+OCT=`shuf -i 1-255 -n 1`
+
 NDRIV=bridge
-NCIDR=172.27.1.0
-NHALF=172.27.1
-NGW=172.27.1.1
+NCIDR=172.17.$OCT.1
+NHALF=172.17.$OCT
+NGW=172.17.$OCT.1
 NMASK=24
 
 docker network create --driver=$NDRIV \
