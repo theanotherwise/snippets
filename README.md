@@ -57,7 +57,22 @@ done
 
 ```bash
 docker container stop `docker ps -a | tail -n +2 | awk '{print $1}'`
-docker container rm `docker ps -a | tail -n +2 | awk '{print $1}'`
+docker container rm --force `docker ps -a | tail -n +2 | awk '{print $1}'`
+```
 
-docker image rm `docker images -a | tail -n +2 | awk '{print $3}'`
+```bash
+docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
+```
+
+```bash
+docker build --rm --force-rm --no-cache -t test .
+```
+
+```bash
+NET_CIDR=172.27.1.0
+NET_GW=172.27.1.1
+NET_MASK=24
+NET_NAME
+
+docker network create --driver=bridge --subnet $NET_CIDR/$MASK --gateway=$NET_GW --ip-range=$NET_CIDR/$NET_MASK $NET_NAME
 ```
