@@ -82,5 +82,5 @@ docker network create --driver=$NDRIV \
 
 docker build --rm --force-rm --no-cache -t test .
 
-docker run -it --rm --network $NET_NAME --ip $NHALF.1 test
+docker run -it --rm --network $NET_NAME --ip $NHALF.11 test
 ```
