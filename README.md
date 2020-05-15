@@ -66,12 +66,13 @@ docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 
 ```bash
 NNAME=test
+NDRIV=bridge
 NCIDR=172.27.1.0
 NHALF=172.27.1
 NGW=172.27.1.1
 NMASK=24
 
-docker network create --driver=bridge \
+docker network create --driver=$NDRIV \
                       --subnet $NCIDR/$NMASK \
                       --gateway=$NGW \
                       --ip-range=$NCIDR/$NMASK \
