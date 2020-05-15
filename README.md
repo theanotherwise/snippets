@@ -65,12 +65,9 @@ docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 ```
 
 ```bash
-DNAME=test
-
 NNAME=test
-
 NCIDR=172.27.1.0
-NHALF=172.27.1.
+NHALF=172.27.1
 NGW=172.27.1.1
 NMASK=24
 
@@ -82,5 +79,5 @@ docker network create --driver=bridge \
 
 docker build --rm --force-rm --no-cache -t test .
 
-docker run -it --rm --network $NET_NAME --ip ${NHALF}1 test
+docker run -it --rm --network $NET_NAME --ip $NHALF.1 test
 ```
