@@ -13,3 +13,8 @@ kubectl get deployments --all-namespaces
 ```bash
 kubectl delete -n NAMESPACE deployment DEPLOYMENT
 ```
+
+```bash
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | \
+   openssl dgst -sha256 -hex | sed 's/^.* //'
+```
