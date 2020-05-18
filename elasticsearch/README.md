@@ -22,12 +22,9 @@ GET /_cat/aliases?v
 GET /_cat/nodeattrs
 GET /_cat/repositories
 
-GET /_cat/ml/anomaly_detectors?v
-GET /_cat/ml/anomaly_detectors/<job_id>
-GET /_cat/ml/data_frame/analytics?v
-GET /_cat/ml/data_frame/analytics/<data_frame_analytics_id>
-GET /_cat/ml/datafeeds?v
-GET /_cat/ml/datafeeds/<feed_id>
+GET /_cat/ml/anomaly_detectors?v    # /<job_id>
+GET /_cat/ml/data_frame/analytics?v # /<data_frame_analytics_id>
+GET /_cat/ml/datafeeds?v            # /<feed_id>
 GET /_cat/ml/trained_models?v
 ```
 
