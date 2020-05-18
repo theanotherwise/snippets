@@ -41,6 +41,8 @@ GET /_cat/ml/trained_models?v
 ```
 
 ```http
+GET /httpd-access.log-2020-05-18/_settings
+
 PUT /httpd-access.log-2020-05-18/_settings
 {
     "index" : {
