@@ -1,22 +1,22 @@
 # Elasticsearch
 
 ```http
-GET /_cat/allocation?v      # /<node_id>
-GET /_cat/count?v           # /<index>
-GET /_cat/fielddata?v       # /<field>
+GET /_cat/allocation?v              # /<node_id>
+GET /_cat/count?v                   # /<index>
+GET /_cat/fielddata?v               # /<field>
 GET /_cat/health?v
-GET /_cat/indices?v         # /<index>
+GET /_cat/indices?v                 # /<index>
 GET /_cat/master?v
 GET /_cat/nodes?v
 GET /_cat/pending_tasks?v
 GET /_cat/plugins?v
-GET /_cat/recovery?v        # /<index>
-GET /_cat/shards?v          # /<index>
-GET /_cat/segments?v        # /<index>
+GET /_cat/recovery?v                # /<index>
+GET /_cat/shards?v                  # /<index>
+GET /_cat/segments?v                # /<index>
 GET /_cat/snapshots/<repository>
 GET /_cat/tasks?v
-GET /_cat/templates?v       # /<template_name>
-GET /_cat/thread_pool?v     # /<thread_pool>
+GET /_cat/templates?v               # /<template_name>
+GET /_cat/thread_pool?v             # /<thread_pool>
 
 GET /_cat/aliases?v
 GET /_cat/nodeattrs
