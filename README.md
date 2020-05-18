@@ -55,6 +55,7 @@ for i in `seq 1 100` ; do
 done
 ```
 
+# Docker
 ```bash
 docker container stop `docker ps -a | tail -n +2 | awk '{print $1}'`
 docker container rm --force `docker ps -a | tail -n +2 | awk '{print $1}'`
@@ -83,4 +84,16 @@ docker network create --driver=$NDRIV \
 docker build --rm --force-rm --no-cache -t test .
 
 docker run -it --rm --network $NNAME --ip $NHALF.11 test
+```
+
+# Kubernetes
+
+```bash
+kubectl get all --all-namespaces
+
+kubectl get pods --all-namespaces
+kubectl get services --all-namespaces
+kubectl get deployments --all-namespaces
+
+kubectl delete -n NAMESPACE deployment DEPLOYMENT
 ```
