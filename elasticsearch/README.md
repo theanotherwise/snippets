@@ -1,17 +1,43 @@
 # Elasticsearch
 
 ```http
-GET /_cat/indices?v
-GET /_cat/nodes?v
-GET /_cat/indices?v
-GET /_cat/shards?v
-GET /_cat/health?v
-GET /_cat/master?v
+GET /_cat/allocation?v
+GET /_cat/allocation/<node_id>
 GET /_cat/count?v
-GET /_cat/tasks?v
-GET /_cat/pending_tasks?v
+GET /_cat/count/<index>
 GET /_cat/fielddata?v
-GET /_cat/snapshots?v
+GET /_cat/fielddata/<field>
+GET /_cat/health?v
+GET /_cat/indices?v
+GET /_cat/indices/<index>
+GET /_cat/master?v
+GET /_cat/nodes?v
+GET /_cat/pending_tasks?v
+GET /_cat/plugins?v
+GET /_cat/recovery?v
+GET /_cat/recovery/<index>
+GET /_cat/shards?v
+GET /_cat/shards/<index>
+GET /_cat/segments?v
+GET /_cat/segments/<index>
+GET /_cat/snapshots/<repository>
+GET /_cat/tasks?v
+GET /_cat/templates?v
+GET /_cat/templates/<template_name>
+GET /_cat/thread_pool?v
+GET /_cat/thread_pool/<thread_pool>
+
+GET /_cat/aliases?v
+GET /_cat/nodeattrs
+GET /_cat/repositories
+
+GET /_cat/ml/anomaly_detectors?v
+GET /_cat/ml/anomaly_detectors/<job_id>
+GET /_cat/ml/data_frame/analytics?v
+GET /_cat/ml/data_frame/analytics/<data_frame_analytics_id>
+GET /_cat/ml/datafeeds?v
+GET /_cat/ml/datafeeds/<feed_id>
+GET /_cat/ml/trained_models?v
 ```
 
 ```http
