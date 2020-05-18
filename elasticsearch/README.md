@@ -32,7 +32,6 @@ PUT /_snapshot/my_backup
 ```
 
 ```http
-# Snapshots
 GET /_snapshot/_all
 
 PUT /_snapshot/my_backup/snapshot_1
