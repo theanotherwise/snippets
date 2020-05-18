@@ -1,8 +1,6 @@
 ```bash
-HTTPD1_ADDR=127.0.0.1:80
-
 for i in `seq 1 50` ; do
-  nohup watch -n 0 curl --connect-timeout 1 --max-time 1 "http://$HTTPD1_ADDR" -o /dev/null --silent > 2>&1 /dev/null & 
+  nohup watch -n 0 curl --connect-timeout 1 --max-time 1 "http://127.0.0.1:8080" -o /dev/null --silent > 2>&1 /dev/null & 
 done
 ```
 
