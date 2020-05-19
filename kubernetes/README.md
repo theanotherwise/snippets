@@ -5,9 +5,10 @@ kubectl get all --all-namespaces
 ```
 
 ```bash
-kubectl get pods --all-namespaces
-kubectl get services --all-namespaces
-kubectl get deployments --all-namespaces
+kubectl get nodes
+kubectl get pods --all-namespaces -o wide
+kubectl get services --all-namespaces -o wide
+kubectl get deployments --all-namespaces -o wide
 ```
 
 ```bash
