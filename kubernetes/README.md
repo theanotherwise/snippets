@@ -1,9 +1,14 @@
 # Kubernetes
 
 ```bash
-apt-get install docker.io kubeadm kubelet kubectl
+apt-get autoremove --purge -y docker.io kubeadm kubelet kubectl
+
+apt-get install -y docker.io kubeadm kubelet kubectl
+
+systemctl enable docker
+systemctl restart docker
  
-kubeadm init --pod-network-cidr=10.10.140.10/16
+kubeadm init --pod-network-cidr=10.10.0.0/16
 ```
 
 ```bash
