@@ -1,6 +1,12 @@
 # Kubernetes
 
 ```bash
+apt-get install docker.io kubeadm kubelet kubectl
+ 
+kubeadm init --pod-network-cidr=10.10.140.10/16
+```
+
+```bash
 kubectl get all --all-namespaces
 ```
 
