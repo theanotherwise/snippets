@@ -11,8 +11,11 @@ rm -rf /etc/kubernetes /var/lib/etcd
 
 apt-get install -y docker.io kubeadm kubelet kubectl
 
-systemctl enable docker && systemctl start docker
-systemctl enable kubelet && systemctl start kubelet
+systemctl enable docker
+systemctl enable kubelet
+
+systemctl start docker
+systemctl start kubelet
 ```
 
 ```bash
