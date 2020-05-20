@@ -2,6 +2,8 @@
 
 ## Prepare cluster
 ```bash
+rm -rf /etc/kubernetes /var/lib/etcd
+
 apt-get autoremove --purge -y docker.io kubeadm kubelet kubectl
 
 apt-get install -y docker.io kubeadm kubelet kubectl
