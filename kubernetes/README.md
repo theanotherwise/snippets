@@ -5,9 +5,10 @@ apt-get autoremove --purge -y docker.io kubeadm kubelet kubectl
 
 apt-get install -y docker.io kubeadm kubelet kubectl
 
-systemctl enable docker
-systemctl restart docker
- 
+systemctl enable docker && systemctl restart docker
+```
+
+```bash
 kubeadm init --pod-network-cidr=10.10.0.0/16
 ```
 
