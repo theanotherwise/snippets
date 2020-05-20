@@ -2,8 +2,8 @@
 
 ## Prepare cluster
 ```bash
-service kubelet stop || systemctl stop kubelet
-service docker stop || systemctl stop docker
+systemctl stop kubelet
+systemctl stop docker
 
 apt-get autoremove --purge -y docker.io kubeadm kubelet kubectl
 
@@ -11,7 +11,8 @@ rm -rf /etc/kubernetes /var/lib/etcd
 
 apt-get install -y docker.io kubeadm kubelet kubectl
 
-systemctl enable docker && systemctl restart docker
+systemctl enable docker && systemctl start docker
+systemctl enable kubelet && systemctl start kubelet
 ```
 
 ```bash
