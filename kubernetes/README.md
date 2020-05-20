@@ -5,9 +5,11 @@
 systemctl stop kubelet
 systemctl stop docker
 
+kubeadm reset -f
+
 apt-get autoremove --purge -y docker.io kubeadm kubelet kubectl
 
-rm -rf /etc/kubernetes /var/lib/etcd
+rm -rf /etc/kubernetes /var/lib/etcd /var/lib/cni/ /etc/cni/ /opt/cni /var/lib/kubelet /usr/libexec/kubernetes
 
 apt-get install -y docker.io kubeadm kubelet kubectl
 
