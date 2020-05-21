@@ -39,6 +39,7 @@ done > konsole.elk-nodes
 konsole --tabs-from-file $KONS_PATH/konsole.elk-nodes
 ```
 
+# Encoding/decoding
 ```bash
 alias urlencode='python2 -c "import urllib, sys; print urllib.quote(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read()[0:-1])"'
 alias urldecode='python2 -c "import urllib, sys; print urllib.unquote(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read()[0:-1])"'
