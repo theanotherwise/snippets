@@ -52,6 +52,14 @@ alias urldecode='python3 -c "from urllib import parse; import sys; print(parse.u
 ## Certificates
 
 ```bash
+dpkg-reconfigure ca-certificates
+```
+
+```bash
+update-ca-certificates --verbose --fresh
+```
+
+```bash
 /etc/ca-certificates.conf
 /etc/ssl/certs/ca-certificates.crt
 ```
@@ -60,10 +68,4 @@ alias urldecode='python3 -c "from urllib import parse; import sys; print(parse.u
 ls -d /etc/ssl/certs/
 ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
-```
-
-```bash
-dpkg-reconfigure ca-certificates
-
-update-ca-certificates --verbose --fresh
 ```
