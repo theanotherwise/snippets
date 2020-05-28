@@ -1,4 +1,4 @@
-# Linux
+# General
 
 ```bash
 find /var/log -mindepth 1 -maxdepth 1 -type f -exec grep -Iq . {} 2>/dev/null \; -print
@@ -85,11 +85,6 @@ dns=none
 ```
 
 ```bash
-rm /etc/resolv.conf
-systemctl restart network-manager
-```
-
-```bash
 cat > /etc/resolv.conf << "EndOfMessage"
 nameserver 10.10.10.10
 nameserver 8.8.8.8
@@ -97,4 +92,9 @@ nameserver 8.8.4.4
 EndOfMessage
 
 chmod 644 /etc/resolv.conf
+```
+
+```bash
+rm /etc/resolv.conf
+systemctl restart network-manager
 ```
