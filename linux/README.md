@@ -71,7 +71,7 @@ ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
 ```
 
-# Ubuntu 18.04/20.04 LTS disable network manager
+# disable `systemd-resolve`
 
 ```bash
 systemctl disable systemd-resolved.service
