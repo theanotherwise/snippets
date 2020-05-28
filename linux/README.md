@@ -81,10 +81,20 @@ systemctl stop systemd-resolved
 `/etc/NetworkManager/NetworkManager.conf`
 ```bash
 [main]
-dns=default
+dns=none
 ```
 
 ```bash
 rm /etc/resolv.conf
 systemctl restart network-manager
+```
+
+```bash
+cat > /etc/resolv.conf << "EndOfMessage"
+nameserver 10.10.10.10
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+EndOfMessage
+
+chmod 644 /etc/resolv.conf
 ```
