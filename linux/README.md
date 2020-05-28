@@ -85,6 +85,10 @@ dns=none
 ```
 
 ```bash
+chattr -i etc/resolv.conf
+
+rm /etc/resolv.conf
+
 cat > /etc/resolv.conf << "EndOfMessage"
 nameserver 10.10.10.10
 nameserver 8.8.8.8
@@ -95,6 +99,6 @@ chmod 644 /etc/resolv.conf
 ```
 
 ```bash
-rm /etc/resolv.conf
+
 systemctl restart network-manager
 ```
