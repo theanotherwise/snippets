@@ -71,7 +71,7 @@ ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
 ```
 
-## disable `systemd-resolve`
+## Disable `systemd-resolve`
 
 ```bash
 systemctl disable systemd-resolved.service
