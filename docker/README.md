@@ -1,9 +1,12 @@
 # Docker
+
+# Clear containers
 ```bash
 docker container stop `docker ps -a | tail -n +2 | awk '{print $1}'`
 docker container rm --force `docker ps -a | tail -n +2 | awk '{print $1}'`
 ```
 
+# Clear images
 ```bash
 docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 ```
