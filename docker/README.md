@@ -5,11 +5,15 @@ docker container rm --force `docker ps -a | tail -n +2 | awk '{print $1}'`
 ```
 
 ```bash
+docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
+```
+
+```bash
 for i in `docker ps -a | grep -i httpd | awk '{print $1}'` ; do curl  $(docker inspect $i | grep -Po "IPAddress\": \"\K[0-9\.]*") ; done
 ```
 
 ```bash
-docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
+echo http://$(docker inspect `docker ps -a | grep -i kibana | awk '{print $1}'` | grep -Po "IPAddress\": \"\K[0-9\.]*"):5601
 ```
 
 ```bash
