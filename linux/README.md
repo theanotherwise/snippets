@@ -70,3 +70,21 @@ ls -d /etc/ssl/certs/
 ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
 ```
+
+# Ubuntu 18.04/20.04 LTS disable network manager
+
+```bash
+systemctl disable systemd-resolved.service
+systemctl stop systemd-resolved
+ ```
+ 
+`/etc/NetworkManager/NetworkManager.conf`
+```bash
+[main]
+dns=default
+```
+
+```bash
+rm /etc/resolv.conf
+systemctl restart network-manager
+```
