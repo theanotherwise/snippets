@@ -2,6 +2,8 @@
 
 ```bash
 docker-compose up --remove-orphans
+
+watch -n 0 "docker ps -a | tail -n +2 |sort -k 2"
 ```
 
 ```bash
