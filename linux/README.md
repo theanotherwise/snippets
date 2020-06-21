@@ -1,5 +1,21 @@
 # Linux
 
+# Locales
+
+touch /etc/default/locale
+
+locale
+localectl status
+
+locale -av
+locale -mv
+localectl list-locales
+localectl list-keymaps
+
+locale-gen --purge en_US.UTF-8
+
+localectl set-locale en_US.UTF-8
+
 ## General
 
 ```bash
