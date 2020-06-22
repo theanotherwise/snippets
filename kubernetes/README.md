@@ -50,6 +50,16 @@ kubectl delete -n NAMESPACE deployment DEPLOYMENT
 kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
 
+# Joine node
+
+```bash
+kubeadm token generate
+```
+
+```bash
+kubeadm join XXX.XXX.XXX.XXX:6443 --token XXX --discovery-token-ca-cert-hash sha256:XXX
+```
+
 ```bash
 openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | \
    openssl dgst -sha256 -hex | sed 's/^.* //'
