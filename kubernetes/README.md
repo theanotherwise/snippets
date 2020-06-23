@@ -53,7 +53,10 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 # Joine node
 
 ```bash
-kubeadm token generate
+kubeadm token create
+kubeadm token delete
+kubeadm token genmerate
+kubeadm token list
 ```
 
 ```bash
