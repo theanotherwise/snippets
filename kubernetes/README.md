@@ -17,7 +17,7 @@ systemctl start docker ; systemctl start docker
 ```
 
 ```bash
-kubeadm init --pod-network-cidr=10.10.0.0/16
+kubeadm init --pod-network-cidr=10.100.0.0/16
 
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
