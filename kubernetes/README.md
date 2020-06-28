@@ -2,8 +2,7 @@
 
 ## Prepare cluster
 ```bash
-systemctl stop kubelet
-systemctl stop docker
+systemctl stop kubelet ; systemctl stop docker
 
 kubeadm reset -f
 
@@ -13,11 +12,8 @@ rm -rf /etc/kubernetes /var/lib/etcd /var/lib/cni/ /etc/cni/ /opt/cni /var/lib/k
 
 apt-get install -y docker.io kubeadm kubelet kubectl
 
-systemctl enable docker
-systemctl enable kubelet
-
-systemctl start docker
-systemctl start docker
+systemctl enable docker ; systemctl enable kubelet
+systemctl start docker ; systemctl start docker
 ```
 
 ```bash
