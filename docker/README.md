@@ -2,14 +2,16 @@
 
 ## Build & Run
 ```bash
-docker build --rm --force-rm --no-cache -t test .
+docker network create --ipam-driver default --subnet 172.20.0.0/16 test
 
-docker run -it --rm --network exatel test
+docker build --rm --force-rm --no-cache --tag test .
+
+docker run -it --rm --network test --hostname hostname --name test test
 ```
 
-## Docker Compose UP
+## Docker Compose
 ```bash
-docker-compose up --force-recreate --build --remove-orphans
+docker-compose up --force-recreate --build --remove-orphans --detach
 ```
 
 ## Clean
