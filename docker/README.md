@@ -6,7 +6,7 @@ docker network create --ipam-driver default --subnet 172.20.0.0/16 test
 
 docker build --rm --force-rm --no-cache --tag test .
 
-docker run -it --rm --network test --hostname hostname --name test test
+docker run --interactive --tty --rm --network test --hostname hostname --name test test
 ```
 
 ## Docker Compose
