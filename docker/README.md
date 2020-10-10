@@ -4,7 +4,7 @@
 ```bash
 docker build --rm --force-rm --no-cache -t test .
 
-docker run -it --rm --network $NNAME --ip $NHALF.11 test
+docker run -it --rm --network exatel test
 ```
 
 ## Docker Compose UP
