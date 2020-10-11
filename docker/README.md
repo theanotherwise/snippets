@@ -25,3 +25,17 @@ docker network rm `docker network ls | tail -n +2 | awk '{print $1}'`
 
 docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 ```
+
+## Dockerfile Clean
+
+```docker
+RUN apt-get autoremove --purge -y && \
+    apt-get autoclean && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /var/cache/apt/* && \
+    rm -rf /var/log/* &&  \
+    rm -rf /var/log/* && \
+    rm -rf /var/tmp/* && \
+    rm -rf /etc/ssh/ssh_host_*
+```
