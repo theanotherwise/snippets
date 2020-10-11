@@ -12,7 +12,7 @@ docker build \
         --tag ubuntu .
 ```
 
-### Run
+### Dry Run
 
 ```bash
 docker network create \
@@ -25,6 +25,20 @@ docker run \
         --volume /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:2.249.2-lts-jdk11 \
         --detach --rm 
 ```
+
+### Allow Stop
+
+```bash
+docker run \
+        --interactive --tty \
+        --network network0 --hostname jenkins0 --name jenkins0 \
+        --volume /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:2.249.2-lts-jdk11
+```
+
+```bash
+docker start -i jenkins0
+```
+
 
 ## Docker Compose
 ```bash
