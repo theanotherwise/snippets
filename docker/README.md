@@ -35,7 +35,7 @@ RUN apt-get autoremove --purge -y && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /var/cache/apt/* && \
     rm -rf /var/log/* &&  \
-    rm -rf /var/log/* && \
+    rm -rf /tmp/* && \
     rm -rf /var/tmp/* && \
     rm -rf /etc/ssh/ssh_host_*
 ```
