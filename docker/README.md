@@ -5,17 +5,25 @@
 ### Build
 
 ```bash
-docker build --rm --force-rm --no-cache --network network0 -t example .
+docker build \
+        --rm \
+        --force-rm \
+        --no-cache \
+        --tag ubuntu .
 ```
 
 ### Run
 
 ```bash
-docker network create --ipam-driver default --subnet 172.20.1.0/24 network0        
+docker network create \
+        --ipam-driver default \
+        --subnet 172.20.1.0/24 network0
 
-docker run -it --rm -d -h jenkins --network network0 --name jenkins0 \
-        -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:2.249.2-lts-jdk11
-        
+docker run \
+        --interactive --tty \
+        --network network0 --hostname jenkins0 --name jenkins0 \
+        --volume /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:2.249.2-lts-jdk11 \
+        --detach --rm 
 ```
 
 ## Docker Compose
