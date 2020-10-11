@@ -33,7 +33,11 @@ docker start --interactive jenkins0
 
 ## Docker Compose
 ```bash
-docker-compose up --force-recreate --build --remove-orphans --detach
+docker-compose up \
+        --force-recreate \
+        --build \
+        --remove-orphans \
+        --detach
 ```
 
 ## Clean
