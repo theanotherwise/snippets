@@ -1,12 +1,21 @@
 # Docker
 
-## Build & Run
+## Fast startup
+
+### Build & Run
+
 ```bash
 docker network create --ipam-driver default --subnet 172.20.0.0/16 test
 
 docker build --rm --force-rm --no-cache --tag test .
 
 docker run --interactive --tty --rm --network test --hostname hostname --name test --detach test
+```
+
+### Useful
+
+```bash
+-v /var/run/docker.sock:/var/run/docker.sock
 ```
 
 ## Docker Compose
