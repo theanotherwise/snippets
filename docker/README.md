@@ -2,20 +2,20 @@
 
 ## Fast startup
 
-### Build & Run
+### Build
 
 ```bash
-docker network create --ipam-driver default --subnet 172.20.0.0/16 test
-
-docker build --rm --force-rm --no-cache --tag test .
-
-docker run --interactive --tty --rm --network test --hostname hostname --name test --detach test
+docker build --rm --force-rm --no-cache --network network0 -t example .
 ```
 
-### Useful
+### Run
 
 ```bash
--v /var/run/docker.sock:/var/run/docker.sock
+docker network create --ipam-driver default --subnet 172.20.1.0/24 network0        
+
+docker run -it --rm -d -h jenkins --network network0 --name jenkins0 \
+        -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:2.249.2-lts-jdk11
+        
 ```
 
 ## Docker Compose
