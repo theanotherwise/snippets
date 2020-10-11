@@ -21,8 +21,8 @@ docker network create \
 
 docker run \
         --interactive --tty \
-        --network network0 --hostname jenkins0 --name jenkins0 \
-        --volume /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:2.249.2-lts-jdk11 \
+        --network network0 --hostname jenkins --name jenkins \
+        --volume /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts-jdk11 \
         --detach --rm 
 ```
 
