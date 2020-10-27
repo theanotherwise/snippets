@@ -1,5 +1,6 @@
 # Snippets
 
+* [Crypt Setup](#luks)
 * [Kubernetes](kubernetes)
 * [Docker](#docker)
 * [Linux](linux)
@@ -11,7 +12,7 @@
 echo `pwgen 4 -c -n -y -s -1 -v``xkcdpass -d "-" --min 6 --max 8 -C first -s 1 -n 2``pwgen 4 -c -n -y -s -1 -v`
 ```
 
-# Luks
+# Crypt Setup
 
 ```
 cryptsetup -c aes-cbc-essiv:sha256 -s 256 -h sha512 -i 5000 luksFormat <device>
