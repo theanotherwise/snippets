@@ -4,7 +4,7 @@
 * [Kubernetes](kubernetes)
 * [Docker](docker.md)
 * [Linux](linux.md)
-* [Elasticsearch](elasticsearch)
+* [Text Processing](text-processing.md)
 
 ---
 
