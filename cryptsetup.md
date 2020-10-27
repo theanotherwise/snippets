@@ -1,6 +1,11 @@
 # Cryptsetup
 
 ```bash
+<name> is the device to create under /dev/mapper
+<device> is the encrypted device
+```
+
+```bash
 cryptsetup -c aes-cbc-essiv:sha256 -s 256 -h sha512 -i 5000 luksFormat <device>
 ```
 
