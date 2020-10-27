@@ -28,7 +28,7 @@ locale-gen --purge en_US.UTF-8
 localectl set-locale en_US.UTF-8
 ```
 
-# Certificates
+## Certificates
 ```bash
 dpkg-reconfigure ca-certificates
 update-ca-certificates --verbose --fresh
@@ -40,7 +40,7 @@ ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
 ```
 
-# Others
+## Others
 
 ```bash
 find /var/log -mindepth 1 -maxdepth 1 -type f -exec grep -Iq . {} 2>/dev/null \; -print
