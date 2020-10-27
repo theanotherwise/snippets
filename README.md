@@ -4,7 +4,7 @@
 * [Cryptsetup](cryptsetup.md)
 * [Kubernetes](kubernetes)
 * [Docker](docker.md)
-* [Linux](linux)
+* [Linux](linux.md)
 * [Elasticsearch](elasticsearch)
 
 ---
