@@ -59,7 +59,7 @@ docker network rm `docker network ls | tail -n +2 | awk '{print $1}'`
 docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 ```
 
-### Dockerfile Clean
+### Dockerfile Clean Debian/Ubuntu
 
 ```docker
 RUN apt-get autoremove --purge -y && \
