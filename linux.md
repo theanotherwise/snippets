@@ -5,7 +5,9 @@
 ```bash
 touch /etc/default/locale
 touch /etc/environment
+```
 
+```bash
 locale
 localectl status
 
@@ -14,10 +16,13 @@ locale -mv
 localectl list-locales
 localectl list-keymaps
 
+```bash
 echo "LC_ALL=\"en_US.UTF-8\"" > /etc/default/locale
 echo "LANG=\"en_US.UTF-8\"" >> /etc/default/locale
 echo "LANGUAGE=\"en_US.UTF-8\"" >> /etc/default/locale
+```
 
+```bash
 locale-gen --purge en_US.UTF-8
 localectl set-locale en_US.UTF-8
 ```
