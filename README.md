@@ -5,7 +5,7 @@
 * [Linux](linux.md)
 * [Text Processing](text-processing.md)
 * [Encoding / Decoding](encoding-decoding.md)
-* [Elasticsearch](elasticssearch.md)
+* [Elasticsearch](elasticsearch.md)
 
 ---
 
