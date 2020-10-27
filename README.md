@@ -1,6 +1,6 @@
 # Snippets
 
-* [Crypt Setup](#cryptsetup)
+* [Cryptsetup](#cryptsetup)
 * [Kubernetes](kubernetes)
 * [Docker](#docker)
 * [Linux](linux)
