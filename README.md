@@ -1,7 +1,7 @@
 # Snippets
 
 * [Password](#Password)
-* [Cryptsetup](#cryptsetup)
+* [Cryptsetup](cryptsetup.md)
 * [Kubernetes](kubernetes)
 * [Docker](#docker)
 * [Linux](linux)
