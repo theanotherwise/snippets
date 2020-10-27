@@ -32,7 +32,9 @@ localectl set-locale en_US.UTF-8
 ```bash
 dpkg-reconfigure ca-certificates
 update-ca-certificates --verbose --fresh
+```
 
+```bash
 ls -d /etc/ssl/certs/
 ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
