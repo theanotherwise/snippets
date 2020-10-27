@@ -20,7 +20,6 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
 
 ```bash
 -A, --askpass
--b, --background
 -H, --set-home
 -i, --login
 -K, --remove-timestamp
@@ -36,4 +35,8 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
 
 ```bash
 -p prompt, --prompt=prompt
+```
+
+```bash
+sudo -A -H -i -k -n -u test -g test pwd
 ```
