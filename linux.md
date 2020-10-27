@@ -15,6 +15,7 @@ locale -av
 locale -mv
 localectl list-locales
 localectl list-keymaps
+```
 
 ```bash
 echo "LC_ALL=\"en_US.UTF-8\"" > /etc/default/locale
