@@ -1,4 +1,6 @@
-# SQL
+# PostgreSQL
+
+## `psql`
 
 ```sql
 \db+          # Tablespaces
