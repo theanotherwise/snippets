@@ -2,6 +2,10 @@
 
 ## `psql`
 
+```bash
+psql -d dbname -h 127.0.0.1 -p 5432
+```
+
 ```sql
 \db+          # Tablespaces
 \l+           # Databases
@@ -25,4 +29,10 @@
 \dC+          # Casts
 \dc+          # Conversions
 \da+          # Aggregate Functions
+```
+
+## Dump
+
+```bash
+pg_dumpall --clean --if-exists --file dump.sql
 ```
