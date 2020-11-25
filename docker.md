@@ -5,20 +5,22 @@ docker network create \
     --driver bridge \
     --ipam-driver default \
     --subnet 172.18.0.0/24 \
-    net18
+    network18
 ```
 
 ```bash
 docker build \
-        --rm --force-rm \
-        --pull --no-cache \
-        --tag example .
+    --rm --force-rm \
+    --pull --no-cache \
+    --network network18
+    --tag example .
 ```
 
 ```bash
 docker run \
     --tty --interactive --rm \
     --name rails --hostname rails \
+    --network network18 --ip 172.18.0.10 \
     --env POSTGRES_DB=rails \
     --env POSTGRES_USER=rails \
     --env POSTGRES_PASSWORD=rails \
