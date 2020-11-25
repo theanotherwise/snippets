@@ -10,10 +10,9 @@ docker network create \
 
 ```bash
 docker build \
-        --rm \
-        --force-rm \
-        --no-cache \
-        --tag ubuntu .
+        --rm --force-rm \
+        --pull --no-cache \
+        --tag example .
 ```
 
 ```bash
