@@ -1,6 +1,5 @@
 # Docker
 
-# `docker network create`
 ```bash
 docker network create \
     --driver bridge \
@@ -9,7 +8,6 @@ docker network create \
     net18
 ```
 
-## `docker build`
 ```bash
 docker build \
         --rm \
@@ -18,7 +16,6 @@ docker build \
         --tag ubuntu .
 ```
 
-## `docker run`
 ```bash
 docker run \
     --tty --interactive --rm \
@@ -41,9 +38,7 @@ docker container stop `docker ps -a | tail -n +2 | awk '{print $1}'`
 docker container rm --force `docker ps -a | tail -n +2 | awk '{print $1}'`
 
 docker volume rm `docker volume ls | tail -n +2 | awk '{print $2}'`
-
 docker network rm `docker network ls | tail -n +2 | awk '{print $1}'`
-
 docker image rm --force `docker images -a | tail -n +2 | awk '{print $3}'`
 ```
 
