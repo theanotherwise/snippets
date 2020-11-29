@@ -1,7 +1,5 @@
 # Ruby on Rails
 
-### database.yml
-
 ```yml
 default: &default
   adapter: postgresql
