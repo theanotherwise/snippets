@@ -3,7 +3,6 @@
 ## General
 * [ip](md-files/ip.md)
 * [Linux](md-files/linux.md)
----
 * [Cryptsetup](md-files/cryptsetup.md)
 * [Docker](md-files/docker.md)
 * [Text Processing](md-files/text-processing.md)
@@ -18,8 +17,6 @@
 * [firewalld](md-files/firewalld.md)
 * [iptables Diagram](md-files/iptables-diagram.md)
 * [MikroTik Firewall Diagram](md-files/mikrotik-firewall-diagram.md)
-
----
 
 # Password
 ```bash
