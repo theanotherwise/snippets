@@ -3,7 +3,6 @@
 ## General
 * [Cryptsetup](md-files/cryptsetup.md)
 * [Docker](md-files/docker.md)
-* [Linux](md-files/linux.md)
 * [Text Processing](md-files/text-processing.md)
 * [Encoding / Decoding](md-files/encoding-decoding.md)
 * [Elasticsearch](md-files/elasticsearch.md)
@@ -12,10 +11,11 @@
 
 ## Linux
 
-* [ip](md-files/ip.md)
+* [Linux](md-files/linux.md)
 
 ## Netorking & Firewall
 
+* [ip](md-files/ip.md)
 * [iptables](md-files/iptables.md)
 * [firewalld](md-files/firewalld.md)
 * [iptables Diagram](md-files/iptables-diagram.md)
