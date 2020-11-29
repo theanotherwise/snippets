@@ -1,6 +1,9 @@
 # Snippets
 
 ## General
+* [ip](md-files/ip.md)
+* [Linux](md-files/linux.md)
+
 * [Cryptsetup](md-files/cryptsetup.md)
 * [Docker](md-files/docker.md)
 * [Text Processing](md-files/text-processing.md)
@@ -9,13 +12,8 @@
 * [OpenVPN](md-files/openvpn.md)
 * [Ruby on Rails](md-files/ruby-on-rails.md)
 
-## Linux
-
-* [Linux](md-files/linux.md)
-
 ## Netorking & Firewall
 
-* [ip](md-files/ip.md)
 * [iptables](md-files/iptables.md)
 * [firewalld](md-files/firewalld.md)
 * [iptables Diagram](md-files/iptables-diagram.md)
