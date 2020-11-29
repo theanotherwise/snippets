@@ -6,7 +6,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get '/index', to: 'users#index'
+      get 'users', to: 'users#index'
     end
   end
 end
@@ -19,7 +19,9 @@ module Api
   module V1
     class UsersController < ApplicationController
       def index
-        # code
+        @users = User.all
+        
+        render json: @users
       end
     end
   end
