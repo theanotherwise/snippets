@@ -3,6 +3,7 @@
 ## General
 * [ip](md-files/ip.md)
 * [Linux](md-files/linux.md)
+---
 * [Cryptsetup](md-files/cryptsetup.md)
 * [Docker](md-files/docker.md)
 * [Text Processing](md-files/text-processing.md)
@@ -11,7 +12,7 @@
 * [OpenVPN](md-files/openvpn.md)
 * [Ruby on Rails](md-files/ruby-on-rails.md)
 
-## Netorking & Firewall
+## Firewall
 
 * [iptables](md-files/iptables.md)
 * [firewalld](md-files/firewalld.md)
