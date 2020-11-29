@@ -1,17 +1,17 @@
 # Snippets
 
-* [Cryptsetup](cryptsetup.md)
-* [Docker](docker.md)
-* [Linux](linux.md)
-* [Text Processing](text-processing.md)
-* [Encoding / Decoding](encoding-decoding.md)
-* [Elasticsearch](elasticsearch.md)
-* [OpenVPN](openvpn.md)
-* [Ruby on Rails](ruby-on-rails.md)
-* [iptables](iptables.md)
-* [firewalld](firewalld.md)
-* ![iptables Diagram](iptables-diagram.jpg)
-* ![MikroTik Firewall Diagram](mikrotik-firewall-diagram.jpg)
+* [Cryptsetup](md-files/cryptsetup.md)
+* [Docker](md-files/docker.md)
+* [Linux](md-files/linux.md)
+* [Text Processing](md-files/text-processing.md)
+* [Encoding / Decoding](md-files/encoding-decoding.md)
+* [Elasticsearch](md-files/elasticsearch.md)
+* [OpenVPN](md-files/openvpn.md)
+* [Ruby on Rails](md-files/ruby-on-rails.md)
+* [iptables](md-files/iptables.md)
+* [firewalld](md-files/firewalld.md)
+* ![iptables Diagram](images/iptables-diagram.jpg)
+* ![MikroTik Firewall Diagram](images/mikrotik-firewall-diagram.jpg)
 
 ---
 
