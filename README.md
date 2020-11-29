@@ -10,7 +10,7 @@
 * [Elasticsearch](md-files/elasticsearch.md)
 * [OpenVPN](md-files/openvpn.md)
 * Ruby on Rails
-  * [Ruby on Rails](md-files/ruby-on-rails.md)
+  * [General](md-files/ruby-on-rails.md)
   * [API](md-files/ruby-on-rails-api.md)
 
 ## Firewall
