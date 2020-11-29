@@ -32,10 +32,6 @@ docker run \
     postgres:latest
 ```
 
-```bash
-docker-compose up -force-recreate --build --remove-orphans \
-```
-
 ```docker
 RUN apt-get autoremove --purge -y && \
     apt-get autoclean && \
