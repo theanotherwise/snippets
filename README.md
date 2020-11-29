@@ -9,7 +9,8 @@
 * [Encoding / Decoding](md-files/encoding-decoding.md)
 * [Elasticsearch](md-files/elasticsearch.md)
 * [OpenVPN](md-files/openvpn.md)
-* [Ruby on Rails](md-files/ruby-on-rails.md)
+* Ruby on Rails
+  * [Ruby on Rails](md-files/ruby-on-rails.md)
   * [API](ruby-on-rails-api.md)
 
 ## Firewall
