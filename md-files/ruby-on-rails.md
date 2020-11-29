@@ -1,6 +1,6 @@
 # Ruby on Rails
 
-##
+## Convention
 
 ```bash
 rails g controller Users index
