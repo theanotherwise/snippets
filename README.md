@@ -11,7 +11,7 @@
 * [OpenVPN](md-files/openvpn.md)
 * Ruby on Rails
   * [Ruby on Rails](md-files/ruby-on-rails.md)
-  * [API](ruby-on-rails-api.md)
+  * [API](md-files/ruby-on-rails-api.md)
 
 ## Firewall
 
