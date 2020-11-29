@@ -1,5 +1,15 @@
 # Ruby on Rails
 
+##
+
+```bash
+rails g controller Users index
+
+rails g model User name:string surname:string 
+```
+
+## database.yml
+
 ```yml
 default: &default
   adapter: postgresql
