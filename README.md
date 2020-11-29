@@ -3,7 +3,6 @@
 ## General
 * [ip](md-files/ip.md)
 * [Linux](md-files/linux.md)
-
 * [Cryptsetup](md-files/cryptsetup.md)
 * [Docker](md-files/docker.md)
 * [Text Processing](md-files/text-processing.md)
