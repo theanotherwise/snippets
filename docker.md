@@ -43,6 +43,10 @@ RUN apt-get autoremove --purge -y && \
     rm -rf /etc/ssh/ssh_host_*
 ```
 
+```bash
+docker-compose up -force-recreate --build --remove-orphans \
+```
+
 # Cleaning
 
 ```bash
