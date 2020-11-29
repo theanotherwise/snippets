@@ -10,8 +10,8 @@
 * [Ruby on Rails](md-files/ruby-on-rails.md)
 * [iptables](md-files/iptables.md)
 * [firewalld](md-files/firewalld.md)
-* ![iptables Diagram](images/iptables-diagram.jpg)
-* ![MikroTik Firewall Diagram](images/mikrotik-firewall-diagram.jpg)
+* [iptables Diagram](md-files/iptables-diagram.md)
+* [MikroTik Firewall Diagram](md-files/mikrotik-firewall-diagram.md)
 
 ---
 
