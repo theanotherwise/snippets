@@ -12,7 +12,7 @@
 * Ruby on Rails
   * [General](md-files/ruby-on-rails-general.md)
   * [API](md-files/ruby-on-rails-api.md)
-  * [API](md-files/ruby-on-rails-page-fix.md)
+  * [Page Fix](md-files/ruby-on-rails-page-fix.md)
 
 ## Firewall
 
