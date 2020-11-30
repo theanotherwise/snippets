@@ -1,7 +1,5 @@
 # Ruby on Rails - Page Fix
 
-page >= 1 = page 
-
 ```ruby
 page = params[:page].to_i
 params[:page] != page.to_s or page <= 0 ? (page = 0) : page -= 1
