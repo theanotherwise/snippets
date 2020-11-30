@@ -1,4 +1,4 @@
-# Ruby on Rails - Page Fix
+# Ruby on Rails Page Fix
 
 ```ruby
 page = params[:page].to_i
