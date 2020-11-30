@@ -6,4 +6,6 @@ if params[:page] != params[:page].to_i.to_s or params[:page].to_i <= 0
 else
   page = params[:page].to_i - 1
 end
+
+@models = Model.offset(page * 50).limit(50)
 ```
