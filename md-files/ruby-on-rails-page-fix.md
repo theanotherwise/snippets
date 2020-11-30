@@ -1,11 +1,10 @@
 # Ruby on Rails - Page Fix
 
+page >= 1 = page 
+
 ```ruby
-if params[:page] != params[:page].to_i.to_s or params[:page].to_i <= 0
-  page = 0
-else
-  page = params[:page].to_i - 1
-end
+page = params[:page].to_i
+params[:page] != page.to_s or page <= 0 ? (page = 0) : page -= 1
 
 @models = Model.offset(page * 50).limit(50)
 ```
