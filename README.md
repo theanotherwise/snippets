@@ -5,6 +5,8 @@
 * [Linux](md-files/linux.md)
 * [Cryptsetup](md-files/cryptsetup.md)
 * [Docker](md-files/docker.md)
+* Kubernetes
+  * [Namespace Stuck on Termintaing](md-files/namespace-stuck-on-termintaing.md)
 * [Text Processing](md-files/text-processing.md)
 * [Encoding / Decoding](md-files/encoding-decoding.md)
 * [Elasticsearch](md-files/elasticsearch.md)
