@@ -1,6 +1,3 @@
-# OpenVPN
-
-## `.ovpn` Template
 ```bash
 client
 proto tcp
