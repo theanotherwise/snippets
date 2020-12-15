@@ -1,5 +1,3 @@
-# git
-
 ```bash
 git config --global --edit
 git config --edit
