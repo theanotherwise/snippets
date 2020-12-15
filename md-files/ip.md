@@ -1,5 +1,3 @@
-# ip
-
 ```bash
 ip link show
 
