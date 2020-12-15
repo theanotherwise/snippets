@@ -1,5 +1,3 @@
-# Cryptsetup
-
 ```bash
 <name> is the device to create under /dev/mapper
 <device> is the encrypted device
