@@ -1,7 +1,3 @@
-# Docker
-
-# Building
-
 ```bash
 docker network create \
     --driver bridge \
@@ -46,8 +42,6 @@ RUN apt-get autoremove --purge -y && \
 ```bash
 docker-compose up -force-recreate --build --remove-orphans \
 ```
-
-# Cleaning
 
 ```bash
 docker container stop `docker ps -a | tail -n +2 | awk '{print $1}'`
