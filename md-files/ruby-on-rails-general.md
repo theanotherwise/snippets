@@ -1,9 +1,14 @@
-#### Application
 ```bash
 rails new example --skip-test --api --database=postgresql --webpack=vue
 ```
 
-#### Controller & Model Convention
+```bash
+gem update
+gem update --system
+
+gem pristine --all
+```
+
 ```bash
 rails g controller Users index
 
