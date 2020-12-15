@@ -1,4 +1,4 @@
-# iptables.md
+#
 
 ```bash
 iptables -L -n -v
@@ -33,7 +33,7 @@ iptables-save
 iptables-restore < iptables.conf
 ```
 
-# Template
+#
 
 ```
 # -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
@@ -49,7 +49,7 @@ iptables-restore < iptables.conf
 -A OUTPUT -j DROP
 ```
 
-# Router
+#
 
 ```bash
 sysctl -w net.ipv4.ip_forward=1                   # /bin/echo 1 > /proc/sys/net/ipv4/ip_forward
