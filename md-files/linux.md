@@ -37,7 +37,7 @@ ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
 ```
 
----
+#
 
 ```bash
 find /var/log -mindepth 1 -maxdepth 1 -type f -exec grep -Iq . {} 2>/dev/null \; -print
