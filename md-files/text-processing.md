@@ -1,5 +1,3 @@
-# Text Processing
-
 ```bash
 echo -e "Lorem\tipsum\tdolor\tsit\tamet" | awk '{print $2}'
 ```
