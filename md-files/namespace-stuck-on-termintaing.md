@@ -1,5 +1,3 @@
-# Namespace Stuck on Termintaing
-
 ```bash
 kubectl proxy
 
