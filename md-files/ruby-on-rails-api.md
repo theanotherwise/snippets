@@ -1,6 +1,3 @@
-# Ruby on Rails 
-
-#### API Module
 `config/routes.rb`
 
 ```rails
