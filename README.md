@@ -15,6 +15,7 @@
 * Ruby on Rails
   * [General](md-files/ruby-on-rails-general.md)
   * [Database](md-files/ruby-on-rails-database.md)
+  * [Active Record Migration](md-files/ruby-on-rails-active-record-migration.md)
   * [Logger](md-files/ruby-on-rails-logger.md)
   * [API](md-files/ruby-on-rails-api.md)
   * [Page Fix](md-files/ruby-on-rails-page-fix.md)
