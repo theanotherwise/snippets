@@ -1,5 +1,3 @@
-# firewalld.md
-
 ```bash
 firewall-cmd --runtime-to-permanent
 firewall-cmd --get-zones
@@ -118,7 +116,7 @@ firewall-cmd --permanent --service=example --remove-destination=
 firewall-cmd --permanent --service=example --query-destination=
 ```
 
-## Template
+#
 
 ```bash 
 firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -m state --state ESTABLISHED -j ACCEPT
