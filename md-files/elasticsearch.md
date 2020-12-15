@@ -1,5 +1,3 @@
-# Elasticsearch
-
 ```http
 GET /_cat/allocation?v              # /<node_id>
 GET /_cat/count?v                   # /<index>
