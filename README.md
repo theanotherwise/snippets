@@ -6,6 +6,7 @@
 * [Cryptsetup](md-files/cryptsetup.md)
 * [git](md-files/git.md)
 * [Docker](md-files/docker.md)
+* [bitcoin-cli](md-files/bitcoin-cli.md)
 * Kubernetes
   * [Namespace Stuck on Termintaing](md-files/namespace-stuck-on-termintaing.md)
 * [Text Processing](md-files/text-processing.md)
