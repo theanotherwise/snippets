@@ -17,15 +17,11 @@ docker build \
 ```bash
 docker run \
     --tty --interactive --rm \
-    --name rails --hostname rails \
+    --name example --hostname example \
     --network network18 --ip 172.18.0.10 \
-    --env POSTGRES_DB=rails \
-    --env POSTGRES_USER=rails \
-    --env POSTGRES_PASSWORD=rails \
-    --env POSTGRES_HOST_AUTH_METHOD=md5 \
-    --env PGDATA=/var/lib/postgresql/data/pgdata \
+    --env EXAMPLE=example \
     --volume /var/lib/postgresql/data \
-    postgres:latest
+    example
 ```
 
 ```docker
