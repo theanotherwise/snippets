@@ -20,8 +20,10 @@
   * [Logger](md-files/ruby-on-rails-logger.md)
   * [API](md-files/ruby-on-rails-api.md)
   * [Page Fix](md-files/ruby-on-rails-page-fix.md)
- * Red Hat Enterprise Linux
-   * [Subscription Manager](md-files/subscription-manager.md)
+* Red Hat Enterprise Linux
+  * [Subscription Manager](md-files/subscription-manager.md)
+* Windows
+  * [Windows Subsystem for Linux][md-files/wsl.md]
 
 ## Firewall
 
