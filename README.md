@@ -23,7 +23,7 @@
 * Red Hat Enterprise Linux
   * [Subscription Manager](md-files/subscription-manager.md)
 * Windows
-  * [Windows Subsystem for Linux][md-files/wsl.md]
+  * [Windows Subsystem for Linux](md-files/wsl.md)
 
 ## Firewall
 
