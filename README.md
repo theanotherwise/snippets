@@ -21,7 +21,7 @@
   * [API](md-files/ruby-on-rails-api.md)
   * [Page Fix](md-files/ruby-on-rails-page-fix.md)
  * Red Hat Enterprise Linux
-  * [Subscription Manager](md-files/subscription-manager.md)
+   * [Subscription Manager](md-files/subscription-manager.md)
 
 ## Firewall
 
