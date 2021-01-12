@@ -21,9 +21,11 @@
   * [API](md-files/ruby-on-rails-api.md)
   * [Page Fix](md-files/ruby-on-rails-page-fix.md)
 * Red Hat Enterprise Linux
-  * [Subscription Manager](md-files/subscription-manager.md)
+  * [Subscription Manager](md-files/rhel-subscription-manager.md)
 * Windows
-  * [Windows Subsystem for Linux](md-files/wsl.md)
+  * [Windows Subsystem for Linux](md-files/windows-wsl.md)
+* Apache2
+  * [MPM](md-files/apache2-mpm.md)
 
 ## Firewall
 
