@@ -4,7 +4,7 @@
   ServerLimit            1600
   StartServers           5
   MinSpareServers        5
-  MaxSpareServers        20
+  MaxSpareServers        10
   MaxRequestWorkers      1600
   MaxConnectionsPerChild 0
 </IfModule>
@@ -13,13 +13,13 @@
 ### worker
 ```
 <IfModule mpm_worker_module>
-  ThreadLimit            150
-  ServerLimit            16
-  StartServers           3
-  MinSpareThreads        5
+  ServerLimit            10
+  StartServers           5
+  ThreadLimit            100
+  MinSpareThreads        10
   MaxSpareThreads        20
-  ThreadsPerChild        150
-  MaxRequestWorkers      2400
+  ThreadsPerChild        100
+  MaxRequestWorkers      1000
   MaxConnectionsPerChild 0
 </IfModule>
 ```
@@ -27,14 +27,14 @@
 ### event
 ```
 <IfModule mpm_event_module>
-  ThreadLimit              150
-  ServerLimit              16
-  StartServers             3
-  MinSpareThreads          5
+  ServerLimit              10
+  StartServers             5
+  ThreadLimit              100
+  MinSpareThreads          10
   MaxSpareThreads          20
   AsyncRequestWorkerFactor 2
-  ThreadsPerChild          150
-  MaxRequestWorkers        2400
+  ThreadsPerChild          100
+  MaxRequestWorkers        1000
   MaxConnectionsPerChild   0
 </IfModule>
 ```
