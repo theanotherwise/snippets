@@ -23,3 +23,18 @@
 	MaxConnectionsPerChild 0
 </IfModule>
 ```
+
+### event
+```bash
+<IfModule mpm_event_module>
+	ThreadLimit              120
+	ServerLimit              10
+	StartServers             3
+	MinSpareThreads          5
+	MaxSpareThreads          20
+	AsyncRequestWorkerFactor 2
+	ThreadsPerChild          120
+	MaxRequestWorkers        1200
+	MaxConnectionsPerChild   0
+</IfModule>
+```
