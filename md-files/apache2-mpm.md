@@ -9,3 +9,17 @@
 	MaxConnectionsPerChild 0
 </IfModule>
 ```
+
+### worker
+```bash
+<IfModule mpm_worker_module>
+	ThreadLimit            120
+	ServerLimit            10
+	StartServers           3
+	MinSpareThreads        5
+	MaxSpareThreads        20
+	ThreadsPerChild        120
+	MaxRequestWorkers      1200
+	MaxConnectionsPerChild 0
+</IfModule>
+```
