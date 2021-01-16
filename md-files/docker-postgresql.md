@@ -1,7 +1,6 @@
 ```bash
-docker run \
-    --tty --interactive --rm \
-    --name postgres \
+docker run --rm \
+    --name postgres --hostname example \
     --env POSTGRES_DB=example \
     --env POSTGRES_USER=example \
     --env POSTGRES_PASSWORD=example \
