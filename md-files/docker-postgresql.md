@@ -1,5 +1,6 @@
 ```bash
-docker run --rm \
+docker run \
+    --detach  --rm \
     --name postgres --hostname example \
     --env POSTGRES_DB=example \
     --env POSTGRES_USER=example \
