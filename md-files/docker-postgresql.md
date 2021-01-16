@@ -2,7 +2,7 @@
 docker run --detach \
     --rm --name postgres \
     --hostname example \
-    --expose
+    --publish 5432:5432/tcp \
     --env POSTGRES_DB=example \
     --env POSTGRES_USER=example \
     --env POSTGRES_PASSWORD=example \
