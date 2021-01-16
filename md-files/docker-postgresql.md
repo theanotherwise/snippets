@@ -1,5 +1,5 @@
 ```bash
-docker run --detach  
+docker run --detach \
     --rm --name postgres \
     --hostname example \
     --env POSTGRES_DB=example \
