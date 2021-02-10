@@ -10,7 +10,7 @@ docker network create \
 docker build \
     --rm --force-rm \
     --pull --no-cache \
-    --network network18
+    --network network18 \
     --tag example .
 ```
 
