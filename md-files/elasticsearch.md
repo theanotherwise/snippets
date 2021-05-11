@@ -142,4 +142,11 @@ PUT _ilm/policy/default
     }
   }
 }
+
+GET /logstash-application-2021-04-23/_settings
+
+PUT /logstash-application-2021-04-23/_settings
+{
+"index.max_result_window": 12000
+}
 ```
