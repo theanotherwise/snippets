@@ -88,7 +88,7 @@ while mapfile -t -n 6 ary && ((${#ary[@]})); do
    
   ((INC=INC+6))
 done < fetch-template.parse
-
+```
 
 ```bash
 #!/bin/bash
