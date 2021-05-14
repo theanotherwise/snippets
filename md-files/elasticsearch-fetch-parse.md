@@ -38,7 +38,7 @@ while [[ "${STOP_CONDITION}" != "STOP" ]] ; do
 done
 ```
 
-````bash
+```bash
 #!/bin/bash
 
 curl 'https://elasticsearch:9200/example-indice-*/_search' \
