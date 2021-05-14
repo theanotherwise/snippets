@@ -14,7 +14,9 @@
   * [Namespace Stuck on Termintaing](md-files/namespace-stuck-on-termintaing.md)
 * [Text Processing](md-files/text-processing.md)
 * [Encoding / Decoding](md-files/encoding-decoding.md)
-* [Elasticsearch](md-files/elasticsearch.md)
+* Elasticsearch
+  * [General](md-files/elasticsearch.md)
+  * [Fetch Parse](md-files/elasticsearch-fetch-parse.md)
 * [OpenVPN](md-files/openvpn.md)
 * Ruby on Rails
   * [General](md-files/ruby-on-rails-general.md)
