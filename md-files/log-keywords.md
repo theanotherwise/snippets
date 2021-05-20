@@ -1,26 +1,24 @@
-```bash
-msg: "err"
-msg: "crit"
-msg: "fail"
-msg: "warn"
-msg: "alert"
-msg: "emerg"
-msg: "denied"
-msg: "deny"
-msg: "unread"
-msg: "unreach"
-msg: "miss"
-msg: "problem"
-msg: "block"
-msg: "terminat"
-msg: "exclude"
-msg: "reject"
-msg: "inject"
-msg: "eject"
-msg: "remove"
-msg: "purge"
-msg: "clean"
-msg: "clear"
-msg: "close"
-msg: "break"
-```
+err
+crit
+fail
+warn
+alert
+emerg
+denied
+deny
+unread
+unreach
+miss
+problem
+block
+terminat
+exclude
+reject
+inject
+eject
+remove
+purge
+clean
+clear
+close
+break
