@@ -32,6 +32,8 @@
 * Apache2
   * [MPM](md-files/apache2-mpm.md)
 * [Internal DNS](md-files/internal-dns.md)
+* Wordlists
+  * [Log Keyworlds](md-files/log-keywords.md)
 
 ## Firewall
 
