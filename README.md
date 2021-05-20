@@ -31,6 +31,7 @@
   * [Windows Subsystem for Linux](md-files/windows-wsl.md)
 * Apache2
   * [MPM](md-files/apache2-mpm.md)
+* [Internal DNS](md-files/internal-dns.md)
 
 ## Firewall
 
