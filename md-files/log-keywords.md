@@ -1,3 +1,4 @@
+```bash
 err
 crit
 fail
@@ -22,3 +23,4 @@ clean
 clear
 close
 break
+```
