@@ -6,8 +6,8 @@ agent type
 environment name
 environment type
 environment organization
-environment app
-environment app part 
+environment application
+environment part
 ```
 
 ## Examples
@@ -25,6 +25,6 @@ filebeat-production-application-bbb-ecomm-bo
 
 filebeat-production-infrastructure-bbb-vpn
 filebeat-production-infrastructure-bbb-load_balancer
-filebeat-production-infrastructure-bbb-sec_ids
-filebeat-production-infrastructure-bbb-sec_ips
+filebeat-production-infrastructure-bbb-sec-ids
+filebeat-production-infrastructure-bbb-sec-ips
 ```
