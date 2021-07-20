@@ -1,6 +1,14 @@
+```csv
+agent-environment name-environment type-environment organization-environment app-environment app part 
+```
+
 ```bash
-filebeat-production-application-aaa-pccp-ide
-filebeat-production-application-aaa-pccp-pte
+# Core Management Cluster
+metricbeat-production-application-core-elasticsearch-self_monitoring
+metricbeat-testing-application-core-elasticsearch-self_monitoring
+
+filebeat-production-application-aaa-ccp-ide
+filebeat-production-application-aaa-ccp-pte
 
 filebeat-production-application-bbb-player-fo
 filebeat-production-application-bbb-player-bo
