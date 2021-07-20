@@ -15,6 +15,7 @@
 * [Text Processing](md-files/text-processing.md)
 * [Encoding / Decoding](md-files/encoding-decoding.md)
 * Elasticsearch
+  * [Convention](md-files/elasticsearch-convention.md)
   * [General](md-files/elasticsearch.md)
   * [Fetch Parse](md-files/elasticsearch-fetch-parse.md)
 * [OpenVPN](md-files/openvpn.md)
