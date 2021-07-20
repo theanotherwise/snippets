@@ -2,7 +2,12 @@
 
 ## Pattern
 ```csv
-agent-environment name-environment type-environment organization-environment app-environment app part 
+agent type
+environment name
+environment type
+environment organization
+environment app
+environment app part 
 ```
 
 ## Examples
