@@ -1,9 +1,12 @@
+# Index naming convention
+
+## Pattern
 ```csv
 agent-environment name-environment type-environment organization-environment app-environment app part 
 ```
 
+## Examples
 ```bash
-# Core Management Cluster
 metricbeat-production-application-core-elasticsearch-self_monitoring
 metricbeat-testing-application-core-elasticsearch-self_monitoring
 
