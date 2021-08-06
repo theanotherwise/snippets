@@ -14,9 +14,9 @@
   * [Namespace Stuck on Termintaing](md-files/namespace-stuck-on-termintaing.md)
 * [Text Processing](md-files/text-processing.md)
 * [Encoding / Decoding](md-files/encoding-decoding.md)
-* Elasticsearch
 * Jenkins
   * [API Usage](md-files/jenkins-api-usage)
+* Elasticsearch
   * [Convention](md-files/elasticsearch-convention.md)
   * [General](md-files/elasticsearch.md)
   * [Fetch Parse](md-files/elasticsearch-fetch-parse.md)
