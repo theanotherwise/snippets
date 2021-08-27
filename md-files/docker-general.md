@@ -36,6 +36,18 @@ RUN apt-get autoremove --purge -y && \
 ```
 
 ```bash
+docker build --no-cache -<< "EndOfMessage"
+FROM ubuntu:focal
+
+ARG ABC=test
+
+RUN echo ${ABC} &&\
+	var=${ABC:0:1} && \
+	echo $var
+EndOfMessage
+```
+
+```bash
 docker-compose up --force-recreate --build --remove-orphans --detach
 ```
 
