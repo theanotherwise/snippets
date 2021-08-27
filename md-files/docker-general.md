@@ -36,7 +36,7 @@ RUN apt-get autoremove --purge -y && \
 ```
 
 ```bash
-docker build --no-cache -<< "EndOfMessage"
+docker build --no-cache --force-rm -<< "EndOfMessage"
 FROM ubuntu:focal
 
 ARG ABC=test
