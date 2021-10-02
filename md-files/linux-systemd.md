@@ -15,13 +15,25 @@ ps -q 1 -o pid,comm,command
 ```
 
 ```bash
-start/stop/status/restart/reload/kill
+start|stop|status|restart|reload|kill
 
-enable/disable
+enable|disable
 
-is-active/is-failed/is-enabled
+is-active|is-failed|is-enabled
 
-show/cat/edit
+show|cat|edit
 
-daemon-reload/list-dependencies
+daemon-reload
+
+list-dependencies|list-unit-files
+```
+
+```bash
+get-default|set-default
+
+default|isolate
+```
+
+```bash
+emergency|suspend|hibernate|halt|poweroff/reboot
 ```
