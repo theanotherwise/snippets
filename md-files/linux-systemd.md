@@ -1,11 +1,7 @@
-# systemd 
-
-## checking
 ```bash
 ps -q 1 -o pid,comm,command
 ```
 
-### paths
 ```bash
 /etc/systemd/system
 /etc/systemd/user
@@ -16,4 +12,16 @@ ps -q 1 -o pid,comm,command
 /usr/lib/systemd/user
 
 ~/.config/systemd/user
+```
+
+```bash
+start/stop/status/restart/reload/kill
+
+enable/disable
+
+is-active/is-failed/is-enabled
+
+show/cat/edit
+
+daemon-reload/list-dependencies
 ```
