@@ -35,5 +35,5 @@ default|isolate
 ```
 
 ```bash
-emergency|suspend|hibernate|halt|poweroff/reboot
+emergency|suspend|hibernate|halt|poweroff|reboot
 ```
