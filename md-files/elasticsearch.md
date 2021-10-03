@@ -1,61 +1,29 @@
-```http
-# Cluster Queries
-GET /_cluster/settings
-GET /_cluster/health
-
-PUT /_cluster/settings
-{
-    "persistent" : {
-        "indices.lifecycle.poll_interval": "5s"
-    }
-}
-
-# General Queries (more in Cluster Queries)
+```curl
+# Cluster
 GET /_cat/health?pretty&v
+GET /_cluster/health?level=cluster
+GET /_cluster/settings?include_defaults=true&flat_settings=true
 
+# Nodes
 GET /_cat/master?pretty&v
 GET /_cat/nodes?pretty&v
-GET /_cat/nodeattrs?pretty&v
+GET /_nodes/settings?flat_settings=true
 
+# GET /_nodes?flat_settings
+GET /_cat/nodeattrs?pretty&v
+GET /_cat/allocation?pretty&v
 GET /_cat/thread_pool?pretty&v
 
-GET /_cat/allocation?pretty&v
-GET /_cat/allocation/es02-data01?pretty&v
-GET /_cat/allocation/es02-data02?pretty&v
-GET /_cat/allocation/es02-data03?pretty&v
+GET /_cat/aliases?pretty&v
 
-GET /_cat/count?pretty&v
-
-GET /_cat/tasks?pretty&v
 GET /_cat/pending_tasks?pretty&v
-
-GET /_cat/repositories?pretty&v
+GET /_cat/tasks?pretty&v
 GET /_cat/recovery?pretty&v
 
-GET /_cat/indices?pretty&v
-GET /_cat/shards?pretty&v
-GET /_cat/segments?pretty&v
-
-GET /_cat/aliases
-
-# Indice Management
-GET /apm-server-example-production-application-2021.02.17-000030/_settings
-
-PUT /apm-server-example-production-application-2021.02.17-000030/_settings
-{
-    "index" : {
-        "number_of_replicas" : 0
-    }
-}
-
-GET /apm-server-example-production-application-2021.02.17-000001/_segments
-
-GET /apm-server-example-production-application-2021.02.17-000001/_search_shards
-
-GET /apm-server-example-production-application-2021.02.17-000001/_ilm/explain
+GET /_cat/repositories?pretty&v
 
 # Snapshots
-
+GET /_cat/snapshots?pretty&v
 GET /_snapshot
 GET /_snapshot/_all
 GET /_snapshot/_status
@@ -90,11 +58,23 @@ POST /_snapshot/my_backup/_cleanup
 
 DELETE /_snapshot/my_backup/snapshot_1
 
-# ILM
-GET /_ilm/status
-POST _ilm/start
-POST _ilm/stop
+# Indices
+GET /_cat/indices?pretty&v
+# GET /_cluster/health?level=indices
 
+# Shards
+GET /_cat/shards?pretty&v
+# GET /_cluster/health?level=shards
+
+# Segments
+GET /_cat/segments?pretty&v
+
+GET /_cat/aliases?pretty&v
+GET /_cat/templates?pretty&v
+GET /_cat/fielddata?pretty&v
+
+# ILM Policy
+GET /_ilm/policy
 GET _ilm/policy/default
 DELETE _ilm/policy/default
 
@@ -143,10 +123,44 @@ PUT _ilm/policy/default
   }
 }
 
-GET /logstash-application-2021-04-23/_settings
+# ILM Policy (Start / Stop)
+GET /_ilm/status
+POST /_ilm/stop
+POST /_ilm/start
 
-PUT /logstash-application-2021-04-23/_settings
+# Aliases
+GET /_alias
+GET /_cat/aliases
+
+# Allocation
+GET /metricbeat-example-production-frontend-2021.10.03-000013/_settings?flat_settings=true
+
+PUT /metricbeat-example-production-frontend-2021.10.03-000013/_settings
 {
-"index.max_result_window": 12000
+  "index.routing.allocation.include._ip": null,
+  "index.routing.allocation.include._host_ip": null,
+  "index.routing.allocation.include._publish_ip": null,
+  "index.routing.allocation.include._host": null,
+  "index.routing.allocation.include._name": null,
+  "index.routing.allocation.include._id": null,
+  "index.routing.allocation.include._tier": null
+}
+
+GET /metricbeat-example-production-frontend-2021.10.03-000006/_search_shards
+
+# Result Window
+PUT /indice-name/_settings
+{
+  "index.max_result_window": 12000
+}
+
+# Indice Priority
+GET /metricbeat-example-production-frontend-2021.10.03-000087/_settings?flat_settings=true
+
+PUT /metricbeat-example-production-frontend-2021.10.03-000087/_settings
+{
+  "settings": {
+    "index.priority": 10
+  }
 }
 ```
