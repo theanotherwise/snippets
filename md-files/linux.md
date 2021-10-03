@@ -90,8 +90,11 @@ netstat --interfaces
 ```bash
 lsof -u root
 lsof -p 10000
+
 lsof +d /usr/sibn
+lsof -u root -a +D /var/log/ -a +d /usr/bin
+
 lsof -i 4
 lsof -i TCP:1-1024
-lsof -u root -a +D /var/log/ -a +d /usr/bin
+lsof -u ^root -P -i TCP -i UDP
 ```
