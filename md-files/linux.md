@@ -43,6 +43,7 @@ ls -d /usr/local/share/ca-certificates/
 find /var/log -mindepth 1 -maxdepth 1 -type f -exec grep -Iq . {} 2>/dev/null \; -print
 ```
 
+`CPU / Devices`
 ```bash
 iostat -c                     # `CPU`
 iostat -c                     # `CPU`
@@ -51,9 +52,14 @@ iostat -d -m 1 10             # Device stat (megabytes)
 iostat -d -k 1 10             # Device stat (kilobytes)
 ```
 
+`Memory`
 ```bash
-vmstat      # `memory`
-mpstat      # `processors`
+vmstat
+```
+
+`Processors`
+```bash
+mpstat
 ```
 
 ```bash
