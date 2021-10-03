@@ -85,3 +85,13 @@ netstat --unix
 netstat --route
 netstat --interfaces
 ```
+
+`lsof`
+```bash
+lsof -u root
+lsof -p 10000
+lsof +d /usr/sibn
+lsof -i 4
+lsof -i TCP:1-1024
+lsof -u root -a +D /var/log/ -a +d /usr/bin
+```
