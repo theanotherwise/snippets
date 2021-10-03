@@ -59,6 +59,6 @@ mpstat      # `processors`
 ```bash
 blockdev --getsz /dev/sda     # Size (in sectors)
 blockdev --getbsz /dev/sda    # Block Size
-blockdev --getss /dev/sda     # Logical block size
-blockdev --getpbsz /dev/sda   # Physical block size
+blockdev --getss /dev/sda     # Logical sector size
+blockdev --getpbsz /dev/sda   # Physical sector size
 ```
