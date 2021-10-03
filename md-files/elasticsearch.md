@@ -1,4 +1,4 @@
-```curl
+```http
 # Cluster
 GET /_cat/health?pretty&v
 GET /_cluster/health?level=cluster
