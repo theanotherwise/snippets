@@ -60,6 +60,7 @@ vmstat
 mpstat
 ```
 
+`blockdev`
 ```bash
 blockdev --getsz /dev/sda     # Size (in sectors)
 blockdev --getbsz /dev/sda    # Block Size
@@ -67,8 +68,20 @@ blockdev --getss /dev/sda     # Logical sector size
 blockdev --getpbsz /dev/sda   # Physical sector size
 ```
 
+`iperf3`
 ```bash
 iperf3 --server --port 10000 --format M --verbose --bind 0.0.0.0 --logfile iperf3.log
 
 iperf3 --client 10.10.20.11 --port 10000 --format M --verbose --parallel 1 --time 10
+```
+
+`netstat`
+```bash
+netstat --tcp --udp --numeric --timers --extend --verbose                        # netstat -tunove
+netstat --tcp --udp --numeric --programs --listening --timers --extend --verbose # netstat -pltunove
+
+netstat --statistics
+netstat --unix
+netstat --route
+netstat --interfaces
 ```
