@@ -133,9 +133,9 @@ GET /_alias
 GET /_cat/aliases
 
 # Allocation
-GET /metricbeat-example-production-frontend-2021.10.03-000013/_settings?flat_settings=true
+GET /index-name/_settings?flat_settings=true
 
-PUT /metricbeat-example-production-frontend-2021.10.03-000013/_settings
+PUT /index-name/_settings
 {
   "index.routing.allocation.include._ip": null,
   "index.routing.allocation.include._host_ip": null,
@@ -146,7 +146,7 @@ PUT /metricbeat-example-production-frontend-2021.10.03-000013/_settings
   "index.routing.allocation.include._tier": null
 }
 
-GET /metricbeat-example-production-frontend-2021.10.03-000006/_search_shards
+GET /index-name/_search_shards
 
 # Result Window
 PUT /indice-name/_settings
@@ -155,9 +155,9 @@ PUT /indice-name/_settings
 }
 
 # Indice Priority
-GET /metricbeat-example-production-frontend-2021.10.03-000087/_settings?flat_settings=true
+GET /index-name/_settings?flat_settings=true
 
-PUT /metricbeat-example-production-frontend-2021.10.03-000087/_settings
+PUT /index-name/_settings
 {
   "settings": {
     "index.priority": 10
