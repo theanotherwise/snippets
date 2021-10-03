@@ -37,8 +37,6 @@ ls -d /usr/share/ca-certificates/
 ls -d /usr/local/share/ca-certificates/
 ```
 
-#
-
 ```bash
 find /var/log -mindepth 1 -maxdepth 1 -type f -exec grep -Iq . {} 2>/dev/null \; -print
 ```
@@ -67,4 +65,10 @@ blockdev --getsz /dev/sda     # Size (in sectors)
 blockdev --getbsz /dev/sda    # Block Size
 blockdev --getss /dev/sda     # Logical sector size
 blockdev --getpbsz /dev/sda   # Physical sector size
+```
+
+```bash
+iperf3 --server --port 10000 --format M --verbose --bind 0.0.0.0 --logfile iperf3.log
+
+iperf3 --client 10.10.20.11 --port 10000 --format M --verbose --parallel 1 --time 10
 ```
