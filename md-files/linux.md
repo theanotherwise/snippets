@@ -42,3 +42,23 @@ ls -d /usr/local/share/ca-certificates/
 ```bash
 find /var/log -mindepth 1 -maxdepth 1 -type f -exec grep -Iq . {} 2>/dev/null \; -print
 ```
+
+```bash
+iostat -c                     # `CPU`
+iostat -c                     # `CPU`
+
+iostat -d -m 1 10             # Device stat (megabytes)
+iostat -d -k 1 10             # Device stat (kilobytes)
+```
+
+```bash
+vmstat      # `memory`
+mpstat      # `processors`
+```
+
+```bash
+blockdev --getsz /dev/sda     # Size (in sectors)
+blockdev --getbsz /dev/sda    # Block Size
+blockdev --getss /dev/sda     # Logical block size
+blockdev --getpbsz /dev/sda   # Physical block size
+```
