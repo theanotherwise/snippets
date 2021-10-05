@@ -1,3 +1,7 @@
+```
+sysctl -w vm.max_map_count=262144
+```
+
 ```http
 # Cluster
 GET /_cat/health?pretty&v
