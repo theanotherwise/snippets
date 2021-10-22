@@ -1,6 +1,6 @@
 # Firewall
 
-* [iptables](md-files/linux/iptables.md)
+* [iptables](md-files/iptables.md)
 * [firewalld](md-files/firewalld.md)
-* [iptables Diagram](md-files/firewall/iptables-diagram.md)
-* [MikroTik Firewall Diagram](md-files/firewall/mikrotik-firewall-diagram.md)
+* [iptables Diagram](md-files/diagram-iptables.md)
+* [MikroTik Firewall Diagram](md-files/diagram-mikrotik.md)
