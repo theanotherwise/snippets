@@ -1,3 +1,3 @@
-* ### [Dolphin Layout](md-files/affinity.md)
-* ### [Dolphin Layout](md-files/contexts.md)
-* ### [Dolphin Layout](md-files/namespace-termintaing.md)
+* ### [Affinity](md-files/affinity.md)
+* ### [Contexts](md-files/contexts.md)
+* ### [Namespace Stuck on Terminating](md-files/namespace-termintaing.md)
