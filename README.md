@@ -26,12 +26,12 @@
   * [Fetch Parse](md-files/elasticsearch-fetch-parse.md)
 * [OpenVPN](md-files/openvpn.md)
 * Ruby on Rails
-  * [General](md-files/ruby-on-rails-general.md)
-  * [Database](md-files/ruby-on-rails-database.md)
-  * [Active Record Migration](md-files/ruby-on-rails-active-record-migration.md)
-  * [Logger](md-files/ruby-on-rails-logger.md)
-  * [API](md-files/ruby-on-rails-api.md)
-  * [Page Fix](md-files/ruby-on-rails-page-fix.md)
+  * [General](md-files/ruby-on-rails/general.md)
+  * [Database](md-files/ruby-on-rails/database.md)
+  * [Active Record Migration](md-files/ruby-on-rails/active-record-migration.md)
+  * [Logger](md-files/ruby-on-rails/logger.md)
+  * [API](md-files/ruby-on-rails/api.md)
+  * [Page Fix](md-files/ruby-on-rails/page-fix.md)
 * Red Hat Enterprise Linux
   * [Subscription Manager](md-files/rhel-subscription-manager.md)
 * Windows
