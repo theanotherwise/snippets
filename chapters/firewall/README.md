@@ -1,6 +1,3 @@
-# Firewall
-
----
 * ## Usage 
   * ### [iptables](md-files/iptables.md)
   * ### [firewalld](md-files/firewalld.md)
