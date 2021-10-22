@@ -1,16 +1,16 @@
 d# Snippets
 
 ## General
-* [ip](md-files/ip.md)
+* [ip](md-files/linux/ip.md)
 * Linux
-  * [General](md-files/linux.md)
-  * [systemd](md-files/linux-systemd.md)
-* [Cryptsetup](md-files/cryptsetup.md)
+  * [General](md-files/linux/linux.md)
+  * [systemd](md-files/linux/linux-systemd.md)
+* [Cryptsetup](md-files/linux/cryptsetup.md)
 * [git](md-files/git.md)
 * Docker
-  * [General](md-files/docker-general.md)
-  * [PostgreSQL](md-files/docker-postgresql.md)
-  * [Drupal](md-files/docker-drupal.md)
+  * [General](md-files/docker/docker-general.md)
+  * [PostgreSQL](md-files/docker/docker-postgresql.md)
+  * [Drupal](md-files/docker/docker-drupal.md)
 * [bitcoin-cli](md-files/bitcoin-cli.md)
 * Kubernetes
   * [Contexts](md-files/kubernetes/contexts.md)
@@ -21,9 +21,9 @@ d# Snippets
 * Jenkins
   * [API Usage](md-files/jenkins-api-usage.md)
 * Elasticsearch
-  * [Convention](md-files/elasticsearch-convention.md)
-  * [General](md-files/elasticsearch.md)
-  * [Fetch Parse](md-files/elasticsearch-fetch-parse.md)
+  * [Convention](md-files/elasticsearch/elasticsearch-convention.md)
+  * [General](md-files/elasticsearch/elasticsearch.md)
+  * [Fetch Parse](md-files/elasticsearch/elasticsearch-fetch-parse.md)
 * [OpenVPN](md-files/openvpn.md)
 * Ruby on Rails
   * [General](md-files/ruby-on-rails/general.md)
@@ -33,21 +33,21 @@ d# Snippets
   * [API](md-files/ruby-on-rails/api.md)
   * [Page Fix](md-files/ruby-on-rails/page-fix.md)
 * Red Hat Enterprise Linux
-  * [Subscription Manager](md-files/rhel-subscription-manager.md)
+  * [Subscription Manager](md-files/linux/rhel-subscription-manager.md)
 * Windows
-  * [Windows Subsystem for Linux](md-files/windows-wsl.md)
+  * [Windows Subsystem for Linux](md-files/windows/windows-wsl.md)
 * Apache2
-  * [MPM](md-files/apache2-mpm.md)
+  * [MPM](md-files/php/apache2-mpm.md)
 * [Internal DNS](md-files/internal-dns.md)
 * Wordlists
   * [Log Keyworlds](md-files/log-keywords.md)
 
 ## Firewall
 
-* [iptables](md-files/iptables.md)
+* [iptables](md-files/linux/iptables.md)
 * [firewalld](md-files/firewalld.md)
-* [iptables Diagram](md-files/iptables-diagram.md)
-* [MikroTik Firewall Diagram](md-files/mikrotik-firewall-diagram.md)
+* [iptables Diagram](md-files/firewall/iptables-diagram.md)
+* [MikroTik Firewall Diagram](md-files/firewall/mikrotik-firewall-diagram.md)
 
 # Password
 ```bash
