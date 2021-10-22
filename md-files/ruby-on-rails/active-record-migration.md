@@ -2,7 +2,7 @@
 rails generate migration InitializeDatabase
 
 rails db:migrate
-rails db:rollback
+rails db:rollback STEPS=10
 ```
 
 ```rails
