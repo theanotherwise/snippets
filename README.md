@@ -1,4 +1,4 @@
-# Snippets
+d# Snippets
 
 ## General
 * [ip](md-files/ip.md)
@@ -27,7 +27,7 @@
 * [OpenVPN](md-files/openvpn.md)
 * Ruby on Rails
   * [General](md-files/ruby-on-rails/general.md)
-  * [Database](md-files/ruby-on-rails/database.md)
+  * [Database Config](md-files/ruby-on-rails/database-config.md)
   * [Active Record Migration](md-files/ruby-on-rails/active-record-migration.md)
   * [Logger](md-files/ruby-on-rails/logger.md)
   * [API](md-files/ruby-on-rails/api.md)
