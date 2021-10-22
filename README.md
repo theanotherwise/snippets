@@ -14,6 +14,7 @@
 * [bitcoin-cli](md-files/bitcoin-cli.md)
 * Kubernetes
   * [Contexts](md-files/kubernetes-contexts.md)
+  * [Affinity](md-files/kubernetes-affinity.md)
   * [Namespace Stuck on Termintaing](md-files/kubernetes-namespace-stuck-on-termintaing.md)
 * [Text Processing](md-files/text-processing.md)
 * [Encoding / Decoding](md-files/encoding-decoding.md)
