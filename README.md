@@ -15,7 +15,7 @@
 * ### [PostgreSQL](chapters/postgresql)
 * ### [Ruby on Rails](chapters/ruby-on-rails)
 * ### [Text Processing](chapters/text-processing)
-* ### [wordlists](chapters/wordlists)
+* ### [Word Lists](chapters/word-lists)
 
 ##
 
