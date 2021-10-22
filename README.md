@@ -1,6 +1,12 @@
 # Snippets
 
-## Chapters
+## Additionals
+
+* ### [Assets](chapters/assets) 
+* ### [Word Lists](chapters/word-lists)
+
+---
+## Core 
 
 * ### [Docker](chapters/docker)
 * ### [Elasticsearch](chapters/elasticsearch)
@@ -15,9 +21,8 @@
 * ### [PostgreSQL](chapters/postgresql)
 * ### [Ruby on Rails](chapters/ruby-on-rails)
 * ### [Text Processing](chapters/text-processing)
-* ### [Word Lists](chapters/word-lists)
 
-##
+## Additionals
 
 ```bash
 sudo -i apt-get install pwgen xkcdpass -y
