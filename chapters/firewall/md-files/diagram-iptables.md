@@ -1,3 +1,3 @@
 # `iptables` Diagram
 
-![iptables Diagram](firewall/images/iptables-diagram.jpg)
+![iptables Diagram](../images/diagram-iptables.jpg)
