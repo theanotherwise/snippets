@@ -35,12 +35,12 @@ git fetch --prune --verbose
 
 ## Stash
 ```bash
-git stash push -m "probably good changes"     # Push to Stash
-git stash list                                # List of Stashes
-git stash show stash@{0} # content: -p        # Show Stash content
+git stash push -m "probably good changes"
+git stash list
+git stash show stash@{0} -p
 
-git pop stash@{0}                             # Get Stash
-# Or
+git pop stash@{0}
+
 git stash apply stash@{0}
 git stash drop stash@{0}
 ```
