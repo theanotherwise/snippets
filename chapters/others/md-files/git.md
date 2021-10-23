@@ -2,8 +2,35 @@
 
 ## Basics
 ```bash
+touch foo.txt
+
+git add foo.txt
+# 
+
+git mv foo.txt bar.txt
+git rm -f bar.txt
+```
+
+```bash
+touch foo.txt
+
+echo "Lorem Ipsum" > foo.txt
+git add foo.txt
+git commit -m "added foo.txt file"
+```
+
+```bash
+git reset --mixed
+git reset --soft
+
+git reset --hard
+```
+
+```bash
 git pull --verbose
+
 git fetch --all --verbose
+git fetch --prune --verbose
 ```
 
 ## Stash
@@ -24,20 +51,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 git stash store -m "test" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-# asda
+## Branch
 ```bash
-git config --global elp--edit
-git config --edit
-
-git push                                # Push changes 
-git pull                                # Pull changes
-git log                                 # Logs
-git status                              # Show status
-git show                                # Show
-
-git fetch --all                         # Fetch remote changes
-git fetch --prune                       # Fetch and remove deleted branches
-
 git switch bname                        # Switch to branch
 git checkout bname                      # Switch to branch
 
@@ -50,22 +65,18 @@ git checkout -b bname origin/bname      # Create new branch from specified branc
 git switch -c 2.6.2 tags/v2_6_2         # Create new branch from specified tag
 git checkout -b 2.7.2 tags/v2_7_2       # Create new branch from specified tag
 
-git reset --hard origin/bname           # Reset not push commits
-git clean -fd                           # Clean not commited changes
-
 git branch -vv                          # Show push origin
-git remote -v                           # Show current branch
+```
 
-git branch -a --contains tags/v2_7_2    # Search branch which contains tag
-
+```bash
 git push --set-upstream origin bname    # Set upstream
 git branch -u origin/bname              # Set upstream
+```
 
-# Stash
-# Merge
-# Rebase
+## Remote
+```bash
+git remote -v
 
-# Remote
 git remote rename origin test
 git remote rename test origin
 
