@@ -1,5 +1,32 @@
+# git 
+
+## Basics
 ```bash
-git config --global --edit
+git pull --verbose
+git fetch --all --verbose
+```
+
+## Stash
+```bash
+git stash push -m "probably good changes"     # Push to Stash
+git stash list                                # List of Stashes
+git stash show stash@{0} # content: -p        # Show Stash content
+
+git pop stash@{0}                             # Get Stash
+# Or
+git stash apply stash@{0}
+git stash drop stash@{0}
+```
+
+```bash
+git stash create
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+git stash store -m "test" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+# asda
+```bash
+git config --global elp--edit
 git config --edit
 
 git push                                # Push changes 
