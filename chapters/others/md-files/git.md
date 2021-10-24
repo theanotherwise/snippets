@@ -5,8 +5,6 @@
 touch foo.txt
 
 git add foo.txt
-# 
-
 git mv foo.txt bar.txt
 git rm -f bar.txt
 ```
@@ -15,8 +13,8 @@ git rm -f bar.txt
 touch foo.txt
 
 echo "Lorem Ipsum" > foo.txt
-git add foo.txt
-git commit -m "added foo.txt file"
+git add foo.txt                         # \
+git commit -m "added foo.txt file"      #  | -> same as git commit -m "message" -a
 ```
 
 ```bash
