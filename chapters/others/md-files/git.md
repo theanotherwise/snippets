@@ -4,22 +4,22 @@
 ```bash
 touch foo.txt
 
-git add foo.txt
-git mv foo.txt bar.txt
-git rm -f bar.txt
-```
+git stage foo.txt                             # Stage
+git mv foo.txt bar.txt                        # Rename
+git rm -f bar.txt                             # Remove
 
-```bash
 touch foo.txt
+git stage foo.txt                             # Stage
+git reset foo.txt                             # Unstage
 
-echo "Lorem Ipsum" > foo.txt
-git add foo.txt                         # \
-git commit -m "added foo.txt file"      #  | -> same as git commit -m "message" -a
+git stage foo.txt                             # \
+                                              #  | -> git commit -m "message" -a
+git commit -m "message"                       # /
 ```
 
 ```bash
-git reset --mixed
 git reset --soft
+git reset --mixed
 
 git reset --hard
 ```
@@ -27,8 +27,15 @@ git reset --hard
 ```bash
 git pull --verbose
 
-git fetch --all --verbose
-git fetch --prune --verbose
+git fetch --all --prune --verbose             # git remote update origin --prune
+```
+
+```bash
+git log
+git show xxxxx
+
+git revert xxxxx
+git revert xxxxx
 ```
 
 ## Stash
@@ -45,8 +52,8 @@ git stash drop stash@{0}
 
 ```bash
 git stash create
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-git stash store -m "test" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+git stash store -m "test" xxxxx
 ```
 
 ## Branch
