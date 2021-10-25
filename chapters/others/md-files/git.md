@@ -82,6 +82,8 @@ git branch -u origin/bname              # Set upstream
 ```bash
 git remote -v
 
+git remote update origin --prune        # same as -> git fetch --all --prune --verbose
+
 git remote rename origin test
 git remote rename test origin
 
