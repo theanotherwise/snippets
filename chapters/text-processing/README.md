@@ -1,5 +1,12 @@
-* ### [Columns Formating](md-files/columns-formating.md)
+```bash
+echo -e "Lorem\tipsum\tdolor\tsit\tamet" | awk '{print $2}'
+```
 
+```bash
+echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d" " -f1
+echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d$'\t' -f3
+echo -e "Lorem\tipsum\tdolor\tsit\tamet" | cut -d$'\t' -f1-2
+```
 
 ```bash
 cat file.txt | sort | uniq
