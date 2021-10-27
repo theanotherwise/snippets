@@ -19,8 +19,7 @@
 * [PHP](chapters/php)
 * [PostgreSQL](chapters/postgresql)
 * [Ruby on Rails](chapters/ruby-on-rails)
-* [Text Processing](chapters/text-processing)
-
+* 
 ## Password
 
 ```bash
