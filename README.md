@@ -1,11 +1,5 @@
 # Snippets
 
-## Additionals
-
-* [Assets](chapters/assets) 
-
-## Core
-
 * [Docker](chapters/docker)
 * [Elasticsearch](chapters/elasticsearch)
 * [Firewall](chapters/firewall)
