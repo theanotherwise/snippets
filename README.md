@@ -3,7 +3,6 @@
 ## Additionals
 
 * [Assets](chapters/assets) 
-* [Word Lists](chapters/word-lists)
 
 ## Core
 
