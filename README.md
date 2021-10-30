@@ -1,3 +1,5 @@
+# Snippets
+
 * [Docker](chapters/docker)
 * [Elasticsearch](chapters/elasticsearch)
 * [Firewall](chapters/firewall)
