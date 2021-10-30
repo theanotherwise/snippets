@@ -1,1 +1,0 @@
-* ### [Server Naming](md-files/server-naming.md)
