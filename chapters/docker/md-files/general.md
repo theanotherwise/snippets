@@ -11,7 +11,14 @@ docker build \
     --rm --force-rm \
     --pull --no-cache \
     --network network18 \
-    --tag example .
+    --tag example/example:latest .
+```
+
+```bash
+docker build \
+    --rm --force-rm \
+    --pull --no-cache \
+    --tag example/example:latest .
 ```
 
 ```bash
