@@ -24,6 +24,13 @@ docker run \
     example
 ```
 
+```bash
+docker run \
+    --tty --interactive --rm \
+    --name example \
+    logstash:7.14.2
+```
+
 ```docker
 RUN apt-get autoremove --purge -y && \
     apt-get autoclean && \
