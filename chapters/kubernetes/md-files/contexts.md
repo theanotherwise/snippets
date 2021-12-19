@@ -20,3 +20,6 @@ kubectl config set-context --current --namespace=example
 kubectl config rename-context foo bar
 kubectl config delete-context foo
 ```
+```bash
+kubectl config view --minify -o jsonpath='{}'
+```
