@@ -1,4 +1,8 @@
 ```bash
+https://cloud.google.com/sdk/docs/install
+```
+
+```bash
 gcloud auth login
 
 gcloud projects list
