@@ -1,5 +1,5 @@
 ```json
-features"{ "buildkit" : false 
+features"{ "buildkit" : false }
 ```
 
 ```bash
