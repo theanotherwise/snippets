@@ -71,5 +71,7 @@ docker volume rm `docker volume ls | tail -n +2 | awk '{print $2}'`
 ```
 
 ```bash
+docker-compose up --force-recreate --build --remove-orphans
+
 docker-compose up --force-recreate --build --remove-orphans --detach
 ```
