@@ -13,3 +13,4 @@
 * [PostgreSQL](chapters/postgresql)
 * [Ruby on Rails](chapters/ruby-on-rails)
 * [VMware](chapters/vmware)
+* [Certificates](chapters/certificates)
