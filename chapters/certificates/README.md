@@ -1,4 +1,10 @@
 ```bash
+openssl x509 -subject -nameopt RFC2253 -noout -in client.crt.pem
+
+openssl x509 -text -noout -in client.crt.pem 
+```
+
+```bash
 openssl req -nodes -x509 -days 3650 -newkey rsa:4096 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root" \
   -keyout ca.key.pem -out ca.crt.pem
 
