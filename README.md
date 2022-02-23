@@ -12,3 +12,4 @@
 * [PHP](chapters/php)
 * [PostgreSQL](chapters/postgresql)
 * [Ruby on Rails](chapters/ruby-on-rails)
+* [VMWare](chapters/vmware)
