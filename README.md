@@ -6,6 +6,7 @@
 * [Jenkins](chapters/jenkins)
 * [KDE Plasma](chapters/kde-plasma)
 * [Kubernetes](chapters/kubernetes)
+* [Helm](chapters/helm)
 * [Linux](chapters/linux)
 * [OpenVPN](chapters/openvpn)
 * [Others](chapters/others)
