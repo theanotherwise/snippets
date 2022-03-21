@@ -48,7 +48,6 @@ nodeGroups:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  group: {{ $group.name }}
   name: {{ include "observability-opensearch.groupName"
            (dict "root" $ "groupName" $group.name "zoneName" $zone.value ) }}
 {{- end }}
@@ -62,20 +61,17 @@ metadata:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  group: master
   name: observability-opensearch-master
 ---
 # Source: observability-opensearch/templates/statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  group: data
   name: observability-opensearch-data-az1
 ---
 # Source: observability-opensearch/templates/statefulset.yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  group: data
   name: observability-opensearch-data-az2
 ```
