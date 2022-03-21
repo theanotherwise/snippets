@@ -1,1 +1,1 @@
-* ### [General](md-files/double-range.md)
+* ### [Double Range](md-files/double-range.md)
