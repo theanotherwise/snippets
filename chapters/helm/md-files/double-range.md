@@ -1,21 +1,22 @@
 `values.yaml`
 ```yaml
 nameOverride: ""
-fullnameOverride: "observability-opensearch"
+fullnameOverride: "opensearch"
 
 nodeGroups:
   - name: master
     replicas: 3
     zones:
       - name: ALL
-        value: "ALL"
+        value: "all"
   - name: data
     replicas: 3
+    separatedZones: false
     zones:
-      - name: INX
-        value: az1
-      - name: RDB
-        value: az2
+      - name: FOO
+        value: "az1"
+      - name: BAR
+        value: "az2"
 ```
 
 `_helpers.tpl`
@@ -31,7 +32,7 @@ nodeGroups:
 
 {{- define "observability-opensearch.groupName" -}}
 {{- $fullName := (include "observability-opensearch.fullName" .root) -}}
-{{- if ne .zoneName "ALL" -}}
+{{- if ne .zoneName "all" -}}
 {{- printf "%s-%s-%s" $fullName .groupName .zoneName -}}
 {{- else -}}
 {{- printf "%s-%s" $fullName .groupName -}}
