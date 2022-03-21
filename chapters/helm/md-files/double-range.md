@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/9096064/159373672-7034d3fb-aea4-4d54-a8b7-3298175a254e.png)
+
 `values.yaml`
 ```yaml
 nameOverride: ""
