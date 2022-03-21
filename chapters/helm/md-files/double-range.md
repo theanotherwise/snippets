@@ -1,5 +1,3 @@
-![image](https://user-images.githubusercontent.com/9096064/159373672-7034d3fb-aea4-4d54-a8b7-3298175a254e.png)
-
 `values.yaml`
 ```yaml
 nameOverride: ""
@@ -54,4 +52,29 @@ metadata:
            (dict "root" $ "groupName" $group.name "zoneName" $zone.value ) }}
 {{- end }}
 {{- end }}
+```
+
+## Result
+```yaml
+---
+# Source: observability-opensearch/templates/statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  group: master
+  name: observability-opensearch-master
+---
+# Source: observability-opensearch/templates/statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  group: data
+  name: observability-opensearch-data-az1
+---
+# Source: observability-opensearch/templates/statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  group: data
+  name: observability-opensearch-data-az2
 ```
