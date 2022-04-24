@@ -11,8 +11,8 @@ echo -e "HTTPS:\t${CLUSTERHTTPS}"
 
 #### Delete
 ```bash
-kubctl -n kube-system delete svc traefik-dashboard
-kubctl -n kube-system delete ingress traefik-dashboard
+kubectl -n kube-system delete svc traefik-dashboard
+kubectl -n kube-system delete ingress traefik-dashboard
 ```
 
 #### Create
