@@ -12,7 +12,7 @@ echo -e "HTTPS (Node Port):\t${CLUSTERHTTPS}"
 kubectl -n kube-system delete svc traefik-dashboard
 kubectl -n kube-system delete ingress traefik-dashboard
 
-kubectl -n kube-system expose deploy/traefik \
+kubectl -n kube-system expose deployment/traefik \
                        --port=9000 \
                        --target-port=9000 \
                        --name=traefik-dashboard
