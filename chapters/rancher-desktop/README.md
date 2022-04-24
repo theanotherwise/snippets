@@ -1,10 +1,7 @@
 ### Node Port
 ```bash
-export CLUSTERHTTP="`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[0].nodePort'`"
-export CLUSTERHTTPS="`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[1].nodePort'`"
-
-echo -e "HTTP (Node Port):\t${CLUSTERHTTP}"
-echo -e "HTTPS (Node Port):\t${CLUSTERHTTPS}"
+echo -e "HTTP (Node Port):\t`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[0].nodePort'`"
+echo -e "HTTPS (Node Port):\t`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[1].nodePort'`"
 ```
 
 ### Traefik Dashboard
