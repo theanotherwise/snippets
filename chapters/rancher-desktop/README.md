@@ -1,6 +1,5 @@
 ```bash
 export CLUSTERIP=127.0.0.1
-
 export CLUSTERHTTP=`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[0].nodePort'`
 export CLUSTERHTTPS=`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[1].nodePort'`
 
