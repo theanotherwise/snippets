@@ -17,11 +17,10 @@ kubectl -n kube-system delete ingress traefik-dashboard
 
 #### Create
 ```bash
-kubectl -n kube-system expose deploy/traefik --port=9000 --target-port=9000 --name=traefik-dashboard
-kubectl -n kube-system create ingress traefik-dashboard --rule="dashboard.traefik.127.0.0.1.sslip.io/*=traefik-dashboard:9000"
-```
-
-```bash
-curl -si http://dashboard.traefik.127.0.0.1.sslip.io:$CLUSTERHTTP/dashboard/ 
-echo http://dashboard.traefik.127.0.0.1.sslip.io:$CLUSTERHTTP/dashboard/
+kubectl -n kube-system expose deploy/traefik \
+                       --port=9000 \
+                       --target-port=9000 \
+                       --name=traefik-dashboard
+kubectl -n kube-system create ingress traefik-dashboard \
+                              --rule="dashboard.traefik.127.0.0.1.sslip.io/*=traefik-dashboard:9000"
 ```
