@@ -1,3 +1,6 @@
+[KDE Konsole Reference](https://docs.kde.org/stable5/en/konsole/konsole/konsole.pdf)
+----
+
 | Name       | Shortcut                | Send Key |
 |------------|-------------------------|----------|
 |Word Left|Left+Ctrl|\E[1;*D|
