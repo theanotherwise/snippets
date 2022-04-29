@@ -20,3 +20,4 @@
 * [YouTube Downloader](chapters/youtube-downloader)
 * [Google Console](chapters/gcloud)
 * [Rancher Desktop](chapters/rancher-desktop)
+* [KeyTab](chapters/keytab)
