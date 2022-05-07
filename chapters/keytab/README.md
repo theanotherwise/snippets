@@ -20,3 +20,5 @@ sed -n l
 |Line Down|Shift+Down|ScrollLineDown|
 |Page Up|PgUp+Shift|ScrollPageUp|
 |Page Down|PgDown+Shift|ScrollPageDown|
+|Backspace|Backspace|\x7f|
+|Delete|Del|\E[3~|
