@@ -15,10 +15,10 @@ sed -n l
 |Down|Down|\E[B|
 |Left|Left|\E[D|
 |Right|Right|\E[C|
-|Tab|Tab|\t|
 |Line Up|Shift+Up|ScrollLineUp|
 |Line Down|Shift+Down|ScrollLineDown|
 |Page Up|PgUp+Shift|ScrollPageUp|
 |Page Down|PgDown+Shift|ScrollPageDown|
+|Tab|Tab|\t|
 |Backspace|Backspace|\x7f|
 |Delete|Del|\E[3~|
