@@ -6,6 +6,8 @@ sed -n l
 ```
 
 ```
+keyboard "TheAnotherWise Keytab"
+
 key Left+Alt        : "\E[H"
 key Right+Alt       : "\E[F"
 key Left+Ctrl       : "\E[1;*D"
