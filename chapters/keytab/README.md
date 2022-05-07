@@ -13,3 +13,4 @@ sed -n l
 |End of Line|Right+Alt|\E[F|
 |xxx|Left-Shift-Ansi|\ED|
 |x|Left-Shift+Ansi-AppCursorKeys|\E[D|
+
