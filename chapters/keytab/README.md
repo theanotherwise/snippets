@@ -16,3 +16,5 @@ sed -n l
 |Tab|Tab|\t|
 |Up|Up|\E[A|
 |Down|Down|\E[B|
+|Line Up|Shift+Up|ScrollLineUp|
+|Line Down|Shift+Down|ScrollLineDown|
