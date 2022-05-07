@@ -18,3 +18,5 @@ sed -n l
 |Tab|Tab|\t|
 |Line Up|Shift+Up|ScrollLineUp|
 |Line Down|Shift+Down|ScrollLineDown|
+|Page Up|PgUp+Shift|ScrollPageUp|
+|Page Down|PgDown+Shift|ScrollPageDown|
