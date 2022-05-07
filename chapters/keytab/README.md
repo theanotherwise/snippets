@@ -11,5 +11,5 @@ sed -n l
 |Word Right|Right+Ctrl|\E[1;*C|
 |Start of Line|Left+Alt|\E[H|
 |End of Line|Right+Alt|\E[F|
-|Left|Left-Shift+Ansi-AppCursorKeys|\E[D|
-|Right|Right-Shift+Ansi-AppCursorKeys|\E[C|
+|Left|Left|\E[D|
+|Right|Right|\E[C|
