@@ -6,9 +6,6 @@ sed -n l
 ```
 
 ```
-key 
-```
-
 key Left+Alt        : "\E[H"
 key Right+Alt       : "\E[F"
 key Left+Ctrl       : "\E[1;*D"
@@ -24,3 +21,4 @@ key PgDown+Shift|ScrollPageDown|
 key Tab|\t|
 key Backspace|\x7f|
 key Del|\E[3~|
+```
