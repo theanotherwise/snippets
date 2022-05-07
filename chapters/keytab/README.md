@@ -12,3 +12,4 @@ sed -n l
 |Start of Line|Left+Alt|\E[H|
 |End of Line|Right+Alt|\E[F|
 |xxx|Left-Shift-Ansi|\ED|
+|x|Left-Shift+Ansi-AppCursorKeys|\E[D|
