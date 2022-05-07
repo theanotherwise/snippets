@@ -13,3 +13,6 @@ sed -n l
 |End of Line|Right+Alt|\E[F|
 |Left|Left|\E[D|
 |Right|Right|\E[C|
+|Tab|Tab|\t|
+|Up|Up|\E[A|
+|Down|Down|\E[B|
