@@ -1,0 +1,81 @@
+keyboard "TheAnotherWise"
+
+##########################################
+######  Basics
+
+key Escape                      : "\E"
+key Tab                         : "\t"
+key Backspace                   : "\x7f"
+key Delete                      : "\E[3~"
+
+##########################################
+######  Others
+
+# key Home                      : "\E[1~"
+# key End                       : "\E[4~"
+# key Insert-Shift              : "\E[2~"
+# key Space+Control             : "\x00"
+
+##########################################
+######  Return / Enter
+
+key Return-NewLine              : "\r"
+key Return+NewLine              : "\r\n"
+key Enter+NewLine               : "\r\n"
+key Enter-NewLine               : "\r"
+
+##########################################
+######  Key Up
+
+key Up-Shift-Ansi               : "\EA"
+key Up-Shift+Ansi-AppCuKeys     : "\E[A"
+key Up-Shift+Ansi+AppCuKeys     : "\EOA"
+
+##########################################
+######  Key Down
+
+key Down-Shift-Ansi             : "\EB"
+key Down-Shift+Ansi-AppCuKeys   : "\E[B"
+key Down-Shift+Ansi+AppCuKeys   : "\EOB"
+
+##########################################
+######  Key Left
+
+key Left-Shift-Ansi             : "\ED"
+key Left-Shift+Ansi-AppCuKeys   : "\E[D"
+key Left-Shift+Ansi+AppCuKeys   : "\EOD"
+
+##########################################
+######  Key Right
+
+key Right-Shift-Ansi            : "\EC"
+key Right-Shift+Ansi-AppCuKeys  : "\E[C"
+key Right-Shift+Ansi+AppCuKeys  : "\EOC"
+
+##########################################
+######  Start / End of Line
+
+key Left+Alt                    : "\E[H"
+key Right+Alt                   : "\E[F"
+
+##########################################
+######  Word Left / Right
+
+key Left+Ctrl                   : "\E[1;*D"
+key Right+Ctrl                  : "\E[1;*C"
+
+##########################################
+######  Line Up / Down
+
+key Up+Shift                    : scrollLineUp
+key Down+Shift                  : scrollLineDown
+
+##########################################
+######  Screen Up /  Down
+
+key PgUp+Shift                  : scrollPageUp
+key PgUp-Shift                  : "\E[5~"
+key PgDown+Shift                : scrollPageDown
+key PgDown-Shift                : "\E[6~"
+
+##########################################
