@@ -1,1 +1,0 @@
-![Dolphin Layout](../images/dolphin-layout.png)
