@@ -1,3 +1,3 @@
 # KDE Plasma
 
-* ### [KeyTab](./md-files/theanotherwise.keytab)
+* ### [Combined KeyTab](./md-files/theanotherwise.keytab)
