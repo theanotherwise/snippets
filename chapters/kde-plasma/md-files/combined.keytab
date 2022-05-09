@@ -1,15 +1,32 @@
 keyboard "Combined"
 
+####################################
+######
+######      Common
+
 key Escape                              : "\E"
 key Space+Control                       : "\x00"
 
 key Backspace                           : "\x7f"
+
+key Tab                                 : "\t"
+key Tab-Shift                           : "\t"
+key Tab+Shift+Ansi                      : "\E[Z"
+key Tab+Shift-Ansi                      : "\t"
+
+####################################
+######
+######      Insert / Delete
 
 key Insert-Shift                        : "\E[2~"
 key Insert+KeyPad                       : "\E[2~"
 
 key Delete                              : "\E[3~"
 key Delete+KeyPad                       : "\E[3~"
+
+####################################
+######
+######      Home / End
 
 key Home                                : "\E[1~"
 key Home+AppCuKeys+KeyPad               : "\EOH"
@@ -23,13 +40,16 @@ key End-AppCuKeys+KeyPad                : "\E[F"
 key End-AnyMod+AppCuKeys                : "\EOF"
 key End-AnyMod-AppCuKeys                : "\E[F"
 
-key Tab                                 : "\t"
-key Tab-Shift                           : "\t"
-key Tab+Shift+Ansi                      : "\E[Z"
-key Tab+Shift-Ansi                      : "\t"
+####################################
+######
+######      Enter
 
 key Enter+NewLine                       : "\r\n"
 key Enter-NewLine                       : "\r"
+
+####################################
+######
+######      Return
 
 key Return-NewLine                      : "\r"
 key Return+NewLine                      : "\r\n"
@@ -37,11 +57,19 @@ key Return+NewLine                      : "\r\n"
 key Return-Shift-NewLine                : "\r"
 key Return-Shift+NewLine                : "\r\n"
 
+####################################
+######
+######      Up
+
 key Up-Shift-Ansi                       : "\EA"
 key Up-Shift+Ansi+AppCuKeys             : "\EOA"
 key Up-Shift+Ansi-AppCuKeys             : "\E[A"
 key Up-Shift+Ansi+AppCuKeys+KeyPad      : "\EOA"
 key Up-Shift+Ansi-AppCuKeys+KeyPad      : "\E[A"
+
+####################################
+######
+######      Down
 
 key Down-Shift-Ansi                     : "\EB"
 key Down-Shift+Ansi+AppCuKeys           : "\EOB"
@@ -49,11 +77,19 @@ key Down-Shift+Ansi-AppCuKeys           : "\E[B"
 key Down-Shift+Ansi+AppCuKeys+KeyPad    : "\EOB"
 key Down-Shift+Ansi-AppCuKeys+KeyPad    : "\E[B"
 
+####################################
+######
+######      Right
+
 key Right-Shift-Ansi                    : "\EC"
 key Right-Shift+Ansi+AppCuKeys          : "\EOC"
 key Right-Shift+Ansi-AppCuKeys          : "\E[C"
 key Right-Shift+Ansi+AppCuKeys+KeyPad   : "\EOC"
 key Right-Shift+Ansi-AppCuKeys+KeyPad   : "\E[C"
+
+####################################
+######
+######      Left
 
 key Left-Shift-Ansi                     : "\ED"
 key Left-Shift+Ansi+AppCuKeys           : "\EOD"
@@ -61,17 +97,39 @@ key Left-Shift+Ansi-AppCuKeys           : "\E[D"
 key Left-Shift+Ansi+AppCuKeys+KeyPad    : "\EOD"
 key Left-Shift+Ansi-AppCuKeys+KeyPad    : "\E[D"
 
+####################################
+######
+######      Begin / End of Line
+
 key Left+Alt                            : "\E[H"
 key Right+Alt                           : "\E[F"
+
+####################################
+######
+######      Move by Word
 
 key Left+Ctrl                           : "\E[1;*D"
 key Right+Ctrl                          : "\E[1;*C"
 
+####################################
+######
+######      Scroll by Line
+
 key Up+Shift                            : scrollLineUp
 key Down+Shift                          : scrollLineDown
 
+####################################
+######
+######      Scroll by Screen
+
 key PgUp+Shift-AppScreen                : scrollPageUp
+key PgUp-Shift+KeyPad                   : "\E[5~"
 key PgDown+Shift-AppScreen              : scrollPageDown
+key PgDown-Shift+KeyPad                 : "\E[6~"
+
+####################################
+######
+######      Scroll Top / Bottom
 
 key Home+Shift-AppScreen                : scrollUpToTop
 key End+Shift-AppScreen                 : scrollDownToBottom
