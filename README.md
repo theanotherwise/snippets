@@ -4,7 +4,6 @@
 * [Elasticsearch](chapters/elasticsearch)
 * [Firewall](chapters/firewall)
 * [Jenkins](chapters/jenkins)
-* [KDE Plasma](chapters/kde-plasma)
 * [Kubernetes](chapters/kubernetes)
 * [Helm](chapters/helm)
 * [Linux](chapters/linux)
@@ -20,4 +19,3 @@
 * [YouTube Downloader](chapters/youtube-downloader)
 * [Google Console](chapters/gcloud)
 * [Rancher Desktop](chapters/rancher-desktop)
-* [KeyTab](chapters/keytab)
