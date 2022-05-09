@@ -1,4 +1,4 @@
-keyboard "TheAnotherWise"
+keyboard "Combined"
 
 key Escape                              : "\E"
 key Space+Control                       : "\x00"
