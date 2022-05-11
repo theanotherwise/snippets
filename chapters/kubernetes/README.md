@@ -1,13 +1,14 @@
 * ### [Contexts](md-files/contexts.md)
 
+#### patch via file
 ```bash
-kubectl get statefulsets -o json observability-opensearch-master > to_patch.json
+# jq '.spec.replicas = 3'
+kubectl get statefulsets -o json NAME
 
-cat to_patch.json | jq '.spec.replicas = 3' > patch.json
-
-kubectl patch statefulsets --patch-file patch.json observability-opensearch-master
+kubectl patch statefulsets --patch-file patch.json NAME
 ```
 
+#### Patch in line
 ```
-kubectl patch deployment -p '{"spec":{"replicas":3}}' nginx 
+kubectl patch statefulsets -p '{"spec":{"replicas":3}}' NAME
 ```
