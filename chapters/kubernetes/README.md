@@ -2,7 +2,7 @@
 
 ### Patching
 
-#### patch via file
+#### Patch via file
 ```bash
 # jq '.spec.replicas = 3'
 kubectl get statefulsets -o json NAME
