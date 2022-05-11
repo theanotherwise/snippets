@@ -1,19 +1,13 @@
-* ### [Affinity](md-files/affinity.md)
 * ### [Contexts](md-files/contexts.md)
-* ### [Namespace Stuck on Terminating](md-files/namespace-termintaing.md)
 
-```yml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: dnsutils
-spec:
-  containers:
-  - name: dnsutils
-    image: gcr.io/kubernetes-e2e-test-images/dnsutils:1.3
-    command:
-      - sleep
-      - "3600"
-    imagePullPolicy: IfNotPresent
-  restartPolicy: Always
+```bash
+kubectl get statefulsets -o json observability-opensearch-master > to_patch.json
+
+cat to_patch.json | jq '.spec.replicas = 3' > patch.json
+
+kubectl patch statefulsets --patch-file patch.json observability-opensearch-master
+```
+
+```
+kubectl patch deployment -p '{"spec":{"replicas":3}}' nginx 
 ```
