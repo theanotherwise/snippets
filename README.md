@@ -4,7 +4,6 @@
 * [Elasticsearch](chapters/elasticsearch)
 * [Firewall](chapters/firewall)
 * [Jenkins](chapters/jenkins)
-* [Kubernetes](chapters/kubernetes)
 * [Helm](chapters/helm)
 * [Linux](chapters/linux)
 * [OpenVPN](chapters/openvpn)
