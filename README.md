@@ -1,12 +1,42 @@
 # Snippets
-* [Jenkins](chapters/jenkins)
-* [OpenVPN](chapters/openvpn)
-* [PHP](chapters/php)
-* [PostgreSQL](chapters/postgresql)
-* [Ruby on Rails](chapters/ruby-on-rails)
-* [VMware](chapters/vmware)
 
-## Single Page
-* [YouTube Downloader](chapters/youtube-downloader)
-* [Google Console](chapters/gcloud)
-* [Rancher Desktop](chapters/rancher-desktop)
+## Index
+
+### Google Cloud Console
+
+- [Initialize Console](md-files/gcp/init-console.md)
+
+### Docker Engine
+
+- [General](md-files/docker/general.md)
+- [Docker Engine](md-files/docker/settings.md)
+
+### Firewalls
+
+- `iptables`
+    - [Usage](md-files/firewalls/iptables.md)
+    - [Diagram](md-files/firewalls/iptables-diagram.md)
+- [Firewalld](md-files/firewalls/firewalld.md)
+- [MikroTik Diagram](md-files/firewalls/mikrotik-diagram.md)
+
+### Helm
+
+- [Double Range](md-files/helm/double-range.md)
+
+### Kubernetes
+
+- [Contexsts](md-files/kubernetes/contexts.md)
+- [Patch Resource](md-files/kubernetes/patch-resource.md)
+
+### Linux
+
+* [General](md-files/linux/general.md)
+* [Root CA](md-files/linux/root-ca.md)
+* [Crypto Setup](md-files/linux/crypt-setup.md)
+* [`ip`](md-files/linux/ip.md)
+* [systemd](md-files/linux/systemd.md)
+* [Subscription Manager](md-files/linux/subscription-manager.md)
+
+### VMware
+
+* [VMware Shrink VMDK](md-files/vmware/shrink-vmdk.md)
