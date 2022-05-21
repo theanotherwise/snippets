@@ -1,6 +1,4 @@
 # Snippets
-
-* [Docker](chapters/docker)
 * [Elasticsearch](chapters/elasticsearch)
 * [Jenkins](chapters/jenkins)
 * [OpenVPN](chapters/openvpn)
