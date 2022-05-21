@@ -2,7 +2,6 @@
 
 * [Docker](chapters/docker)
 * [Elasticsearch](chapters/elasticsearch)
-* [Firewall](chapters/firewall)
 * [Jenkins](chapters/jenkins)
 * [OpenVPN](chapters/openvpn)
 * [Others](chapters/others)
