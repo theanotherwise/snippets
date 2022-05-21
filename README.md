@@ -1,5 +1,4 @@
 # Snippets
-* [Elasticsearch](chapters/elasticsearch)
 * [Jenkins](chapters/jenkins)
 * [OpenVPN](chapters/openvpn)
 * [Others](chapters/others)
