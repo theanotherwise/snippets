@@ -1,5 +1,0 @@
-* ### [General](md-files/general.md)
-* ### [Crypto Setup](md-files/cryptsetup.md)
-* ### [`ip` Usage](md-files/ip.md)
-* ### [systemd](md-files/systemd.md)
-* ### [Subscription Manager](md-files/subscription-manager.md)
