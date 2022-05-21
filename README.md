@@ -37,6 +37,10 @@
 - [systemd](md-files/linux/systemd.md)
 - [Subscription Manager](md-files/linux/subscription-manager.md)
 
+### VPN
+
+- [OpenVPN Config](md-files/vpn/openvpn-config.md)
+
 ### VMware
 
 -[VMware Shrink VMDK](md-files/vmware/shrink-vmdk.md)
