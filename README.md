@@ -1,7 +1,6 @@
 # Snippets
 * [Jenkins](chapters/jenkins)
 * [OpenVPN](chapters/openvpn)
-* [Others](chapters/others)
 * [PHP](chapters/php)
 * [PostgreSQL](chapters/postgresql)
 * [Ruby on Rails](chapters/ruby-on-rails)
