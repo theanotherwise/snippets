@@ -1,17 +1,14 @@
-### Node Port
 ```bash
 echo -e "HTTP (Node Port):\t`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[0].nodePort'`"
 echo -e "HTTPS (Node Port):\t`kubectl get service -n kube-system traefik -o json | jq '.spec.ports[1].nodePort'`"
 ```
 
-### Traefik Dashboard
 ```bash
 kubectl -n kube-system delete svc traefik-dashboard
 kubectl -n kube-system delete ingress traefik-dashboard
 
 kubectl -n kube-system expose deployment/traefik \
-                       --port=9000 \
-                       --target-port=9000 \
+                       --port=9000 --target-port=9000 \
                        --name=traefik-dashboard
 
 kubectl -n kube-system create ingress traefik-dashboard \
