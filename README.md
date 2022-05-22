@@ -9,9 +9,8 @@
   - [Docker Engine](md-files/docker/settings.md)
 - [`ip` Usage](md-files/linux/ip.md)
 - Firewalls
-  - `iptables`
-    - [Usage](md-files/firewalls/iptables.md)
-    - [Diagram](md-files/firewalls/iptables-diagram.md)
+  - [`iptables` Usage](md-files/firewalls/iptables.md)
+  - [`iptables` Diagram](md-files/firewalls/iptables-diagram.md)
   - [Firewalld](md-files/firewalls/firewalld.md)
   - [MikroTik Diagram](md-files/firewalls/mikrotik-diagram.md)
 - Helm:
