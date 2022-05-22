@@ -4,7 +4,7 @@
 
 - GCP
   - [Initialize Console](md-files/gcp/init-console.md)
-- Docker:
+- Docker
   - [General](md-files/docker/general.md)
   - [Docker Engine](md-files/docker/settings.md)
 - Firewalls
@@ -12,12 +12,12 @@
   - [`iptables` Diagram](md-files/firewalls/iptables-diagram.md)
   - [Firewalld](md-files/firewalls/firewalld.md)
   - [MikroTik Diagram](md-files/firewalls/mikrotik-diagram.md)
-- Helm:
+- Helm
   - [Double Range](md-files/helm/double-range.md)
-- Kubernetes:
+- Kubernetes
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
-- Linux:
+- Linux
   - [General](md-files/linux/general.md)
   - [`ip` Usage](md-files/linux/ip.md)
   - [Root CA](md-files/linux/root-ca.md)
@@ -32,4 +32,5 @@
   - [API Usage](md-files/jenkins/api-usage.md)
 - Apache2
   - [Apache2 MPM](md-files/apache2/mpm.md)
-- [Rancher Desktop SVC Access](md-files/rancher-desktop/svc-access.md)
+- Rancher Desktop
+  - [SVC Access](md-files/rancher-desktop/svc-access.md)
