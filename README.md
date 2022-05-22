@@ -18,8 +18,8 @@
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
 - Linux:
-  - [`ip` Usage](md-files/linux/ip.md)
   - [General](md-files/linux/general.md)
+  - [`ip` Usage](md-files/linux/ip.md)
   - [Root CA](md-files/linux/root-ca.md)
   - [Crypto Setup](md-files/linux/crypt-setup.md)
   - [systemd](md-files/linux/systemd.md)
