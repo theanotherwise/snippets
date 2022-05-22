@@ -7,7 +7,6 @@
 - Docker:
   - [General](md-files/docker/general.md)
   - [Docker Engine](md-files/docker/settings.md)
-- [`ip` Usage](md-files/linux/ip.md)
 - Firewalls
   - [`iptables` Usage](md-files/firewalls/iptables.md)
   - [`iptables` Diagram](md-files/firewalls/iptables-diagram.md)
@@ -19,6 +18,7 @@
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
 - Linux:
+  - [`ip` Usage](md-files/linux/ip.md)
   - [General](md-files/linux/general.md)
   - [Root CA](md-files/linux/root-ca.md)
   - [Crypto Setup](md-files/linux/crypt-setup.md)
