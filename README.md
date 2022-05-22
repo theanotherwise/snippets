@@ -8,7 +8,7 @@
   - [General](md-files/docker/general.md)
   - [Docker Engine](md-files/docker/settings.md)
 - Firewalls
-  - [`iptables` Usage](md-files/firewalls/iptables.md)
+  - [`iptables`](md-files/firewalls/iptables.md)
   - [`iptables` Diagram](md-files/firewalls/iptables-diagram.md)
   - [Firewalld](md-files/firewalls/firewalld.md)
   - [MikroTik Diagram](md-files/firewalls/mikrotik-diagram.md)
@@ -19,7 +19,7 @@
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
 - Linux
   - [General](md-files/linux/general.md)
-  - [`ip` Usage](md-files/linux/ip.md)
+  - [`ip`](md-files/linux/ip.md)
   - [Root CA](md-files/linux/root-ca.md)
   - [Crypto Setup](md-files/linux/crypt-setup.md)
   - [systemd](md-files/linux/systemd.md)
