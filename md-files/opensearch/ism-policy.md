@@ -1,4 +1,4 @@
-```bash
+```json
 GET _cluster/settings
 PUT _cluster/settings
 {
