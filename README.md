@@ -30,6 +30,8 @@
   - [VMware Shrink VMDK](md-files/vmware/shrink-vmdk.md)
 - Jenkins
   - [API Usage](md-files/jenkins/api-usage.md)
+- Opensearch
+  - [ISM Policy](md-files/opensearch/ism-policy.md)
 - Apache2
   - [Apache2 MPM](md-files/apache2/mpm.md)
 - Rancher Desktop
