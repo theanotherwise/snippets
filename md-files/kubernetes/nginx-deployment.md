@@ -1,8 +1,14 @@
 ```yaml
 apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
+  namespace: nginx
 spec:
   containers:
     - name: nginx
@@ -11,9 +17,9 @@ spec:
         - name: http
           containerPort: 8080
       securityContext:
-        runAsUser: 101
-        runAsGroup: 101
-        runAsNonRoot: true
+        runAsUser: 0
+        runAsGroup: 0
+        runAsNonRoot: false
         privileged: false
         allowPrivilegeEscalation: false
       volumeMounts:
@@ -61,6 +67,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-config
+  namespace: nginx
 data:
   default.conf: |
     server {
