@@ -17,7 +17,9 @@
 - Kubernetes
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
-  - [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
+  - [PSP Restricted](md-files/kubernetes/psp-restricted.md)
+  - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
+- [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
 - Linux
   - [General](md-files/linux/general.md)
   - [`ip`](md-files/linux/ip.md)
