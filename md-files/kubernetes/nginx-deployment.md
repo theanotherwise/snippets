@@ -6,21 +6,23 @@ metadata:
 spec:
   containers:
     - name: nginx
-      image: nginx:1.14.2
-      #      command: ["/bin/bash", "-c"]
-      #      args:
-      #        - cat /etc/nginx/nginx.conf
+      image: nginx:latest
       ports:
-        - containerPort: 80
+        - name: http
+          containerPort: 8080
       securityContext:
+        runAsUser: 101
         runAsGroup: 101
         runAsNonRoot: true
-        runAsUser: 101
+        privileged: false
+        allowPrivilegeEscalation: false
       volumeMounts:
+        - name: entrypointd
+          mountPath: /docker-entrypoint.d/
         - name: cache
           mountPath: /var/cache/nginx
         - name: run
-          mountPath: /var/run
+          mountPath: /var/run/nginx
         - name: log
           mountPath: /var/log/nginx
         - name: config
@@ -34,12 +36,12 @@ spec:
       image: debian:bullseye-slim
       command: [ "/bin/bash", "-c" ]
       args:
-        - chown 101:101 -R /var/cache/nginx /var/log/nginx /var/run
+        - chown 101:101 -R /var/cache/nginx /var/log/nginx /var/run/nginx
       volumeMounts:
         - name: cache
           mountPath: /var/cache/nginx
         - name: run
-          mountPath: /var/run
+          mountPath: /var/run/nginx
         - name: log
           mountPath: /var/log/nginx
   volumes:
@@ -48,6 +50,8 @@ spec:
     - name: run
       emptyDir: { }
     - name: log
+      emptyDir: { }
+    - name: entrypointd
       emptyDir: { }
     - name: config
       configMap:
@@ -65,14 +69,14 @@ data:
 
         location / {
             root   /usr/share/nginx/html;
-            index  index.html index.htm;
+            index  index.html;
         }
     }
   nginx.conf: |
     worker_processes  1;
 
     error_log /dev/stdout info;
-    pid        /var/run/nginx.pid;
+    pid       /var/run/nginx/nginx.pid;
 
     events {
         worker_connections  1024;
