@@ -1,5 +1,5 @@
 ```bash
 kubectl auth can-i \
-  --as=system:serviceaccount:psp-demo:default \
+  --as=system:serviceaccount:NAMESPACE:SERVICEACCOUNT \
   get pods
 ```
