@@ -17,7 +17,7 @@
 - Kubernetes
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
-  - [PSP Restricted](md-files/kubernetes/psp-restricted.md)
+  - [PSP Usage](md-files/kubernetes/psp-usage.md)
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
   - [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
   - [Find Service Account Bindings](md-files/kubernetes/find-service-account-bindings.md)
