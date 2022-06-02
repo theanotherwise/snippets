@@ -21,6 +21,7 @@
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
   - [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
   - [Find Service Account Bindings](md-files/kubernetes/find-service-account-bindings.md)
+  - [Test Service Account](md-files/kubernetes/test-service-account.md)
 - Linux
   - [General](md-files/linux/general.md)
   - [`ip`](md-files/linux/ip.md)
