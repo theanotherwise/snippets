@@ -1,3 +1,4 @@
+`psp.yaml`
 ```yaml
 apiVersion: v1
 kind: Namespace
@@ -80,6 +81,7 @@ subjects:
     namespace: demo
 ```
 
+`pod.yaml`
 ```yaml
 apiVersion: v1
 kind: Pod
