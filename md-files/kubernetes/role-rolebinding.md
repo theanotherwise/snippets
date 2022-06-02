@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: nginx
+  name: demo-sa
   namespace: nginx
 ---
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: nginx
+  name: demo-role
 rules:
   - apiGroups: [ "*" ]
     resources: [ "*" ]
@@ -17,15 +17,14 @@ rules:
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: nginx
-  namespace: nginx
+  name: demo-rolebinding
 roleRef:
   kind: Role
-  name: nginx
+  name: demo-role
   apiGroup: rbac.authorization.k8s.io
 subjects:
   - kind: ServiceAccount
-    name: nginx
+    name: demo-sa
     apiGroup: ""
-    namespace: nginx
+    namespace: demo
 ```
