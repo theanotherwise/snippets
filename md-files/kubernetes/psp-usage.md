@@ -79,3 +79,37 @@ subjects:
     name: demo-sa
     namespace: demo
 ```
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo
+  namespace: demo
+spec:
+  serviceAccount: demo-sa
+  serviceAccountName: demo-sa
+  automountServiceAccountToken: true
+  securityContext:
+    runAsUser: 0
+    runAsGroup: 0
+    fsGroup: 0
+    runAsNonRoot: false
+  containers:
+    - name: demo
+      image: bitnami/kubectl
+      command: [ "/bin/bash", "-c" ]
+      args: [ "sleep 3600" ]
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        runAsNonRoot: false
+        privileged: false
+        readOnlyRootFilesystem: true
+        allowPrivilegeEscalation: false
+```
+
+```bash
+ kubectl  apply -f psp.yaml
+ kubectl  apply --as-group=system:authenticated --as=system:serviceaccount:demo:demo-sa -f pod.yaml
+```
