@@ -115,3 +115,62 @@ spec:
  kubectl  apply -f psp.yaml
  kubectl  apply --as-group=system:authenticated --as=system:serviceaccount:demo:demo-sa -f pod.yaml
 ```
+
+```yaml
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: permissive
+  annotations:
+    seccomp.security.alpha.kubernetes.io/allowedProfileNames: '*'
+spec:
+  privileged: true
+  allowPrivilegeEscalation: true
+  allowedCapabilities:
+  - '*'
+  volumes:
+  - '*'
+  hostNetwork: true
+  hostPorts:
+  - min: 0
+    max: 65535
+  hostIPC: true
+  hostPID: true
+  runAsUser:
+    rule: 'RunAsAny'
+  seLinux:
+    rule: 'RunAsAny'
+  supplementalGroups:
+    rule: 'RunAsAny'
+  fsGroup:
+    rule: 'RunAsAny'
+---
+# A ClusterRole that allows using the permissive PSP above
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: permissive-psp
+rules:
+- apiGroups:
+  - policy
+  resourceNames:
+  - permissive
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
+---
+# Allow all service accounts in kube-system to use the permissive PSP
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: permissive-psp
+  namespace: kube-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: permissive-psp
+subjects:
+- kind: Group
+  name: system:serviceaccounts
+```
