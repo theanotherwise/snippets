@@ -8,14 +8,16 @@ DELETE _index_template/seems
 DELETE _plugins/_ism/policies/seems
 
 GET /seems
-GET /seems-00001
+GET /seems-000001
 POST /seems/_rollover
-DELETE /seems-00001
-DELETE /seems-00002
-DELETE /seems-00003
+DELETE /seems-000001
+DELETE /seems-000002
+DELETE /seems-000003
 GET /_opendistro/_ism/explain/seems-00001
+GET /_opendistro/_ism/explain/seems-00002
+GET /_opendistro/_ism/explain/seems-00003
 
-PUT /seems-00001
+PUT /seems-000001
 {
  "aliases": {
    "seems": {
