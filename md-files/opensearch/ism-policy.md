@@ -1,14 +1,15 @@
-```json
+```bash
 GET _component_template/seems
 GET _index_template/seems
 GET _plugins/_ism/policies
-
 
 DELETE _component_template/seems
 DELETE _index_template/seems
 DELETE _plugins/_ism/policies/seems
 
 PUT /seems-00001
+DELETE /seems-00001
+GET /seems-00001
 GET /_opendistro/_ism/explain/seems-00001
 
 PUT _component_template/seems
@@ -32,7 +33,10 @@ PUT _index_template/seems
       "number_of_shards": 3,
       "number_of_replicas": 1
     }
-  }
+  },
+  "composed_of": [
+    "seems"
+  ]
 }
 
 PUT _plugins/_ism/policies/seems
