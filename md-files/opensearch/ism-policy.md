@@ -11,6 +11,8 @@ GET /seems
 GET /seems-00001
 POST /seems/_rollover
 DELETE /seems-00001
+DELETE /seems-00002
+DELETE /seems-00003
 GET /_opendistro/_ism/explain/seems-00001
 
 PUT /seems-00001
