@@ -7,10 +7,20 @@ DELETE _component_template/seems
 DELETE _index_template/seems
 DELETE _plugins/_ism/policies/seems
 
-PUT /seems-00001
-DELETE /seems-00001
+GET /seems
 GET /seems-00001
+POST /seems/_rollover
+DELETE /seems-00001
 GET /_opendistro/_ism/explain/seems-00001
+
+PUT /seems-00001
+{
+ "aliases": {
+   "seems": {
+     "is_write_index": true
+   }
+ }
+}
 
 PUT _component_template/seems
 {
