@@ -1,6 +1,16 @@
+#### `PodSecurityPolicy` Enabled
+
 ```bash
 k3d cluster create \
   --k3s-arg "--kube-apiserver-arg=enable-admission-plugins=NodeRestriction,PodSecurityPolicy,ServiceAccount" \
+  --no-lb \
+  seems-psp
+```
+
+#### Generic
+
+```bash
+k3d cluster create \
   --agents 6 \
   --servers 3 \
   --port 8080:80@loadbalancer \
