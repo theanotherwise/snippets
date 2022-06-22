@@ -1,6 +1,4 @@
-```bash
-virsh nodeinfo 
-```
+#### TTY
 
 ```bash
 systemctl daemon-reload
@@ -9,6 +7,12 @@ systemctl status serial-getty@ttyS0.service
 
 systemctl start serial-getty@ttyS0.service
 systemctl enable serial-getty@ttyS0.service
+```
+
+#### Virsh
+
+```bash
+virsh nodeinfo
 ```
 
 ```bash
@@ -23,6 +27,8 @@ virsh destroy myvm
 
 virsh undefine myvm
 ```
+
+#### Virt Install
 
 ```bash
 virt-install \
