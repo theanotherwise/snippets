@@ -33,6 +33,10 @@ virsh undefine myvm
 #### Virt Install
 
 ```bash
+virt-install --osinfo list
+```
+
+```bash
 virt-install \
   --description "My Virtual Machine" \
   --memory 1024 \
