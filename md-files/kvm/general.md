@@ -85,8 +85,8 @@ virt-install \
   --video virtio \
   --console pty,target_type=virtio \
   --serial pty \
-  --location winxp.iso \
-  --boot uefi,bootmenu.enable=on,bios.useserial=on \
+  --cdrom winxp.iso \
+  --boot bootmenu.enable=on,bios.useserial=on \
   --os-variant winxp \
   --name myvm
 ```
