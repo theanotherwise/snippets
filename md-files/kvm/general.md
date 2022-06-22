@@ -26,8 +26,11 @@ virsh vol-delete --pool default
 ```
 
 ```bash
+virsh startmyvm
 virsh reboot myvm
+```
 
+```bash
 virsh shutdown myvm
 virsh destroy myvm
 
@@ -54,11 +57,11 @@ virt-install \
   --vcpu 16 \
   --disk pool=default,size=10 \
   --rng /dev/random \
-  --location image.iso \
   --network bridge:virbr0 \
   --video virtio \
   --console pty,target_type=virtio \
   --serial pty \
+  --location image.iso 
   --boot bootmenu.enable=on,bios.useserial=on \
   --os-variant debian11 \
   --name myvm
