@@ -1,4 +1,13 @@
 ```bash
+virsh list
+
+vrish shutdown myvm
+virsh destroy myvm
+
+virsh undefine myvm
+```
+
+```bash
 virt-install \
   --memory 1024 \
   --vcpu 1 \
