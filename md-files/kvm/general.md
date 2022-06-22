@@ -43,9 +43,9 @@ virt-install --osinfo list
 ```bash
 virt-install \
   --description "My Virtual Machine" \
-  --memory 1024 \
+  --memory 4096 \
   --cpu host \
-  --vcpu 1 \
+  --vcpu 16 \
   --disk pool=default,size=10 \
   --rng /dev/random \
   --cdrom image.iso \
