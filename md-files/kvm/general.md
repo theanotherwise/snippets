@@ -66,7 +66,7 @@ virt-install \
   --video virtio \
   --console pty,target_type=virtio \
   --serial pty \
-  --location image.iso \
+  --location linux.iso \
   --boot uefi,bootmenu.enable=on,bios.useserial=on \
   --os-variant debian11 \
   --name myvm
@@ -85,7 +85,7 @@ virt-install \
   --video virtio \
   --console pty,target_type=virtio \
   --serial pty \
-  --location image.iso \
+  --location winxp.iso \
   --boot uefi,bootmenu.enable=on,bios.useserial=on \
   --os-variant winxp \
   --name myvm
