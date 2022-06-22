@@ -60,7 +60,7 @@ virt-install \
   --video virtio \
   --console pty,target_type=virtio \
   --serial pty \
-  --location image.iso 
+  --location image.iso \
   --boot bootmenu.enable=on,bios.useserial=on \
   --os-variant debian11 \
   --name myvm
