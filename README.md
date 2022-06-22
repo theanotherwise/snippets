@@ -18,7 +18,7 @@
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
   - [PSP Usage](md-files/kubernetes/psp-usage.md)
-  - [K3d Pod Security Policy](md-files/kubernetes/k3d-podsecuritypolicy.md)
+  - [K3d](md-files/kubernetes/k3d.md)
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
   - [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
   - [Find Service Account Bindings](md-files/kubernetes/find-service-account-bindings.md)
