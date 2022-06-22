@@ -41,6 +41,12 @@ virt-install --osinfo list
 ```
 
 ```bash
+virt-viewer --connect qemu:///system --wait myvm
+```
+
+```bash
+# --graphics none \
+  
 virt-install \
   --description "My Virtual Machine" \
   --memory 4096 \
@@ -48,12 +54,12 @@ virt-install \
   --vcpu 16 \
   --disk pool=default,size=10 \
   --rng /dev/random \
-  --cdrom image.iso \
+  --location image.iso \
   --network bridge:virbr0 \
-  --graphics none \
   --video virtio \
   --console pty,target_type=virtio \
   --serial pty \
+  --boot bootmenu.enable=on,bios.useserial=on \
   --os-variant debian11 \
   --name myvm
 ```
