@@ -26,7 +26,7 @@ virsh vol-delete --pool default
 ```
 
 ```bash
-virsh startmyvm
+virsh start myvm
 virsh reboot myvm
 ```
 
