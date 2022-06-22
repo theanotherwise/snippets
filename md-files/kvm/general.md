@@ -33,7 +33,6 @@ virsh reboot myvm
 ```bash
 virsh shutdown myvm
 virsh destroy myvm
-
 virsh undefine myvm
 ```
 
