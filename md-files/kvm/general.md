@@ -1,7 +1,7 @@
 ```bash
 virsh list
 
-vrish shutdown myvm
+virsh shutdown myvm
 virsh destroy myvm
 
 virsh undefine myvm
