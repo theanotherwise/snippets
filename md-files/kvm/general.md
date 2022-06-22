@@ -17,6 +17,8 @@ virsh nodeinfo
 
 ```bash
 virsh list
+virsh pool-list
+virsh vol-list default
 
 virsh reboot myvm
 ```
