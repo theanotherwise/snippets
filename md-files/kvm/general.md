@@ -13,12 +13,15 @@ systemctl enable serial-getty@ttyS0.service
 
 ```bash
 virsh nodeinfo
+
 ```
 
 ```bash
 virsh list
 virsh pool-list
 virsh vol-list default
+virsh net-list
+virsh iface-list
 ```
 
 ```bash
