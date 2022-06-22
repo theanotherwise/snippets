@@ -28,10 +28,10 @@ virsh vol-delete --pool default
 ```bash
 virsh start myvm
 virsh reboot myvm
+virsh shutdown myvm
 ```
 
 ```bash
-virsh shutdown myvm
 virsh destroy myvm
 virsh undefine myvm
 ```
