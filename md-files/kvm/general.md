@@ -51,6 +51,7 @@ virt-viewer --connect qemu:///system --wait myvm
 
 ```bash
 # --graphics none \
+# --boot uefi,bootmenu.enable=on,bios.useserial=on \
 ```
 
 ```bash
@@ -66,8 +67,8 @@ virt-install \
   --video virtio \
   --console pty,target_type=virtio \
   --serial pty \
-  --location linux.iso \
-  --boot uefi,bootmenu.enable=on,bios.useserial=on \
+  --cdrom linux.iso \
+  --boot bootmenu.enable=on,bios.useserial=on \
   --os-variant debian11 \
   --name myvm
 ```
