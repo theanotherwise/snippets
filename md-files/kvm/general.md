@@ -19,11 +19,15 @@ virsh nodeinfo
 virsh list
 virsh pool-list
 virsh vol-list default
-
-virsh reboot myvm
 ```
 
 ```bash
+virsh vol-delete --pool default 
+```
+
+```bash
+virsh reboot myvm
+
 virsh shutdown myvm
 virsh destroy myvm
 
@@ -40,11 +44,16 @@ virt-install --osinfo list
 virt-install \
   --description "My Virtual Machine" \
   --memory 1024 \
+  --cpu host \
   --vcpu 1 \
-  --disk size=10 \
-  --os-variant ubuntu20.04 \
-  --cdrom mini.iso \
+  --disk pool=default,size=10 \
+  --rng /dev/random \
+  --cdrom image.iso \
   --network bridge:virbr0 \
+  --graphics none \
+  --video virtio \
   --console pty,target_type=virtio \
+  --serial pty \
+  --os-variant debian11 \
   --name myvm
 ```
