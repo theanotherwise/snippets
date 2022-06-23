@@ -7,17 +7,17 @@ kubectl config delete-user
 
 kubectl config get-contexts
 kubectl config delete-user
-
-kubectl config use-context <context_name>
 ```
 
 ```bash
+kubectl config use-context <context_name>
+
+kubectl config set-context --current --namespace=<namespace_name>
+
 kubectl config set-context <context_name> \
                 --cluster <cluster_name> \
                 --user <user_name> \
                 --namespace <namespace_name>
-
-kubectl config set-context --current --namespace=<namespace_name>
 ```
 
 ```bash
