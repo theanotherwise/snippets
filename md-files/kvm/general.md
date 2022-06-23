@@ -62,7 +62,7 @@ virt-install \
   --vcpu 16 \
   --hvm \
   --disk pool=default,size=10 \
-  --rng /dev/random \
+  --rng /dev/urandom \
   --network bridge:virbr0 \
   --video virtio \
   --console pty,target_type=virtio \
@@ -81,7 +81,7 @@ virt-install \
   --vcpu 16 \
   --hvm \
   --disk pool=default,size=10 \
-  --rng /dev/random \
+  --rng /dev/urandom \
   --network bridge:virbr0 \
   --video virtio \
   --console pty,target_type=virtio \
