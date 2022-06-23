@@ -19,7 +19,7 @@ k3d cluster create \
   --k3s-arg "--disable=servicelb@server:*" \
   --k3s-arg "--disable=metrics-server@server:*" \
   --no-lb \
-  "${CLUSTER_NAME}"
+  ${CLUSTER_NAME}
   
 kubectl config set-context k3d-${CLUSTER_NAME}-default \
                 --cluster k3d-${CLUSTER_NAME} \
