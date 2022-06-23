@@ -11,6 +11,8 @@ k3d cluster delete seems
 k3d cluster create \
   --servers 3 \
   --agents 6 \
+  --k3s-arg "--cluster-cidr=10.100.0.0/16@server:*" \
+  --k3s-arg "--service-cidr=10.200.0.0/16@server:*" \
   --k3s-arg "--disable=traefik@server:*" \
   --k3s-arg "--disable=servicelb@server:*" \
   --k3s-arg "--disable=metrics-server@server:*" \
