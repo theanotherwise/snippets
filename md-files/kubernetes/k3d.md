@@ -34,7 +34,7 @@ kubectl config set-context k3d-${CLUSTER_NAME}-kube-system \
 kubectl config set-context k3d-${CLUSTER_NAME}-metallb-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
-                --namespace kube-system
+                --namespace metallb-system
                 
 kubectl config delete-context k3d-${CLUSTER_NAME}
 ```
