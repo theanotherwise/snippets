@@ -48,6 +48,11 @@ kubectl config set-context k3d-${CLUSTER_NAME}-metallb-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace metallb-system
+                
+kubectl config set-context k3d-${CLUSTER_NAME}-cert-manager-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace cert-manager-system
 ```
 
 ```bash
@@ -64,4 +69,10 @@ helm upgrade --install metallb metallb/metallb \
   --set configInline.address-pools\[0\].protocol=layer2 \
   --set configInline.address-pools\[0\].addresses\[0\]=${METALLB_CIDR} \
   --namespace metallb-system
+```
+
+```bash
+kubectl create namespace cert-manager-system
+
+helm upgrade cert-manager jetstack/cert-manager --version v1.7.2 --install --namespace cert-manager-system --set installCRDs=true
 ```
