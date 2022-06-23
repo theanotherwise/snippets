@@ -1,14 +1,8 @@
 ```yaml
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: nginx
----
-apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
-  namespace: nginx
 spec:
   containers:
     - name: nginx
@@ -67,7 +61,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: nginx
 data:
   default.conf: |
     server {
