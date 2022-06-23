@@ -14,6 +14,8 @@ k3d cluster create \
   --agents 6 \
   --servers 3 \
   --k3s-arg "--disable=traefik@server:*" \
+  --k3s-arg "--disable=servicelb@server:*" \
+  --k3s-arg "--disable=metrics-server@server:*" \
   --no-lb \
   seems
 ```
