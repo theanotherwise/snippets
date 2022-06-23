@@ -27,6 +27,8 @@ kubectl create namespace metallb-system
 
 METALLB_CIDR=`docker network inspect k3d-seems | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."240"/"29}'`
 
+echo "${METALLB_CIDR}"
+
 helm upgrade --install metallb metallb/metallb \
   --set configInline.address-pools\[0\].name=default,\
   --set configInline.address-pools\[0\].protocol=layer2 \
