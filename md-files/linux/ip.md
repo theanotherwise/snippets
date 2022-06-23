@@ -1,4 +1,8 @@
 ```bash
+iw dev wlan0 set 4addr on
+```
+
+```bash
 ip link show
 
 ip -s link
