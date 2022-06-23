@@ -6,6 +6,8 @@ k3d cluster create \
 ```
 
 ```bash
+k3d cluster delete seems
+
 k3d cluster create \
   --servers 3 \
   --agents 6 \
@@ -17,6 +19,8 @@ k3d cluster create \
 ```
 
 ```bash
+helm repo add metallb https://metallb.github.io/metallb
+
 kubectl create namespace metallb-system
 
 METALLB_CIDR=`docker network inspect k3d-seems | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."240"/"29}'`
