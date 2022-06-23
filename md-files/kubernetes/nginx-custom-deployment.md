@@ -103,4 +103,18 @@ data:
 
         include /etc/nginx/conf.d/*.conf;
     }
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+    app: nginx
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
 ```
