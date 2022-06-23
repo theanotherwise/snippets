@@ -13,7 +13,7 @@ k3d cluster create \
 k3d cluster create \
   --agents 6 \
   --servers 3 \
-  --port 8080:80@loadbalancer \
-  --port 8443:443@loadbalancer \
+  --k3s-arg "--disable=traefik@server:*" \
+  --no-lb \
   seems
 ```
