@@ -104,7 +104,6 @@ data:
         include /etc/nginx/conf.d/*.conf;
     }
 ---
----
 apiVersion: v1
 kind: Service
 metadata:
