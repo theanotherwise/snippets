@@ -6,7 +6,9 @@ k3d cluster create \
 ```
 
 ```bash
-k3d cluster delete seems
+CLUSTER_NAME="seems"
+
+k3d cluster delete "${CLUSTER_NAME}"
 
 k3d cluster create \
   --servers 3 \
@@ -17,7 +19,24 @@ k3d cluster create \
   --k3s-arg "--disable=servicelb@server:*" \
   --k3s-arg "--disable=metrics-server@server:*" \
   --no-lb \
-  seems
+  "${CLUSTER_NAME}"
+  
+kubectl config set-context k3d-${CLUSTER_NAME}-default \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace kube-default
+                
+kubectl config set-context k3d-${CLUSTER_NAME}-kube-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace kube-system
+
+kubectl config set-context k3d-${CLUSTER_NAME}-metallb-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace kube-system
+                
+kubectl config delete-context k3d-${CLUSTER_NAME}
 ```
 
 ```bash
@@ -25,7 +44,7 @@ helm repo add metallb https://metallb.github.io/metallb
 
 kubectl create namespace metallb-system
 
-METALLB_CIDR=`docker network inspect k3d-seems | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."240"/"29}'`
+METALLB_CIDR=`docker network inspect k3d-${CLUSTER_NAME} | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."240"/"29}'`
 
 echo "${METALLB_CIDR}"
 
