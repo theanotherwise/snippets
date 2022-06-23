@@ -23,6 +23,7 @@
   - [K3d](md-files/kubernetes/k3d.md)
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
   - [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
+  - [Nginx Custom Deployment](md-files/kubernetes/nginx-custom-deployment.md)
   - [Find Service Account Bindings](md-files/kubernetes/find-service-account-bindings.md)
   - [Test Service Account](md-files/kubernetes/test-service-account.md)
 - Linux
