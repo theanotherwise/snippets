@@ -17,11 +17,11 @@ virsh nodeinfo
 ```
 
 ```bash
-virsh list
-virsh pool-list
-virsh vol-list default
-virsh net-list
-virsh iface-list
+virsh list  --all
+virsh pool-list --all
+virsh vol-list default --all
+virsh net-list --all
+virsh iface-list --all
 ```
 
 ```bash
