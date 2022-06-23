@@ -26,10 +26,10 @@ kubectl config delete-context foo
 ```
 
 ```bash
-kubectl config view --minify -o json
-kubectl config view --minify -o yaml
+kubectl config view --minify --output json --raw
+kubectl config view --minify --output yaml --raw
 
-kubectl config view --minify -o jsonpath='{}'
-kubectl config view --minify -o jsonpath='{.clusters[].name}'
-kubectl config view --minify -o jsonpath-as-json='{.clusters[].name}'
+kubectl config view --minify --output jsonpath='{}' --raw
+kubectl config view --minify --output jsonpath='{.clusters[].name}' --raw
+kubectl config view --minify --output jsonpath-as-json='{.clusters[].name}' --raw
 ```
