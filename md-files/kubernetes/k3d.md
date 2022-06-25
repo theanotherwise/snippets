@@ -6,6 +6,13 @@ k3d cluster create \
 ```
 
 ```bash
+helm repo add jetstack https://charts.jetstack.io
+helm repo add metallb https://metallb.github.io/metallb
+helm repo add longhorn https://charts.longhorn.io
+helm repo update
+```
+
+```bash
 CLUSTER_NAME="seems"
 
 k3d cluster delete "${CLUSTER_NAME}"
@@ -24,7 +31,11 @@ k3d cluster create \
 
 ```bash
 kubectl create namespace workspace
+kubectl create namespace metallb-system
+kubectl create namespace cert-manager-system
+```
 
+```bash
 kubectl config set-context k3d-${CLUSTER_NAME}-workspace \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
@@ -56,10 +67,6 @@ kubectl config set-context k3d-${CLUSTER_NAME}-cert-manager-system \
 ```
 
 ```bash
-helm repo add metallb https://metallb.github.io/metallb
-
-kubectl create namespace metallb-system
-
 METALLB_CIDR=`docker network inspect k3d-${CLUSTER_NAME} | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."240"/"29}'`
 
 echo "${METALLB_CIDR}"
@@ -72,7 +79,5 @@ helm upgrade --install metallb metallb/metallb \
 ```
 
 ```bash
-kubectl create namespace cert-manager-system
-
 helm upgrade cert-manager jetstack/cert-manager --version v1.7.2 --install --namespace cert-manager-system --set installCRDs=true
 ```
