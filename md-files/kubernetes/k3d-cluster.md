@@ -13,6 +13,8 @@ k3d cluster create \
   --k3s-arg "--disable=metrics-server@server:*" \
   --no-lb \
   -v /tmp/longhorn:/var/lib/longhorn:shared \
+  -v /etc/iscsi:/etc/iscsi \
+  -v /sbin/iscsiadm:/sbin/iscsiadm \
   ${CLUSTER_NAME}
 ```
 
