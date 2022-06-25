@@ -11,12 +11,8 @@ k3d cluster create \
   --k3s-arg "--disable=traefik@server:*" \
   --k3s-arg "--disable=servicelb@server:*" \
   --k3s-arg "--disable=metrics-server@server:*" \
-  --no-lb
+  --no-lb \
   ${CLUSTER_NAME}
-  
-#  -v /tmp/longhorn:/var/lib/longhorn:shared \
-#  -v /etc/iscsi:/etc/iscsi \
-#  -v /sbin/iscsiadm:/sbin/iscsiadm \
 ```
 
 ```bash
@@ -82,19 +78,4 @@ helm upgrade --install cert-manager jetstack/cert-manager \
   --version v1.7.2 \
   --namespace cert-manager-system \
   --set installCRDs=true
-```
-
-#### Not Working with K3d
-
-```bash
-helm repo add longhorn https://charts.longhorn.io
-helm repo update
-
-kubectl create namespace longhorn-system
-
-helm upgrade --install longhorn longhorn/longhorn \
-  --version 1.3.0 \
-  --namespace longhorn-system \
-  --set service.ui.type=LoadBalancer \
-  --set service.manager.type=LoadBalancer
 ```
