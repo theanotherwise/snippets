@@ -12,7 +12,7 @@ k3d cluster create \
   --k3s-arg "--disable=servicelb@server:*" \
   --k3s-arg "--disable=metrics-server@server:*" \
   --no-lb \
-  -v /tmp/longhorn:/var/lib/longhorn:shared
+  -v /tmp/longhorn:/var/lib/longhorn:shared \
   ${CLUSTER_NAME}
 ```
 
