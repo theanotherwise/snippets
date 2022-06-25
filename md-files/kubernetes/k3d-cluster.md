@@ -1,11 +1,4 @@
 ```bash
-helm repo add jetstack https://charts.jetstack.io
-helm repo add metallb https://metallb.github.io/metallb
-helm repo add longhorn https://charts.longhorn.io
-helm repo update
-```
-
-```bash
 CLUSTER_NAME="seems"
 
 k3d cluster delete "${CLUSTER_NAME}"
@@ -19,17 +12,13 @@ k3d cluster create \
   --k3s-arg "--disable=servicelb@server:*" \
   --k3s-arg "--disable=metrics-server@server:*" \
   --no-lb \
+  -v /tmp/longhorn:/var/lib/longhorn:shared
   ${CLUSTER_NAME}
 ```
 
 ```bash
 kubectl create namespace workspace
-kubectl create namespace metallb-system
-kubectl create namespace cert-manager-system
-kubectl create namespace longhorn-system
-```
 
-```bash
 kubectl config set-context k3d-${CLUSTER_NAME}-workspace \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
@@ -58,9 +47,19 @@ kubectl config set-context k3d-${CLUSTER_NAME}-cert-manager-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace cert-manager-system
+                
+kubectl config set-context k3d-${CLUSTER_NAME}-longhorn-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace longhorn-system
 ```
 
 ```bash
+helm repo add metallb https://metallb.github.io/metallb
+helm repo update
+
+kubectl create namespace metallb-system
+
 METALLB_CIDR=`docker network inspect k3d-${CLUSTER_NAME} | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."240"/"29}'`
 
 helm upgrade --install metallb metallb/metallb \
@@ -71,6 +70,11 @@ helm upgrade --install metallb metallb/metallb \
 ```
 
 ```bash
+helm repo add jetstack https://charts.jetstack.io
+helm repo update
+
+kubectl create namespace cert-manager-system
+
 helm upgrade --install cert-manager jetstack/cert-manager \
   --version v1.7.2 \
   --namespace cert-manager-system \
@@ -78,9 +82,14 @@ helm upgrade --install cert-manager jetstack/cert-manager \
 ```
 
 ```bash
+helm repo add longhorn https://charts.longhorn.io
+helm repo update
+
+kubectl create namespace longhorn-system
+
 helm upgrade --install longhorn longhorn/longhorn \
   --version 1.3.0 \
   --namespace longhorn-system \
-  --set service.ui=LoadBalancer \
-  --set service.manager=LoadBalancer
+  --set service.ui.type=LoadBalancer \
+  --set service.manager.type=LoadBalancer
 ```
