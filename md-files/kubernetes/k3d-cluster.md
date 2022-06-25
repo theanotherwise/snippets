@@ -26,6 +26,7 @@ k3d cluster create \
 kubectl create namespace workspace
 kubectl create namespace metallb-system
 kubectl create namespace cert-manager-system
+kubectl create namespace longhorn-system
 ```
 
 ```bash
@@ -70,5 +71,16 @@ helm upgrade --install metallb metallb/metallb \
 ```
 
 ```bash
-helm upgrade cert-manager jetstack/cert-manager --version v1.7.2 --install --namespace cert-manager-system --set installCRDs=true
+helm upgrade --install cert-manager jetstack/cert-manager \
+  --version v1.7.2 \
+  --namespace cert-manager-system \
+  --set installCRDs=true
+```
+
+```bash
+helm upgrade --install longhorn longhorn/longhorn \
+  --version 1.3.0 \
+  --namespace longhorn-system \
+  --set service.ui=LoadBalancer \
+  --set service.manager=LoadBalancer
 ```
