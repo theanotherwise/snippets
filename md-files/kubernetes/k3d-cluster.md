@@ -1,11 +1,4 @@
 ```bash
-k3d cluster create \
-  --k3s-arg "--kube-apiserver-arg=enable-admission-plugins=NodeRestriction,PodSecurityPolicy,ServiceAccount" \
-  --no-lb \
-  seems-psp
-```
-
-```bash
 helm repo add jetstack https://charts.jetstack.io
 helm repo add metallb https://metallb.github.io/metallb
 helm repo add longhorn https://charts.longhorn.io
