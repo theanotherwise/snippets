@@ -27,9 +27,6 @@ spec:
 ```
 
 ```yaml
-nameOverride: ""
-fullnameOverride: ""
-
 dashboardsReports:
   username: admin
   password: admin
