@@ -16,6 +16,7 @@
   - [MikroTik Diagram](md-files/firewalls/mikrotik-diagram.md)
 - Helm
   - [Double Range](md-files/helm/double-range.md)
+  - [Opensearch Dashboards Reports](md-files/helm/osd-reports.md)
 - Logstash
   - [Nested Value in Field NAme Instead Field Value](md-files/logstash/extract-nexted.md)
 - Kubernetes
