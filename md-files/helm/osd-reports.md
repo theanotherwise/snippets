@@ -1,11 +1,34 @@
 ```yaml
+dashboardsReports:
+  username: admin
+  password: admin
+  reports:
+    - shortName: "meta-bar"
+      reportName: "Fetch data from Foo"
+      dashboards_url: "http://observability-opensearch-dashboards/fdafdsfadsfadsdfsafdsa"
+      schedule: "* * * * 1"
+      format: "pdf"
+      recipients:
+        - foo@gmail.com
+    - shortName: "crypto-act"
+      reportName: "Fetch data from Foo"
+      dashboards_url: "http://observability-opensearch-dashboards/fdafdsfadsfadsdfsafdsa"
+      schedule: "* * * * 2"
+      format: pdf
+      recipients:
+        - foo@gmail.com
+        - bar@gmail.com
+        - baz@gmail.com
+```
+
+```yaml
 {{- range $report := .Values.dashboardsReports.reports }}
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: {{ include "test.fullname" $ }}
+  name: {{ include "observability-opensearch.fullname" $ }}-report-{{ $report.shortName }}
   labels:
-    {{- include "test.labels" $ | nindent 4 }}
+    {{- include "observability-opensearch.labels" $ | nindent 4 }}
 spec:
   schedule: "{{ $report.schedule }}"
   jobTemplate:
@@ -18,7 +41,7 @@ spec:
               imagePullPolicy: IfNotPresent
               env:
                 - name: "REPORT_NAME"
-                  value: "{{ $report.name }}"
+                  value: "{{ $report.reportName }}"
                 - name: "DASHBOARD_URL"
                   value: "{{ $report.dashboards_url }}"
                 - name: "RECIPIENTS"
@@ -28,25 +51,4 @@ spec:
           restartPolicy: OnFailure
 ---
 {{- end }}
-```
-
-```yaml
-dashboardsReports:
-  username: admin
-  password: admin
-  reports:
-    - name: "Fetech data from database"
-      dashboards_url: "http://observability-opensearch-dashboards/fdafdsfadsfadsdfsafdsa"
-      schedule: "* * * * 1"
-      format: "pdf"
-      recipients:
-        - foo@gmail.com
-    - name: "Fetech data from database"
-      dashboards_url: "http://observability-opensearch-dashboards/fdafdsfadsfadsdfsafdsa"
-      schedule: "* * * * 2"
-      format: pdf
-      recipients:
-        - foo@gmail.com
-        - bar@gmail.com
-        - baz@gmail.com
 ```
