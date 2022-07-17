@@ -17,10 +17,14 @@ spec:
               image: busybox:1.28
               imagePullPolicy: IfNotPresent
               env:
+                - name: "REPORT_NAME"
+                  value: "{{ $report.name }}"
                 - name: "DASHBOARD_URL"
                   value: "{{ $report.dashboards_url }}"
                 - name: "RECIPIENTS"
                   value: "{{ join "," $report.recipients }}"
+                - name: "OUTPUT_FORMAT"
+                  value: "{{ $report.format }}"
           restartPolicy: OnFailure
 ---
 {{- end }}
