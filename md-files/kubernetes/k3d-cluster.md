@@ -73,6 +73,16 @@ spec:
     - "${METALLB_CIDR}"
   avoidBuggyIPs: true
 EndOfMessage
+
+cat <<EndOfMessage | kubectl -n metallb-system apply -f -
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: example
+spec:
+  ipAddressPools:
+  - docker-host
+ EndOfMessage
 ```
 
 ```bash
