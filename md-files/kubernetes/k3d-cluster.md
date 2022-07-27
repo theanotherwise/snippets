@@ -61,7 +61,7 @@ kubectl create namespace metallb-system
 
 helm upgrade --install metallb metallb/metallb   --namespace metallb-system
 
-METALLB_CIDR=`docker network inspect k3d-${CLUSTER_NAME} | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."240"/"29}'`
+METALLB_CIDR=`docker network inspect k3d-${CLUSTER_NAME} | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."0"/"24}'`
 
 cat <<EndOfMessage | kubectl -n metallb-system apply -f -
 apiVersion: metallb.io/v1beta1
