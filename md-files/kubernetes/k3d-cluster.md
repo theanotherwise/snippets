@@ -65,11 +65,10 @@ METALLB_CIDR=`docker network inspect k3d-${CLUSTER_NAME} | jq -r ".[0].IPAM.Conf
 
 cat <<EndOfMessage | kubectl -n metallb-system apply -f -
 apiVersion: metallb.io/v1beta1
-kind: AddressPool
+kind: IPAddressPool
 metadata:
   name: docker-host
 spec:
-  protocol: layer2
   addresses:
   - "${METALLB_CIDR}"
 EndOfMessage
