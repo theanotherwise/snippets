@@ -80,7 +80,7 @@ cat <<EndOfMessage | kubectl -n metallb-system apply -f -
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
-  name: example
+  name: docker-host
 spec:
   ipAddressPools:
   - docker-host
