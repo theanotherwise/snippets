@@ -82,7 +82,7 @@ metadata:
 spec:
   ipAddressPools:
   - docker-host
- EndOfMessage
+EndOfMessage
 ```
 
 ```bash
