@@ -70,7 +70,8 @@ metadata:
   name: docker-host
 spec:
   addresses:
-  - "${METALLB_CIDR}"
+    - "${METALLB_CIDR}"
+  avoidBuggyIPs: true
 EndOfMessage
 ```
 
