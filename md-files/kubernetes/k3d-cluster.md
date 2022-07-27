@@ -46,11 +46,11 @@ kubectl config set-context k3d-${CLUSTER_NAME}-cert-manager-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace cert-manager-system
-                
-kubectl config set-context k3d-${CLUSTER_NAME}-longhorn-system \
+
+kubectl config set-context k3d-${CLUSTER_NAME}-nginx-ingress-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
-                --namespace longhorn-system
+                --namespace nginx-ingress-system
 ```
 
 ```bash
@@ -97,4 +97,18 @@ helm upgrade --install cert-manager jetstack/cert-manager \
   --version v1.7.2 \
   --namespace cert-manager-system \
   --set installCRDs=true
+```
+
+```bash
+helm repo add nginx-stable https://helm.nginx.com/stable
+helm repo update
+
+kubectl create namespace nginx-ingress-system
+
+helm upgrade --install nginx-ingess nginx-stable/nginx-ingress \
+  --namespace nginx-ingress-system
+  
+kubectl port-forward service/nginx-ingess-nginx-ingress \
+  --namespace nginx-ingress-system \
+  8080:80
 ```
