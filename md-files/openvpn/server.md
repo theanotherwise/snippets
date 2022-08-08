@@ -5,12 +5,18 @@ port 1194
 proto tcp
 dev tun
 
-# Server RSA
+# Service certificate
 ca ca.crt
-cert server.crt
 key server.key
-dh dh.pem
+cert server.crt
+
+# Hide initial TLS handshake
 tls-crypt tc.key
+
+# Key Exchange 
+dh dh.pem
+
+# CRLs (revoked certificates)
 crl-verify crl.pem
 
 # Algorithms
