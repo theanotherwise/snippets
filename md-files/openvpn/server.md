@@ -27,10 +27,10 @@ topology subnet
 
 server 10.8.0.0 255.255.255.0
 
-# Force all traffic via VPN 
+# Whole traffic via VPN 
 #push "redirect-gateway def1 bypass-dhcp"
 
-# Push only specified IP ( only theses addresses will go through via VPN)
+# Only specified IP via VPN
 push "route 3.232.242.170"
 push "route 52.20.78.240"
 push "route 3.220.57.224"
@@ -40,10 +40,10 @@ push "route 54.91.59.199"
 push "dhcp-option DNS 8.8.8.8"
 push "dhcp-option DNS 8.8.4.4"
 
-client-config-dir ccd           # Client config
-ifconfig-pool-persist ipp.txt   # Assign IP to client
-persist-key                     # Dont read key again on restart
-persist-tun                     # Dont remove interface on restart
+client-config-dir /etc/openvpn/ccd  # Client config
+ifconfig-pool-persist ipp.txt       # Assign IP to client
+persist-key                         # Dont read key again on restart
+persist-tun                         # Dont remove interface on restart
 
 user nobody
 group nogroup
