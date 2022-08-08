@@ -1,25 +1,21 @@
 ```bash
-# Network configuration
+# Reference
+# https://github.com/OpenVPN/openvpn/blob/master/sample/sample-config-files/server.conf
+
 local 10.100.255.2
 port 1194
 proto tcp
 dev tun
 
-# Service certificate
 ca ca.crt
 key server.key
 cert server.crt
 
-# Hide initial TLS handshake
 tls-crypt tc.key
-
-# Key Exchange 
 dh dh.pem
 
-# CRLs (revoked certificates)
 crl-verify crl.pem
 
-# Algorithms
 auth SHA512
 cipher AES-256-CBC
 
@@ -27,16 +23,13 @@ topology subnet
 
 server 10.8.0.0 255.255.255.0
 
-# Whole traffic via VPN 
 #push "redirect-gateway def1 bypass-dhcp"
 
-# Only specified IP via VPN
 push "route 3.232.242.170"
 push "route 52.20.78.240"
 push "route 3.220.57.224"
 push "route 54.91.59.199"
 
-# Push DNS Server
 push "dhcp-option DNS 8.8.8.8"
 push "dhcp-option DNS 8.8.4.4"
 
