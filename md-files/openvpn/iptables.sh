@@ -3,14 +3,14 @@ iptables-restore << EndOfMessage
 :INPUT ACCEPT [0:0]
 :FORWARD DROP [0:0]
 :OUTPUT ACCEPT [0:0]
-:vpn-employees - [0:0]
--A INPUT -s 10.8.0.0/24 -j vpn-employees
+:vpn-aaa - [0:0]
+-A INPUT -s 10.8.0.0/24 -j vpn-aaa
 -A INPUT -s 10.8.0.0/24 -d 10.100.255.0/24 -j DROP
 -A INPUT -p tcp -m tcp --dport 1194 -j ACCEPT
 
--A vpn-employees -s 10.8.0.0/24 -p tcp --dport 22 -d 10.100.255.2 -j ACCEPT
--A vpn-employees -s 10.8.0.0/24 -p tcp --dport 80 -d 10.100.255.2 -j ACCEPT
--A vpn-employees -j DROP
+-A vpn-aaa -s 10.8.0.0/24 -p tcp --dport 22 -d 10.100.255.2 -j ACCEPT
+-A vpn-aaa -s 10.8.0.0/24 -p tcp --dport 80 -d 10.100.255.2 -j ACCEPT
+-A vpn-aaa -j DROP
 
 -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A FORWARD -s 10.8.0.0/24 -j ACCEPT
