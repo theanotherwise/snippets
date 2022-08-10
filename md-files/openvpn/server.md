@@ -21,16 +21,16 @@ topology subnet
 
 server 10.8.0.0 255.255.255.0
 
-# Push all via VPN
+# All via VPN
 #push "redirect-gateway def1 bypass-dhcp"
 
-# Push routes to client
+# Push routes
 #push "route 3.232.242.170 255.255.255.255"
 #push "route 52.20.78.240 255.255.255.255"
 #push "route 3.220.57.224 255.255.255.255"
 #push "route 54.91.59.199 255.255.255.255"
 
-# Push DNS to client
+# Push DNS
 #push "dhcp-option DNS 8.8.8.8"
 #push "dhcp-option DNS 8.8.4.4"
 
