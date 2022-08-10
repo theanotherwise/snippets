@@ -3,8 +3,8 @@ export SERVER_IP=10.100.255.2
 export SERVER_NET=10.100.255.2
 export VPN_NET=10.8.0.0/24
 
-*filter
 cat > iptables << EndOfMessage
+*filter
 :INPUT ACCEPT [0:0]
 :FORWARD DROP [0:0]
 :OUTPUT ACCEPT [0:0]
