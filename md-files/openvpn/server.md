@@ -7,6 +7,9 @@ port 1194
 proto tcp
 dev tun
 
+user nobody
+group nogroup
+
 ca ca.crt
 key server.key
 cert server.crt
@@ -22,9 +25,6 @@ cipher AES-256-CBC
 
 server 10.8.0.0 255.255.255.0
 topology subnet
-
-user nobody
-group nogroup
 
 keepalive 10 120
 
