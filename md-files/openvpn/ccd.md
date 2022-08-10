@@ -1,3 +1,4 @@
+```
 # Force statis IP
 ifconfig-push 10.8.0.50 255.255.255.0
 
@@ -10,3 +11,4 @@ ifconfig-push 10.8.0.50 255.255.255.0
 # Push DNS to client
 # push "dhcp-option DNS 8.8.8.8"
 # push "dhcp-option DNS 8.8.4.4"
+```
