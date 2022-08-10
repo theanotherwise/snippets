@@ -14,12 +14,24 @@ tls-crypt tc.key
 dh dh.pem
 crl-verify crl.pem
 
+client-config-dir /etc/openvpn/ccd
+ifconfig-pool-persist ipp.txt
+
 auth SHA512
 cipher AES-256-CBC
 
+server 10.8.0.0 255.255.255.0
 topology subnet
 
-server 10.8.0.0 255.255.255.0
+user nobody
+group nogroup
+
+keepalive 10 120
+
+persist-key
+persist-tun
+
+verb 3
 
 # All via VPN
 #push "redirect-gateway def1 bypass-dhcp"
@@ -33,16 +45,4 @@ server 10.8.0.0 255.255.255.0
 #push "route 52.20.78.240 255.255.255.255"
 #push "route 3.220.57.224 255.255.255.255"
 #push "route 54.91.59.199 255.255.255.255"
-
-client-config-dir /etc/openvpn/ccd  # Client config
-ifconfig-pool-persist ipp.txt       # Assign IP to client
-persist-key                         # Dont read key again on restart
-persist-tun                         # Dont remove interface on restart
-
-user nobody
-group nogroup
-
-keepalive 10 120
-
-verb 3
 ```
