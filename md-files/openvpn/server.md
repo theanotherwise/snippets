@@ -24,15 +24,15 @@ server 10.8.0.0 255.255.255.0
 # All via VPN
 #push "redirect-gateway def1 bypass-dhcp"
 
+# Push DNS
+#push "dhcp-option DNS 8.8.8.8"
+#push "dhcp-option DNS 8.8.4.4"
+
 # Push routes
 #push "route 3.232.242.170 255.255.255.255"
 #push "route 52.20.78.240 255.255.255.255"
 #push "route 3.220.57.224 255.255.255.255"
 #push "route 54.91.59.199 255.255.255.255"
-
-# Push DNS
-#push "dhcp-option DNS 8.8.8.8"
-#push "dhcp-option DNS 8.8.4.4"
 
 client-config-dir /etc/openvpn/ccd  # Client config
 ifconfig-pool-persist ipp.txt       # Assign IP to client
