@@ -5,7 +5,7 @@
 local 10.100.255.2
 port 1194
 proto tcp
-dev tun0
+dev tun
 
 ca ca.crt
 key server.key
