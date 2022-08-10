@@ -14,11 +14,11 @@ ignore-unknown-option block-outside-dns
 block-outside-dns
 verb 3
 
-# Force DNS
+# Static DNS
 #dhcp-option DNS 8.8.8.8
 #dhcp-option DNS 8.8.4.4
 
-# Force Route
+# Static route
 #route 3.232.242.170 255.255.255.255
 #route 52.20.78.240 255.255.255.255
 #route 3.220.57.224 255.255.255.255
