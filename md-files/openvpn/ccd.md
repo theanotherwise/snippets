@@ -1,5 +1,5 @@
 ```
-# Statis IP for client
+# Client IP
 ifconfig-push 10.8.0.50 255.255.255.0
 
 # Push DNS
