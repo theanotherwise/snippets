@@ -40,7 +40,10 @@
 - Nodejs
    - [Node Mailer](md-files/nodejs/nodemailer.md)
 - VPN
-  - [OpenVPN Config](md-files/openvpn/config.md)
+  - [OpenVPN Server](md-files/openvpn/server.md)
+  - [OpenVPN CCD](md-files/openvpn/ccd.md)
+  - [OpenVPN OVPN](md-files/openvpn/ovpn.md)
+  
 - VMware
   - [VMware Shrink VMDK](md-files/vmware/shrink-vmdk.md)
 - Jenkins
