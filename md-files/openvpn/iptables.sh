@@ -1,24 +1,26 @@
-export SERVER_IP=10.100.255.2
-export SERVER_NET=10.100.255.2
-export VPN_NET=10.8.0.0/24
-
 cat > iptables << EndOfMessage
 *filter
 :INPUT ACCEPT [0:0]
 :FORWARD DROP [0:0]
 :OUTPUT ACCEPT [0:0]
--A INPUT -i tun0 -s ${VPN_NET} -p tcp --dport 80 -d ${SERVER_NET} -j ACCEPT
--A INPUT -s ${VPN_NET} -d 10.100.255.0/24 -j DROP
+:vpn-employees - [0:0]
+-A INPUT -s 10.8.0.0/24 -j vpn-employees
+-A INPUT -s 10.8.0.0/24 -d 10.100.255.0/24 -j DROP
 -A INPUT -p tcp -m tcp --dport 1194 -j ACCEPT
+
+-A vpn-employees -s 10.8.0.0/24 -p tcp --dport 22 -d 10.100.255.2 -j ACCEPT
+-A vpn-employees -s 10.8.0.0/24 -p tcp --dport 80 -d 10.100.255.2 -j ACCEPT
+-A vpn-employees -j DROP
+
 -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
--A FORWARD -s ${VPN_NET} -j ACCEPT
+-A FORWARD -s 10.8.0.0/24 -j ACCEPT
 COMMIT
 *nat
 :PREROUTING ACCEPT [0:0]
 :INPUT ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
 :POSTROUTING ACCEPT [0:0]
--A POSTROUTING -s ${VPN_NET} ! -d ${VPN_NET} -j SNAT --to-source ${SERVER_IP}
+-A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to-source 10.100.255.2
 COMMIT
 EndOfMessage
 
