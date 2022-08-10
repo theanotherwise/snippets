@@ -21,8 +21,8 @@ topology subnet
 
 server 10.8.0.0 255.255.255.0
 
-# All via VPN
-#push "redirect-gateway def1 bypass-dhcp"
+# Push all via VPN
+# push "redirect-gateway def1 bypass-dhcp"
 
 # Push Routes
 # push "route 3.232.242.170"
