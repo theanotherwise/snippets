@@ -1,11 +1,10 @@
 ```bash
-SERVER_IP=10.100.255.2
-SERVER_NET=10.100.255.2
-VPN_NET=10.8.0.0/24
-```
+export SERVER_IP=10.100.255.2
+export SERVER_NET=10.100.255.2
+export VPN_NET=10.8.0.0/24
 
-```
 *filter
+cat < EndOfMessage
 :INPUT ACCEPT [0:0]
 :FORWARD DROP [0:0]
 :OUTPUT ACCEPT [0:0]
@@ -22,4 +21,5 @@ COMMIT
 :POSTROUTING ACCEPT [0:0]
 -A POSTROUTING -s {{VPN_NET}} ! -d {{VPN_NET}} -j SNAT --to-source {{SERVER_IP}}
 COMMIT
+EndOfMessage
 ```
