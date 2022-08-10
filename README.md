@@ -43,7 +43,7 @@
   - [OpenVPN Server](md-files/openvpn/server.md)
   - [OpenVPN CCD](md-files/openvpn/ccd.md)
   - [OpenVPN OVPN](md-files/openvpn/ovpn.md)
-  - [OpenVPN iptables](md-files/openvpn/iptables.md)
+  - [OpenVPN iptables](md-files/openvpn/iptables.sh)
 - VMware
   - [VMware Shrink VMDK](md-files/vmware/shrink-vmdk.md)
 - Jenkins
