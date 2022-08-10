@@ -1,3 +1,4 @@
+```
 client
 dev tun
 proto tcp
@@ -31,3 +32,4 @@ verb 3
 </key>
 <tls-crypt>
 </tls-crypt>
+```
