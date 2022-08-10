@@ -1,4 +1,4 @@
-cat > iptables << EndOfMessage
+iptables-restore << EndOfMessage
 *filter
 :INPUT ACCEPT [0:0]
 :FORWARD DROP [0:0]
@@ -23,5 +23,3 @@ COMMIT
 -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to-source 10.100.255.2
 COMMIT
 EndOfMessage
-
-iptables-restore < iptables
