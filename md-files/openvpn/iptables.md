@@ -1,6 +1,8 @@
+```bash
 SERVER_IP=10.100.255.2
 SERVER_NET=10.100.255.2
 VPN_NET=10.8.0.0/24
+```
 
 ```
 *filter
