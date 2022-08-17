@@ -2,6 +2,8 @@
 
 ## Index
 
+- Azure CLI
+  - [Upload to Storage](md-files/azure-cli/upload-to-storage.md)
 - KVM
   - [General](md-files/kvm/general.md)
 - GCP
