@@ -2,7 +2,6 @@
 # Reference
 # https://github.com/OpenVPN/openvpn/blob/master/sample/sample-config-files/server.conf
 
-local 10.100.255.2
 port 1194
 proto tcp
 dev tun
@@ -10,26 +9,34 @@ dev tun
 user nobody
 group nogroup
 
-ca ca.crt
-key server.key
-cert server.crt
-tls-crypt tc.key
-dh dh.pem
-crl-verify crl.pem
-
-client-config-dir /etc/openvpn/ccd
-ifconfig-pool-persist ipp.txt
-
-auth SHA512
-cipher AES-256-CBC
-
-server 10.8.0.0 255.255.255.0
-topology subnet
+persist-key
+persist-tun
 
 keepalive 10 120
 
-persist-key
-persist-tun
+topology subnet
+
+server 10.8.0.0 255.255.255.0
+
+ecdh-curve prime256v1
+tls-crypt tls-crypt.key
+crl-verify crl.pem
+
+ca ca.crt
+auth SHA512
+cipher AES-256-CBC
+cert server_rj5GdAW6ZWXw7Bqj.crt
+key server_rj5GdAW6ZWXw7Bqj.key
+auth SHA256
+cipher AES-128-GCM
+ncp-ciphers AES-128-GCM
+tls-server
+tls-version-min 1.2
+tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
+
+client-config-dir /etc/openvpn/ccd
+ifconfig-pool-persist ipp.txt
+status /var/log/openvpn/status.log
 
 verb 3
 
