@@ -4,11 +4,15 @@ dev tun
 proto proto tcp-client
 remote XXX.XXX.XXX.XXX 1194
 resolv-retry infinite
+
 nobind
+
 persist-key
 persist-tun
+
 remote-cert-tls server
 verify-x509-name server_rj5GdAW6ZWXw7Bqj name
+
 auth SHA256
 auth-nocache
 cipher AES-128-GCM
@@ -16,7 +20,9 @@ tls-client
 tls-version-min 1.2
 tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
 ignore-unknown-option block-outside-dns
-setenv opt block-outside-dns # Prevent Windows 10 DNS leak
+
+# setenv opt block-outside-dns # Prevent Windows 10 DNS leak
+
 verb 3
 
 # Static DNS
