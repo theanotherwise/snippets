@@ -9,7 +9,7 @@ iptables-restore << EndOfMessage
 :OUTPUT ACCEPT [0:0]
 :vpn-aaa - [0:0]
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
--A INPUT -p tcp -s ${VPN_NET} -j vpn-aaa
+-A INPUT -p tcp -s ${VPN_NET} -j vpn-aaa 
 -A INPUT -p tcp --dport 22      -j ACCEPT
 -A INPUT -p udp --dport 53      -j ACCEPT
 -A INPUT -p tcp --dport 1194    -j ACCEPT
