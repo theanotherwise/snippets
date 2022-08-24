@@ -23,7 +23,7 @@ done
 # NoSchedule- untaint node
 ``` 
 
-## Contests
+## Contexts
 
 ```bash
 kubectl create namespace workspace
