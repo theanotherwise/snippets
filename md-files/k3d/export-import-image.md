@@ -1,6 +1,6 @@
 ```bash
-IMAGE="rancher/k3s"
-TAG="v1.23.6-k3s1"
+IMAGE=foobar
+TAG=2.2.0
 
 docker image save "${IMAGE}:${TAG}" -o image.tar
 
