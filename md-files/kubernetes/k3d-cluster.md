@@ -3,9 +3,12 @@ CLUSTER_NAME="seems"
 
 k3d cluster delete "${CLUSTER_NAME}"
 
+SERVERS=3
+AGENTS=1
+
 k3d cluster create \
-  --servers 3 \
-  --agents 3 \
+  --servers "${SERVERS}" \
+  --agents "${AGENTS}" \
   --k3s-arg "--cluster-cidr=10.100.0.0/16@server:*" \
   --k3s-arg "--service-cidr=10.200.0.0/16@server:*" \
   --k3s-arg "--disable=traefik@server:*" \
