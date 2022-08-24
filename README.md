@@ -26,6 +26,7 @@
 - K3d
   - [Cluster](md-files/k3d/cluster.md)
   - [PSP](md-files/k3d/psp.md)
+  - [Export/Import Image](md-files/k3d/export-import-image.md)
 - Kubernetes
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
