@@ -16,19 +16,12 @@ k3d cluster create \
   --k3s-arg "--disable=metrics-server@server:*" \
   --no-lb \
   ${CLUSTER_NAME}
-```
 
-```bash
 for i in `seq 0 $(("${SERVERS}"-1))` ; do
-  kubectl taint nodes "k3d-${CLUSTER_NAME}-server-$i" dedicated=control-plane:NoSchedule 
+  kubectl taint nodes "k3d-${CLUSTER_NAME}-server-$i" dedicated=control-plane:NoSchedule
 done
-```
-
-```bash
-for i in `seq 0 $(("${SERVERS}"-1))` ; do
-  kubectl taint nodes "k3d-${CLUSTER_NAME}-server-$i" dedicated=control-plane:NoSchedule-
-done
-```
+# NoSchedule- untaint node
+``` 
 
 ```bash
 kubectl create namespace workspace
