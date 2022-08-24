@@ -19,6 +19,12 @@ k3d cluster create \
 ```
 
 ```bash
+for i in `seq 0 $(("${SERVERS}"-1))` ; do
+  kubectl taint nodes "k3d-${CLUSTER_NAME}-server-$i" dedicated=control-plane:NoSchedule 
+done
+```
+
+```bash
 kubectl create namespace workspace
 
 kubectl config set-context k3d-${CLUSTER_NAME}-workspace \
