@@ -23,6 +23,8 @@ done
 # NoSchedule- untaint node
 ``` 
 
+## Contests
+
 ```bash
 kubectl create namespace workspace
 
@@ -61,6 +63,8 @@ kubectl config set-context k3d-${CLUSTER_NAME}-nginx-ingress-system \
                 --namespace nginx-ingress-system
 ```
 
+## Load Balancer
+
 ```bash
 helm repo add metallb https://metallb.github.io/metallb
 helm repo update
@@ -95,6 +99,8 @@ spec:
 EndOfMessage
 ```
 
+## Certificates
+
 ```bash
 helm repo add jetstack https://charts.jetstack.io
 helm repo update
@@ -107,6 +113,8 @@ helm upgrade --install cert-manager jetstack/cert-manager \
   --set installCRDs=true
 ```
 
+## Ingress
+
 ```bash
 helm repo add nginx-stable https://helm.nginx.com/stable
 helm repo update
@@ -115,7 +123,9 @@ kubectl create namespace nginx-ingress-system
 
 helm upgrade --install nginx-ingess nginx-stable/nginx-ingress \
   --namespace nginx-ingress-system
-  
+```
+
+```
 kubectl port-forward service/nginx-ingess-nginx-ingress \
   --namespace nginx-ingress-system \
   8080:80
