@@ -10,6 +10,8 @@
   - [Initialize Console](md-files/gcp/init-console.md)
 - Docker
   - [General](md-files/docker/general.md)
+  - [Cleanup](md-files/docker/cleanup.md)
+  - [Docker Compose](md-files/docker/docker-compose.md)
   - [Docker Engine](md-files/docker/settings.md)
 - Firewalls
   - [`iptables`](md-files/firewalls/iptables.md)
