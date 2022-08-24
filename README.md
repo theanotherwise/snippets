@@ -23,12 +23,13 @@
   - [Opensearch Dashboards Reports](md-files/helm/osd-reports.md)
 - Logstash
   - [Nested Value in Field NAme Instead Field Value](md-files/logstash/extract-nexted.md)
+- K3d
+  - [Cluster](md-files/k3d/cluster.md)
+  - [PSP](md-files/k3d/psp.md)
 - Kubernetes
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
   - [PSP Usage](md-files/kubernetes/psp-usage.md)
-  - [K3d PSP Cluster](md-files/kubernetes/k3d-psp-cluster.md)
-  - [K3d Cluster](md-files/kubernetes/k3d-cluster.md)
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
   - [Nginx Short Deployment](md-files/kubernetes/nginx-short-deployment.md)
   - [Nginx Custom Deployment](md-files/kubernetes/nginx-custom-deployment.md)
