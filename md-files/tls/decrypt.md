@@ -4,5 +4,5 @@ chromium
 ```
 
 ```bash
-SSLKEYLOGFILE=sslkey.log curl -s https://httpbin.org
+SSLKEYLOGFILE=sslkey.log curl -s https://wp.pl
 ```
