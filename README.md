@@ -18,6 +18,8 @@
   - [`iptables` Diagram](md-files/firewalls/iptables-diagram.md)
   - [Firewalld](md-files/firewalls/firewalld.md)
   - [MikroTik Diagram](md-files/firewalls/mikrotik-diagram.md)
+- TLS
+  - [`tls` decrypt](md-files/tls/decrypt.md)
 - Helm
   - [Double Range](md-files/helm/double-range.md)
   - [Opensearch Dashboards Reports](md-files/helm/osd-reports.md)
