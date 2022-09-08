@@ -17,3 +17,7 @@ mvn release:update-versions -DautoVersionSubmodules=true
 
 mvn --batch-mode release:update-versions -DdevelopmentVersion=1000-SNAPSHOT
 ```
+
+```bash
+mvn scm:checkout
+```
