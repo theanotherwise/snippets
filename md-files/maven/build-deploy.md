@@ -1,12 +1,15 @@
+
 ```bash
 mvn clean
+find . -name "pom.xml" -exec mvn clean -f {} \;
+```
 
+```bash
 mvn package
 ```
 
 ```bash
-mvn deploy # requires artifactory
-
+mvn deploy
 mvn -Dmaven.deploy.skip deploy
 mvn -Ddockerfile.skip deploy
 ```
