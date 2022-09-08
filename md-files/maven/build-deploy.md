@@ -20,4 +20,5 @@ mvn --batch-mode release:update-versions -DdevelopmentVersion=1000-SNAPSHOT
 
 ```bash
 mvn scm:checkout
+mvn scm:checkout -f images/application/pom.xml
 ```
