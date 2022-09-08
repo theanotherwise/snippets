@@ -38,6 +38,8 @@
   - [Nginx Custom Deployment](md-files/kubernetes/nginx-custom-deployment.md)
   - [Find Service Account Bindings](md-files/kubernetes/find-service-account-bindings.md)
   - [Test Service Account](md-files/kubernetes/test-service-account.md)
+- Maven
+  - [Build / Deploy](md-files/maven/build-deploy.md)
 - Linux
   - [General](md-files/linux/general.md)
   - [`ip`](md-files/linux/ip.md)
