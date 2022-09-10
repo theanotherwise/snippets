@@ -51,9 +51,8 @@
    - [Node Mailer](md-files/nodejs/nodemailer.md)
 - VPN
   - [Config Server](md-files/openvpn/server.md)
+  - [Config Client](md-files/openvpn/client.md)
   - [Config CCD](md-files/openvpn/ccd.md)
-  - [Config client](md-files/openvpn/ovpn.md)
-  - [DNS on Linux](md-files/openvpn/dns-on-linux.md)
   - [OpenVPN iptables](md-files/openvpn/iptables.sh)
 - VMware
   - [VMware Shrink VMDK](md-files/vmware/shrink-vmdk.md)
