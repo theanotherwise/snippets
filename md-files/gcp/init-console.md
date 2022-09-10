@@ -11,5 +11,5 @@ gcloud projects list
 gcloud config set project project_id
 
 gcloud container clusters list
-gcloud container clusters get-credentials xx --region xxx
+gcloud container clusters get-credentials --region XXX XXX
 ```
