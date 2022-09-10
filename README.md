@@ -6,8 +6,8 @@
   - [Upload to Storage](md-files/azure-cli/upload-to-storage.md)
 - KVM
   - [General](md-files/kvm/general.md)
-- GCP
-  - [Initialize Console](md-files/gcp/init-console.md)
+- Google Cloud
+  - [Initialize Console](md-files/google-cloud/init-console.md)
 - Docker
   - [General](md-files/docker/general.md)
   - [Cleanup](md-files/docker/cleanup.md)
