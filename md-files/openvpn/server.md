@@ -35,7 +35,7 @@ tls-crypt tls-crypt.key
 
 # Exchange
 # openssl dhparam -out dh.pem 2048
-# dh dh.pem
+dh dh.pem
 ecdh-curve prime256v1
 
 # Input / Output Files
