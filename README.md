@@ -49,7 +49,7 @@
   - [Subscription Manager](md-files/linux/subscription-manager.md)
 - Nodejs
    - [Node Mailer](md-files/nodejs/nodemailer.md)
-- VPN
+- OpenVPN
   - [Config Server](md-files/openvpn/server.md)
   - [Config Client](md-files/openvpn/client.md)
   - [Config CCD](md-files/openvpn/ccd.md)
