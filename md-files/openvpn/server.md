@@ -1,6 +1,4 @@
 ```bash
-mode server
-
 dev tun
 proto tcp
 port 1194
