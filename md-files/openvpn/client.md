@@ -1,30 +1,41 @@
-```
+```bash
 client
+
 dev tun
-proto proto tcp-client
+proto tcp
 remote XXX.XXX.XXX.XXX 1194
-resolv-retry infinite
-nobind
+
 persist-key
 persist-tun
+
+user nobody
+group nobody
+
+nobind
+resolv-retry infinite
+
+# Certificates
+# ca as <ca></ca>
+# cert <cert></cert>
+# key <key></key>
+
+# Auth / Encryption
+auth SHA512
+cipher AES-256-CBC
+
 remote-cert-tls server
 verify-x509-name server_rj5GdAW6ZWXw7Bqj name
-auth SHA256
-auth-nocache
-cipher AES-128-GCM
+
+# TLS 
 tls-client
 tls-version-min 1.2
 tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
+# tls-crypt as <tls-crypt></tls-crypt>
 
-# DNS Leaks
-#setenv opt block-outside-dns # Windows
-#dhcp-option DOMAIN-ROUTE . # Linux
-
-# Static DNS Servers
+#setenv opt block-outside-dns   # DNS Leaks windows
+#dhcp-option DOMAIN-ROUTE .     # Linux
 #dhcp-option DNS 8.8.8.8
 #dhcp-option DNS 8.8.4.4
-
-# Static Routes
 #route 3.232.242.170 255.255.255.255
 #route 52.20.78.240 255.255.255.255
 #route 3.220.57.224 255.255.255.255
@@ -32,7 +43,6 @@ tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
 #route 10.100.10.0 255.255.255.0
 #route 10.100.20.0 255.255.255.0
 
-dhcp-option DOMAIN-ROUTE .
 verb 3
 
 <ca>
