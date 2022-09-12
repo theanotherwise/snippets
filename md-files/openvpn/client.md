@@ -3,13 +3,13 @@ client
 
 dev tun
 proto tcp
-remote XXX.XXX.XXX.XXX 1194
+remote 34.118.85.76 1194
 
 persist-key
 persist-tun
 
-user nobody
-group nobody
+;user nobody
+;group nobody
 
 nobind
 resolv-retry infinite
@@ -26,7 +26,7 @@ cipher AES-256-CBC
 remote-cert-tls server
 verify-x509-name server_rj5GdAW6ZWXw7Bqj name
 
-# TLS 
+# TLS
 tls-client
 tls-version-min 1.2
 tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
