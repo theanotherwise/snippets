@@ -14,7 +14,7 @@ keepalive 10 120
 topology subnet
 server 10.8.0.0 255.255.255.0
 
-# Certificates / CRL
+# Certificates
 ca ca.crt
 key server.key
 cert server.crt
@@ -29,8 +29,8 @@ ncp-ciphers AES-128-GCM
 tls-server
 tls-version-min 1.2
 tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
-# 0 server, 1 client, openvpn --genkey --secret ta.key
-# tls-auth tiv.key 0
+# openvpn --genkey --secret tls-[auth|crypt].key
+# tls-auth tls-auth.key 0   # 0 server, 1 client
 tls-crypt tls-crypt.key
 
 # Exchange
