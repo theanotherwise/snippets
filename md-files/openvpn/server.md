@@ -3,11 +3,11 @@ dev tun
 proto tcp
 port 1194
 
-user nobody
-group nogroup
-
 persist-key
 persist-tun
+
+user nobody
+group nogroup
 
 keepalive 10 120
 
@@ -16,22 +16,19 @@ server 10.8.0.0 255.255.255.0
 
 # Certificates
 ca ca.crt
-key server.key
 cert server.crt
+key server.key
 crl-verify crl.pem
 
 # Auth
 auth SHA512
 cipher AES-256-CBC
-ncp-ciphers AES-128-GCM
 
 # TLS
 tls-server
 tls-version-min 1.2
 tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
-# openvpn --genkey --secret tls-[auth|crypt].key
-# tls-auth tls-auth.key 0   # 0 server, 1 client
-tls-crypt tls-crypt.key
+tls-crypt tls-crypt.key     # openvpn --genkey --secret tls-crypt.key
 
 # Exchange
 # openssl dhparam -out dh.pem 2048
