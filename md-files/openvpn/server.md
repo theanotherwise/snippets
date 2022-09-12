@@ -1,7 +1,9 @@
 ```bash
-port 1194
-proto tcp
+mode server
+
 dev tun
+proto tcp
+port 1194
 
 user nobody
 group nogroup
