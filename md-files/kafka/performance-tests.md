@@ -9,5 +9,5 @@ kafka-producer-perf-test.sh \
     batch.size=16384 \
     linger.ms=0 \
     compression.type=gzip \
-    bootstrap.servers=redpanda-0.redpanda.default.svc.cluster.local:9092,redpanda-1.redpanda.default.svc.cluster.local:9092,redpanda-2.redpanda.default.svc.cluster.local:9092
+    bootstrap.servers=kafka0:9092,kafka1:9092,kafka2:9092
 ```
