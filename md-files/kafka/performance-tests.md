@@ -19,10 +19,10 @@ kafka-consumer-perf-test.sh \
     --fetch-size=1 \
     --from-latest \
     --reporting-interval=1 \
-    --bootstrap-server=kafka-0:9092,kafka-1:9092,kafka-2:9092 \
     --group testing \
     --print-metrics \
-    --show-detailed-stats
+    --show-detailed-stats \
+    --bootstrap-server=kafka-0:9092,kafka-1:9092,kafka-2:9092
 ```
 
 ```bash
