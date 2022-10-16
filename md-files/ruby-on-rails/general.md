@@ -8,11 +8,11 @@ rails new terenowe-info \
     \
     --no-skip-git --no-skip-keeps \
     --no-skip-action-mailer --no-skip-action-mailbox \
-    --no-skip-action-text --no-skip-active-record \
-    --no-skip-active-job --no-skip-active-storage \
-    --no-skip-action-cable\
+    --no-skip-active-storage --no-skip-active-record \
+    --no-skip-active-job --no-skip-action-text \
+    --no-skip-action-cable \
     \
-    --no-skip --no-quiet \
+    --no-skip --no-quiet
 ```
 
 ```bash
