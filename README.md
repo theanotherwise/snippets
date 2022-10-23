@@ -44,6 +44,7 @@
   - [Build / Deploy](md-files/maven/build-deploy.md)
 - Linux
   - [General](md-files/linux/general.md)
+  - [Swap File](md-files/linux/swap.md)
   - [`ip`](md-files/linux/ip.md)
   - [Root CA](md-files/linux/root-ca.md)
   - [Crypto Setup](md-files/linux/crypt-setup.md)
