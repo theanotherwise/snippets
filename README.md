@@ -53,8 +53,9 @@
 - Nodejs
    - [Node Mailer](md-files/nodejs/nodemailer.md)
    - [Vue Server](md-files/nodejs/vue-server.md)
-- Nodejs
+- Ruby
    - [Rails Server](md-files/ruby/rails-server.md)
+   - [Comparsion Functions](md-files/ruby/comparsion-functions.md)
 - OpenVPN
   - [Config Server](md-files/openvpn/server.md)
   - [Config Client](md-files/openvpn/client.md)
