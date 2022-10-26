@@ -27,6 +27,8 @@
   - [Nested Value in Field NAme Instead Field Value](md-files/logstash/extract-nexted.md)
 - Kafka
   - [Performance tests](md-files/kafka/performance-tests.md)
+- CSS
+  - [Footer on Bottom](md-files/css/footer-on-bottom.md)
 - K3d
   - [Cluster](md-files/k3d/cluster.md)
   - [PSP](md-files/k3d/psp.md)
