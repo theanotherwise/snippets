@@ -10,6 +10,7 @@
   - [Initialize Console](md-files/google-cloud/init-console.md)
 - WSL
   - [General](md-files/wsl/general.md)
+  - [.wslconfig](md-files/wsl/wslconfig.md)
 - Docker
   - [General](md-files/docker/general.md)
   - [Cleanup](md-files/docker/cleanup.md)
