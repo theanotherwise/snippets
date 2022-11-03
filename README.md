@@ -8,6 +8,8 @@
   - [General](md-files/kvm/general.md)
 - Google Cloud
   - [Initialize Console](md-files/google-cloud/init-console.md)
+- WSL
+  - [General](md-files/wsl/general.md)
 - Docker
   - [General](md-files/docker/general.md)
   - [Cleanup](md-files/docker/cleanup.md)
