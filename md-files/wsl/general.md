@@ -18,6 +18,7 @@ wsl --update
 ```
 
 ```bash
+wsl --set-version Ubuntu 1
 wsl --set-version Ubuntu 2
 wsl --setdefault Ubuntu
 
