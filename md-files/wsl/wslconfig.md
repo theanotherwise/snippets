@@ -16,9 +16,9 @@ generateHosts         = false
 generateResolvConf    = false
 
 [wsl2]
-processors            = 4
-memory                = 8GB
-swap                  = 0
+processors            = 8
+memory                = 32GB
+swap                  = 32GB
 nestedVirtualization  = true
 localhostForwarding   = true
 vmIdleTimeout         = 720000
