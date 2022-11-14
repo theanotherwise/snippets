@@ -16,7 +16,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Initialize Console](md-files/google-cloud/init-console.md)
 - WSL
   - [General](md-files/wsl/general.md)
-  - [Windows .wslconfig](md-files/wsl/windows-wslconfig.md)
+  - [Windows C:\Users\<username>\.wslconfig](md-files/wsl/windows-wslconfig.md)
   - [Subsystem /etc/wsl.conf](md-files/wsl/subsystem-wslconf.md)
 - Docker
   - [General](md-files/docker/general.md)
