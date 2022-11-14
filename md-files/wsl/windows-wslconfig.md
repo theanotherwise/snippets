@@ -1,4 +1,4 @@
-`.wslconfig`
+`C:\Users\<username>\.wslconfig`
 
 ```conf
 [automount]
