@@ -2,7 +2,7 @@
 ```bash
 dism.exe /online /disable-feature /featurename:VirtualMachinePlatform /norestart
 dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux /norestart
-```bash
+```
 
 ## Enable
 ```bash
