@@ -24,6 +24,8 @@ wsl --setdefault Ubuntu
 
 wsl --unregister Ubuntu
 
+wsl --terminate Ubuntu
+
 wsl --export Ubuntu ubuntu.ta
 wsl --import Ubuntu C:\Users\mateu\WSL\Ubuntu ubuntu.tar
 ```
