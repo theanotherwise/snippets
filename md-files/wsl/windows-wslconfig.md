@@ -1,15 +1,6 @@
 `C:\Users\<username>\.wslconfig`
 
 ```conf
-[automount]
-enabled               = true
-root                  = /
-mountFsTab            = true
-
-[interop]
-enabled               = false
-appendWindowsPath     = false
-
 [wsl2]
 processors            = 8
 memory                = 32GB
