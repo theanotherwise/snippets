@@ -2,6 +2,6 @@
 ```conf
 [network]
 # hostname            = hostname
-generateHosts         = false
-generateResolvConf    = false
+generateHosts         = true
+generateResolvConf    = true
 ```
