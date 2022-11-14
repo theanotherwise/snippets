@@ -11,4 +11,6 @@ wsl --set-version Ubuntu 2
 wsl --setdefault Ubuntu 2
 
 wsl --unregister Ubuntu
+
+wsl --import Test C:\Users\mateu\WSL\Test wsl.tar
 ```
