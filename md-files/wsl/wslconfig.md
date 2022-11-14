@@ -10,11 +10,6 @@ mountFsTab            = true
 enabled               = false
 appendWindowsPath     = false
 
-[network]
-# hostname            = DemoHost
-generateHosts         = false
-generateResolvConf    = false
-
 [wsl2]
 processors            = 8
 memory                = 32GB
