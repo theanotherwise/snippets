@@ -45,6 +45,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [PSP](md-files/k3d/psp.md)
   - [Export/Import Image](md-files/k3d/export-import-image.md)
 - Kubernetes
+  - [Fast Track](md-files/kuberentes/fast-track.md)
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
   - [PSP Usage](md-files/kubernetes/psp-usage.md)
