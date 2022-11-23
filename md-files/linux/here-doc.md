@@ -11,7 +11,7 @@ tee textfile << EndOfMessage
 Lorem Ipsum
 EndOfMessage
 
-cat << EndOfMessage | sudo tee textfile
+cat << EndOfMessage | tee textfile
 Lorem Ipsum
 EndOfMessage
 ```
