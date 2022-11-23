@@ -26,9 +26,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Docker Engine](md-files/docker/settings.md)
 - Firewalls
   - [`iptables`](md-files/firewalls/iptables.md)
-  - [`iptables` Diagram](md-files/firewalls/iptables-diagram.md)
   - [Firewalld](md-files/firewalls/firewalld.md)
-  - [MikroTik Diagram](md-files/firewalls/mikrotik-diagram.md)
 - TLS
   - [`tls` decrypt](md-files/tls/decrypt.md)
 - Helm
