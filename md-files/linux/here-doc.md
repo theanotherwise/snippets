@@ -2,10 +2,12 @@
 cat > textfile << EndOfMessage
 Lorem Ipsum
 EndOfMessage
-```
 
-```bash
 cat << EndOfMessage > textfile
-The variable will not be interpreted.
+Lorem Ipsum
+EndOfMessage
+
+tee textfile << EndOfMessage
+Lorem Ipsum
 EndOfMessage
 ```
