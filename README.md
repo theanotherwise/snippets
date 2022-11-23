@@ -45,6 +45,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
 - Kubernetes
   - [Fast Track](md-files/kubernetes/fast-track.md)
   - [Contexsts](md-files/kubernetes/contexts.md)
+  - [Cluster Wide](md-files/kubernetes/cluster-wide.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
   - [PSP Usage](md-files/kubernetes/psp-usage.md)
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
