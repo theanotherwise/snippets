@@ -10,6 +10,9 @@ xxd -l 2 file
 
 # Start from 5 Byte
 xxd -s 4 file
+
+# Extract and Revert Bytes
+xxd 111.png | xxd -r > dupa.png
 ```
 
 ```bash
