@@ -12,17 +12,17 @@ xxd -l 2 file
 xxd -s 4 file
 
 # Extract and Revert Bytes
-xxd 111.png | xxd -r > dupa.png
+xxd 111.png | xxd -r > aaa.bin
 ```
 
 ```bash
-AAA_FILE="aaa.bin"
-BBB_FILE="bbb.bin"
-CCC_FILE="ccc.bin"
-DDD_FILE="ddd.bin"
+AAA_FILE="AAAAAA"
+BBB_FILE="BBBBBB"
+CCC_FILE="protected"
+DDD_FILE="extracted"
 
-echo "111222333" > "${AAA_FILE}"
-echo "444555666777888999" > "${BBB_FILE}"
+# echo "111222333" > "${AAA_FILE}"
+# echo "444555666777888999" > "${BBB_FILE}"
 
 AAA_LEN="$(wc -c < ${AAA_FILE})"
 BBB_LEN="$(wc -c < ${BBB_FILE})"
