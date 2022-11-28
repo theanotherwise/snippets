@@ -57,6 +57,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Build / Deploy](md-files/maven/build-deploy.md)
 - Linux
   - [General](md-files/linux/general.md)
+  - [XXD](md-files/linux/xxd.md)
   - [Here Doc](md-files/linux/here-doc.md)
   - [Swap File](md-files/linux/swap.md)
   - [`ip`](md-files/linux/ip.md)
