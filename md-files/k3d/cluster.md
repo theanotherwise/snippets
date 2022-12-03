@@ -4,7 +4,7 @@ CLUSTER_NAME="seems"
 k3d cluster delete "${CLUSTER_NAME}"
 
 SERVERS=3
-AGENTS=1
+AGENTS=3
 
 k3d cluster create \
   --servers "${SERVERS}" \
