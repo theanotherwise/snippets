@@ -156,7 +156,11 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 80
----
+ENDOFMESSAGE
+```
+
+```bash
+cat <<ENDOFMESSAGE | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -174,40 +178,5 @@ spec:
             port:
               number: 8080
   ingressClassName: nginx
-ENDOFMESSAGE
-```
-
-```bash
-cat <<ENDOFMESSAGE | kubectl apply -f -
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx
-spec:
-  selector:
-    matchLabels:
-      app: nginx
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-        - name: nginx
-          image: nginx:latest
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx
-spec:
-  type: LoadBalancer
-  selector:
-    app: nginx
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 80
 ENDOFMESSAGE
 ```
