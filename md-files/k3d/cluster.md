@@ -1,3 +1,5 @@
+# Setup
+
 ```bash
 CLUSTER_NAME="seems"
 
@@ -25,7 +27,6 @@ done
 
 ```bash
 kubectl create namespace workspace
-
 kubectl config set-context k3d-${CLUSTER_NAME}-workspace \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
@@ -45,16 +46,19 @@ kubectl config set-context k3d-${CLUSTER_NAME}-kube-system \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace kube-system
 
+kubectl create namespace metallb-system
 kubectl config set-context k3d-${CLUSTER_NAME}-metallb-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace metallb-system
-                
+
+kubectl create namespace cert-manager-system
 kubectl config set-context k3d-${CLUSTER_NAME}-cert-manager-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace cert-manager-system
 
+kubectl create namespace nginx-ingress-system
 kubectl config set-context k3d-${CLUSTER_NAME}-nginx-ingress-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
@@ -63,14 +67,29 @@ kubectl config set-context k3d-${CLUSTER_NAME}-nginx-ingress-system \
 
 ```bash
 helm repo add metallb https://metallb.github.io/metallb
+helm repo add jetstack https://charts.jetstack.io
+helm repo add nginx-stable https://helm.nginx.com/stable
+
 helm repo update
+```
 
-kubectl create namespace metallb-system
-
+```bash
 helm upgrade --install metallb metallb/metallb \
   --version 0.13.4 \
   --namespace metallb-system
 
+helm upgrade --install cert-manager jetstack/cert-manager \
+  --version v1.7.2 \
+  --namespace cert-manager-system \
+  --set installCRDs=true
+
+helm upgrade --install nginx-ingess nginx-stable/nginx-ingress \
+  --namespace nginx-ingress-system
+```
+
+# Configurations
+
+```bash  
 METALLB_CIDR=`docker network inspect k3d-${CLUSTER_NAME} | jq -r ".[0].IPAM.Config[0].Subnet" | awk -F'.' '{print $1"."$2"."$3"."128"/"25}'`
 
 cat <<EndOfMessage | kubectl -n metallb-system apply -f -
@@ -96,28 +115,6 @@ EndOfMessage
 ```
 
 ```bash
-helm repo add jetstack https://charts.jetstack.io
-helm repo update
-
-kubectl create namespace cert-manager-system
-
-helm upgrade --install cert-manager jetstack/cert-manager \
-  --version v1.7.2 \
-  --namespace cert-manager-system \
-  --set installCRDs=true
-```
-
-```bash
-helm repo add nginx-stable https://helm.nginx.com/stable
-helm repo update
-
-kubectl create namespace nginx-ingress-system
-
-helm upgrade --install nginx-ingess nginx-stable/nginx-ingress \
-  --namespace nginx-ingress-system
-```
-
-```
 kubectl port-forward service/nginx-ingess-nginx-ingress \
   --namespace nginx-ingress-system \
   8080:80
