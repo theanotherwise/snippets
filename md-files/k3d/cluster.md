@@ -113,6 +113,13 @@ helm upgrade --install nginx-ingess nginx-stable/nginx-ingress \
   --namespace nginx-ingress-system
 ```
 
+# Secrets
+
+```bash
+# ArgoCD secret
+kubectl -n argocd-system get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
+
 # Configurations
 
 ```bash  
