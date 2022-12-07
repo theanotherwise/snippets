@@ -65,17 +65,28 @@ kubectl config set-context k3d-${CLUSTER_NAME}-nginx-ingress-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace nginx-ingress-system
+
+kubectl create namespace argocd-system
+kubectl config set-context k3d-${CLUSTER_NAME}-argocd-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace argocd-system
 ```
 
 ```bash
 helm repo add metallb https://metallb.github.io/metallb
 helm repo add jetstack https://charts.jetstack.io
 helm repo add nginx-stable https://helm.nginx.com/stable
+helm repo add argo https://argoproj.github.io/argo-helm
 
 helm repo update
 ```
 
 ```bash
+helm upgrade --install argocd argo/argo-cd \
+  --version 5.16.1 \
+  --namespace argocd-system
+
 helm upgrade --install metallb metallb/metallb \
   --version 0.13.4 \
   --namespace metallb-system
