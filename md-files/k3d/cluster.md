@@ -98,7 +98,8 @@ helm repo update
 ```bash
 helm upgrade --install argocd argo/argo-cd \
   --version 5.16.1 \
-  --namespace argocd-system
+  --namespace argocd-system \
+  --set server.service.type=LoadBalancer
 
 helm upgrade --install keda kedacore/keda \
   --version 2.8.2 \
