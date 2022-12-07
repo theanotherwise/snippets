@@ -91,6 +91,7 @@ helm repo add metallb https://metallb.github.io/metallb
 helm repo add jetstack https://charts.jetstack.io
 helm repo add nginx-stable https://helm.nginx.com/stable
 helm repo add argo https://argoproj.github.io/argo-helm
+helm repo add kedacore https://kedacore.github.io/charts
 
 helm repo update
 ```
