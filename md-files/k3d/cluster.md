@@ -30,6 +30,14 @@ done
 ```bash
 kubectl config delete-context k3d-${CLUSTER_NAME}
 
+kubectl create namespace metallb-system
+kubectl create namespace cert-manager-system
+kubectl create namespace nginx-ingress-system
+kubectl create namespace argocd-system
+kubectl create namespace keda-system
+kubectl create namespace istio-system
+kubectl create namespace istio-gateway-system
+
 kubectl config set-context k3d-${CLUSTER_NAME}-default \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
@@ -42,29 +50,40 @@ kubectl config set-context k3d-${CLUSTER_NAME}-kube-system \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace kube-system
 
-kubectl create namespace metallb-system
 kubectl config set-context k3d-${CLUSTER_NAME}-metallb-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace metallb-system
 
-kubectl create namespace cert-manager-system
 kubectl config set-context k3d-${CLUSTER_NAME}-cert-manager-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace cert-manager-system
 
-kubectl create namespace nginx-ingress-system
 kubectl config set-context k3d-${CLUSTER_NAME}-nginx-ingress-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace nginx-ingress-system
 
-kubectl create namespace argocd-system
 kubectl config set-context k3d-${CLUSTER_NAME}-argocd-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace argocd-system
+
+kubectl config set-context k3d-${CLUSTER_NAME}-keda-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace keda-system
+
+kubectl config set-context k3d-${CLUSTER_NAME}-istio-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace istio-system
+
+kubectl config set-context k3d-${CLUSTER_NAME}-istio-gateway-system \
+                --cluster k3d-${CLUSTER_NAME} \
+                --user admin@k3d-${CLUSTER_NAME} \
+                --namespace istio-gateway-system
 ```
 
 ```bash
