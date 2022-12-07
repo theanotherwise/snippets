@@ -28,21 +28,15 @@ done
 ``` 
 
 ```bash
-kubectl create namespace workspace
-kubectl config set-context k3d-${CLUSTER_NAME}-workspace \
-                --cluster k3d-${CLUSTER_NAME} \
-                --user admin@k3d-${CLUSTER_NAME} \
-                --namespace workspace
-
-kubectl config use-context k3d-${CLUSTER_NAME}-workspace
-
 kubectl config delete-context k3d-${CLUSTER_NAME}
 
 kubectl config set-context k3d-${CLUSTER_NAME}-default \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
                 --namespace kube-default
-                
+
+kubectl config use-context k3d-${CLUSTER_NAME}-default
+
 kubectl config set-context k3d-${CLUSTER_NAME}-kube-system \
                 --cluster k3d-${CLUSTER_NAME} \
                 --user admin@k3d-${CLUSTER_NAME} \
