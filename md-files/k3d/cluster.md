@@ -100,6 +100,10 @@ helm upgrade --install argocd argo/argo-cd \
   --version 5.16.1 \
   --namespace argocd-system
 
+helm upgrade --install keda kedacore/keda \
+  --version 2.8.2 \
+  --namespace keda-system
+
 helm upgrade --install metallb metallb/metallb \
   --version 0.13.4 \
   --namespace metallb-system
