@@ -39,7 +39,6 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
 - CSS
   - [Footer on Bottom](md-files/css/footer-on-bottom.md)
 - K3d
-  - [Cluster](md-files/k3d/cluster.md)
   - [PSP](md-files/k3d/psp.md)
   - [Export/Import Image](md-files/k3d/export-import-image.md)
 - Kubernetes
