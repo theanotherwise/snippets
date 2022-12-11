@@ -1,3 +1,4 @@
+```bash
 cat > format.txt << EndOfMessage
      time_namelookup:  %{time_namelookup}s\n
         time_connect:  %{time_connect}s\n
@@ -10,3 +11,4 @@ cat > format.txt << EndOfMessage
 EndOfMessage
 
 watch -n 1 curl "wp.pl" -w "@format.txt" -o /dev/null --silent
+```
