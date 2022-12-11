@@ -148,13 +148,25 @@ spec:
               value: v1
           args:
             - |-
-              while true ; do
-                DATETIME="$(date +"%Y-%m-%d %H:%M:%S")"
-                BACKEND="$(curl http://backend:80/ --silent)"
+              cat >format.txt <<EndOfMessage
+              Statistics:\n
+                       http_code:  %{http_code}\n
+                 time_namelookup:  %{time_namelookup}s\n
+                    time_connect:  %{time_connect}s\n
+                 time_appconnect:  %{time_appconnect}s\n
+                time_pretransfer:  %{time_pretransfer}s\n
+                   time_redirect:  %{time_redirect}s\n
+              time_starttransfer:  %{time_starttransfer}s\n
+                                   ----------\n
+                      time_total:  %{time_total}s\n
+              ----------\n\n
+              EndOfMessage
               
-                echo -e "Frontend:\t${VERSION}" > index.html;
-                echo -e "Backend:\t${BACKEND}" >> index.html;
-                echo -e "Datetime:\t${DATETIME}" >> index.html;
+              while true ; do
+                BACKEND="$(curl http://backend:80/ -w "@format.txt" --silent)"
+              
+                echo -e "Backend:\t${BACKEND}" > index.html;
+                echo -e "Frontend:\t${VERSION}" >> index.html;
               
                 mv index.html /usr/share/nginx/html/index.html;
                 sleep 1;
@@ -201,13 +213,25 @@ spec:
               value: v2
           args:
             - |-
-              while true ; do
-                DATETIME="$(date +"%Y-%m-%d %H:%M:%S")"
-                BACKEND="$(curl http://backend:80/ --silent)"
+              cat >format.txt <<EndOfMessage
+              Statistics:\n
+                       http_code:  %{http_code}\n
+                 time_namelookup:  %{time_namelookup}s\n
+                    time_connect:  %{time_connect}s\n
+                 time_appconnect:  %{time_appconnect}s\n
+                time_pretransfer:  %{time_pretransfer}s\n
+                   time_redirect:  %{time_redirect}s\n
+              time_starttransfer:  %{time_starttransfer}s\n
+                                   ----------\n
+                      time_total:  %{time_total}s\n
+              ----------\n\n
+              EndOfMessage
               
-                echo -e "Frontend:\t${VERSION}" > index.html;
-                echo -e "Backend:\t${BACKEND}" >> index.html;
-                echo -e "Datetime:\t${DATETIME}" >> index.html;
+              while true ; do
+                BACKEND="$(curl http://backend:80/ -w "@format.txt" --silent)"
+              
+                echo -e "Backend:\t${BACKEND}" > index.html;
+                echo -e "Frontend:\t${VERSION}" >> index.html;
               
                 mv index.html /usr/share/nginx/html/index.html;
                 sleep 1;
@@ -249,10 +273,8 @@ spec:
           args:
             - |-
               cat >format.txt <<EndOfMessage
-              ----------
-              \n\n
-              Request stats:\n\n
-                       http_code:  %{http_code}\n\n
+              Statistics:\n
+                       http_code:  %{http_code}\n
                  time_namelookup:  %{time_namelookup}s\n
                     time_connect:  %{time_connect}s\n
                  time_appconnect:  %{time_appconnect}s\n
@@ -261,7 +283,15 @@ spec:
               time_starttransfer:  %{time_starttransfer}s\n
                                    ----------\n
                       time_total:  %{time_total}s\n
+              ----------\n\n
               EndOfMessage
               
-              watch -n 1 curl "http://frontend:80" -w "@format.txt" -sS > /proc/1/fd/1 2>&1
+              while true ; do
+                DATETIME="$(date +"%Y-%m-%d %H:%M:%S")"
+
+                curl "http://frontend:80" -w "@format.txt" -sS > response.txt 2>&1;
+                echo -e "${DATETIME}\n\n" >> response.txt 
+                cat response.txt > /proc/1/fd/1
+                sleep 1;
+              done
 ```
