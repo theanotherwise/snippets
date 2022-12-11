@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/9096064/206935411-e64a22c4-0cb5-411a-ad35-20f266568472.png)
+
 ```yaml
 apiVersion: v1
 kind: Namespace
