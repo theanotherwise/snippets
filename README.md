@@ -43,6 +43,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Export/Import Image](md-files/k3d/export-import-image.md)
 - Kubernetes
   - [Fast Track](md-files/kubernetes/fast-track.md)
+  - [Istio Test App](md-files/kuberentes/istio-test-app.md)
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Cluster Wide](md-files/kubernetes/cluster-wide.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
