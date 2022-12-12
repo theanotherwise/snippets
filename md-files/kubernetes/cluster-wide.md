@@ -8,29 +8,24 @@ metadata:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: wide
-  namespace: "${NAMESPACE}"
+  name: debug
 spec:
-  serviceAccount: wide
+  terminationGracePeriodSeconds: 1
   securityContext:
-    runAsNonRoot: true
-    runAsUser: 1000
-    runAsGroup: 1000
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
+    fsGroup: 0
   containers:
-    - name: wide
-      image: alpine:latest
-      command: [ "/bin/sh", "-c" ]
+    - name: debug
+      image: seemscloud/debug:latest
+      imagePullPolicy: Always
       securityContext:
-        runAsUser: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        allowPrivilegeEscalation: false
-        privileged: false
-      args:
-        - |
-          while true ; do
-            true
-          done
+        runAsNonRoot: false
+        runAsUser: 0
+        runAsGroup: 0
+        allowPrivilegeEscalation: true
+        privileged: true
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
