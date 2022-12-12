@@ -1,3 +1,4 @@
+```yaml
 ############################################
 #
 # General
@@ -163,3 +164,4 @@ GET /_dangling
 POST /_dangling/SET_INDEX_UUID?accept_data_loss=true
 
 DELETE /_dangling/SET_INDEX_UUID?accept_data_loss=true
+```
