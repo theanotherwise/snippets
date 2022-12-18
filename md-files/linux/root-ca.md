@@ -17,7 +17,7 @@ openssl req -nodes -new -newkey rsa:4096 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seem
 ```
 
 ```bash
-kubectl create secret tls client-tls \
+kubectl create secret tls application-tls \
   --key=client.key.pem \
   --cert=client.crt.pem
 ```
