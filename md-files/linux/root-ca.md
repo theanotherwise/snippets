@@ -16,6 +16,11 @@ openssl req -nodes -new -newkey rsa:4096 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seem
   -in client.csr.pem -out client.crt.pem
 ```
 
+```
+openssl x509 -noout -modulus -in client.crt.pem | openssl md5
+openssl rsa -noout -modulus -in client.key.pem | openssl md5
+```
+
 ```bash
 kubectl create secret tls application-tls \
   --key=client.key.pem \
