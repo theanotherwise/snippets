@@ -43,9 +43,11 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Export/Import Image](md-files/k3d/export-import-image.md)
 - Openshift
   - [OpenShift](md-files/openshift/ingress.md)
+- Istio
+  - [Ingress Gateway Trace Logging](md-files/istio/ingress-gateway-trace-logging.md)
+  - [Istio Test App](md-files/istio/performance-tests.md)
 - Kubernetes
   - [Apply Heredoc](md-files/kubernetes/apply-heredoc.md)
-  - [Istio Test App](md-files/kubernetes/istio-test-app.md)
   - [Contexsts](md-files/kubernetes/contexts.md)
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
   - [PSP Usage](md-files/kubernetes/psp-usage.md)
