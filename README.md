@@ -33,7 +33,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Double Range](md-files/helm/double-range.md)
   - [Opensearch Dashboards Reports](md-files/helm/osd-reports.md)
 - Logstash
-  - [Nested Value in Field NAme Instead Field Value](md-files/logstash/extract-nexted.md)
+  - [Field multiple types workaround](md-files/logstash/field-multiple-types-workaround.md)
 - Kafka
   - [Performance tests](md-files/kafka/performance-tests.md)
 - CSS
