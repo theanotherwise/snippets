@@ -24,6 +24,8 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Cleanup](md-files/docker/cleanup.md)
   - [Docker Compose](md-files/docker/docker-compose.md)
   - [Docker Engine](md-files/docker/settings.md)
+- Hashcat
+  - [Benchmark](md-files/hashcat/benchmark.md)
 - Firewalls
   - [`iptables`](md-files/firewalls/iptables.md)
   - [Firewalld](md-files/firewalls/firewalld.md)
