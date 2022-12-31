@@ -1,4 +1,9 @@
 ```bash
+# MD5 (0) Benchmark
+hashcat -b -m 0
+```
+
+```bash
 # mask
 hashcat -m 0 -a 3 615af8e453b4bee217e7727cffb1739d -1 ?l?d?u ?1?1?1?1?1?1?1?1
 
