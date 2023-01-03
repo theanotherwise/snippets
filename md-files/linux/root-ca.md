@@ -7,10 +7,10 @@ openssl rsa -noout -modulus -in tls.key.pem | openssl md5
 ```
 
 ```
-openssl req -nodes -x509 -days 3650 -newkey rsa:4096 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root" \
+openssl req -nodes -x509 -days 3650 -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root" \
   -keyout ca.key.pem -out ca.crt.pem
 
-openssl req -nodes -new -newkey rsa:4096 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root/CN=*.localhost" \
+openssl req -nodes -new -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root/CN=*.localhost" \
   -keyout tls.key.pem -out tls.csr.pem
 
  openssl x509 -req -days 730 \
