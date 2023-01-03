@@ -16,6 +16,8 @@ openssl req -nodes -new -newkey rsa:4096 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seem
  openssl x509 -req -days 730 \
   -CA ca.crt.pem -CAkey ca.key.pem -CAcreateserial \
   -in tls.csr.pem -out tls.crt.pem
+  
+rm -f tls.csr.pem
 ```
 
 ```
