@@ -2,10 +2,10 @@
 
 ### Convention
 
-|type        |organization   |environment    |domain      |team        |group       |application |
-|------------|---------------|---------------|------------|------------|------------|------------|
-|Filebeat    |Seems Cloud    |Production     |Trading     |DevOps I    |Front End   |FooBar      |
+|  organization  |  environment  |  domain   |  team      |
+|----------------|---------------|-----------|------------|
+|  SeemsCloud    |  Production   |  Trading  |  DevOps I  |
 
 ### Example
 
-`filebeat-seemscloud-production-trading-devops_i-front_end-foobar`
+`seemscloud-production-traiding-devops`
