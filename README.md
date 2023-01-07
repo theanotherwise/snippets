@@ -62,7 +62,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Build / Deploy](md-files/maven/build-deploy.md)
 - Linux
   - [General](md-files/linux/general.md)
-  - [SSH Tunnel](mod-files/linux-ssh-tunnel.md)
+  - [SSH Tunnel](mod-files/linux/ssh-tunnel.md)
   - [Curl Time details](md-files/linux/curl-time-details.md)
   - [XXD](md-files/linux/xxd.md)
   - [GRPC Log Level](md-files/linux/grpc-log-level.md)
