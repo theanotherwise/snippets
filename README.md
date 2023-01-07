@@ -89,4 +89,6 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
 - Rancher Desktop
   - [SVC Access](md-files/rancher-desktop/svc-access.md)
 - Elasticsearch 
+  - [Indices Naming](md-files/elasticsearch/indices-naming.md)
+  - [Fluentd Consumer & Producer](md-files/elasticsearch/fluentd-consumer-producer.md)
   - [Debugging](md-files/elasticsearch/debugging.md)
