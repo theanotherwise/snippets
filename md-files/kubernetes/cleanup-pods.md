@@ -1,4 +1,8 @@
 ```bash
+kubectl get pods -A | grep -Ev "Completed" | grep -Eiv "1/1|2/2|5/5|3/3|4/4|6/6"
+```
+
+```bash
 kubectl delete pods --field-selector status.phase=Pending -A
 ```
 
