@@ -36,6 +36,9 @@ spec:
             - mountPath: /etc/nginx/conf.d/default.conf
               name: config
               subPath: default.conf
+            - mountPath: /usr/share/nginx/html/index.html
+              name: config
+              subPath: index.html
       volumes:
         - name: config
           configMap:
@@ -55,5 +58,7 @@ data:
             index  index.html;
         }
     }
+  index.html: |
+    Lorem Ipsum
 EndOfMessage
 ```
