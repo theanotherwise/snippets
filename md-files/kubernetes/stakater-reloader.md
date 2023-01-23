@@ -19,7 +19,6 @@ metadata:
     app: nginx
   annotations:
     configmap.reloader.stakater.com/reload: "nginx"
-    reloader.stakater.com/auto: "true"
 spec:
   replicas: 2
   selector:
