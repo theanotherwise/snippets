@@ -49,6 +49,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Ingress Gateway Trace Logging](md-files/istio/ingress-gateway-trace-logging.md)
   - [Performance Tests](md-files/istio/performance-tests.md)
 - Kubernetes
+  - [HashiCorp Vault](md-files/kubernetes/hashicorp-vault.md)
   - [Stakater Reloader](md-files/kubernetes/stakater-reloader.md)
   - [Cleanup Pods](md-files/kubernetes/cleanup-pods.md)
   - [Apply Heredoc](md-files/kubernetes/apply-heredoc.md)
