@@ -65,6 +65,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Build / Deploy](md-files/maven/build-deploy.md)
 - Linux
   - [General](md-files/linux/general.md)
+  - [LDAP](md-files/linux/ldap.md)
   - [Fedora CoreOS Install](md-files/linux/fedora-coreos-install.md)
   - [SSH Tunnel](md-files/linux/ssh-tunnel.md)
   - [Curl Time details](md-files/linux/curl-time-details.md)
