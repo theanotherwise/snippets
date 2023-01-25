@@ -58,6 +58,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [PSP Usage](md-files/kubernetes/psp-usage.md)
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
   - [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
+  - [OpenLDAP Deployment](md-files/kubernetes/openldap-deployment.md)
   - [Find Service Account Bindings](md-files/kubernetes/find-service-account-bindings.md)
   - [Test Service Account](md-files/kubernetes/test-service-account.md)
 - Maven
