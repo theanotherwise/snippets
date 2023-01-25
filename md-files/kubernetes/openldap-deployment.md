@@ -5,47 +5,36 @@ metadata:
   name: nginx
 automountServiceAccountToken: true
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   name: openldap
   labels:
     app: openldap
 spec:
-  selector:
-    matchLabels:
-      app: openldap
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: openldap
-    spec:
-      serviceAccountName: nginx
-      automountServiceAccountToken: true
-      containers:
-        - name: openldap
-          image: docker.io/bitnami/openldap:latest
-          imagePullPolicy: "Always"
-          env:
-            - name: BITNAMI_DEBUG
-              value: "true"
-            - name: LDAP_LOGLEVEL
-              value: "4"
-            - name: LDAP_ADMIN_USERNAME
-              value: "admin"
-            - name: LDAP_ADMIN_PASSWORD
-              value: "admin"
-            - name: LDAP_CONFIG_ADMIN_ENABLED
-              value: "yes"
-            - name: LDAP_USER_DC
-              value: "users"
-            - name: LDAP_GROUP
-              value: "groups"
-            - name: LDAP_ROOT
-              value: "dc=seems,dc=cloud"
-            - name: LDAP_ADD_SCHEMAS
-              value: "yes"
+  serviceAccountName: openldap
+  automountServiceAccountToken: true
+  containers:
+    - name: openldap
+      image: docker.io/bitnami/openldap:latest
+      imagePullPolicy: "Always"
+      env:
+        - name: BITNAMI_DEBUG
+          value: "true"
+        - name: LDAP_LOGLEVEL
+          value: "4"
+        - name: LDAP_ADMIN_USERNAME
+          value: "admin"
+        - name: LDAP_ADMIN_PASSWORD
+          value: "admin"
+        - name: LDAP_CONFIG_ADMIN_ENABLED
+          value: "yes"
+        - name: LDAP_USER_DC
+          value: "users"
+        - name: LDAP_GROUP
+          value: "groups"
+        - name: LDAP_ROOT
+          value: "dc=seems,dc=cloud"
 ---
 apiVersion: v1
 kind: Service
