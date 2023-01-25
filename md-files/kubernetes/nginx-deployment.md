@@ -8,58 +8,33 @@ automountServiceAccountToken: true
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: openldap
   labels:
-    app: nginx
+    app: openldap
 spec:
-  serviceAccountName: nginx
+  serviceAccountName: openldap
   automountServiceAccountToken: true
   containers:
-    - name: nginx
-      image: nginx:latest
-      ports:
-        - name: http
-          containerPort: 8080
-      volumeMounts:
-        - name: entrypointd
-          mountPath: /docker-entrypoint.d/
-        - name: cache
-          mountPath: /var/cache/nginx
-        - name: run
-          mountPath: /var/run/nginx
-        - name: log
-          mountPath: /var/log/nginx
-        - name: config
-          subPath: default.conf
-          mountPath: /etc/nginx/conf.d/default.conf
-        - name: config
-          subPath: index.html
-          mountPath: /usr/share/nginx/html/index.html
-  initContainers:
-    - name: chmod
-      image: debian:bullseye-slim
-      command: [ "/bin/bash", "-c" ]
-      args:
-        - chown 101:101 -R /var/cache/nginx /var/log/nginx /var/run/nginx
-      volumeMounts:
-        - name: cache
-          mountPath: /var/cache/nginx
-        - name: run
-          mountPath: /var/run/nginx
-        - name: log
-          mountPath: /var/log/nginx
-  volumes:
-    - name: cache
-      emptyDir: { }
-    - name: run
-      emptyDir: { }
-    - name: log
-      emptyDir: { }
-    - name: entrypointd
-      emptyDir: { }
-    - name: config
-      configMap:
-        name: nginx-config
+    - name: openldap
+      image: docker.io/bitnami/openldap:latest
+      imagePullPolicy: "Always"
+      env:
+        - name: BITNAMI_DEBUG
+          value: "true"
+        - name: LDAP_LOGLEVEL
+          value: "4"
+        - name: LDAP_ADMIN_USERNAME
+          value: "admin"
+        - name: LDAP_ADMIN_PASSWORD
+          value: "admin"
+        - name: LDAP_CONFIG_ADMIN_ENABLED
+          value: "yes"
+        - name: LDAP_USER_DC
+          value: "users"
+        - name: LDAP_GROUP
+          value: "groups"
+        - name: LDAP_ROOT
+          value: "dc=seems,dc=cloud"
 ---
 apiVersion: v1
 kind: ConfigMap
