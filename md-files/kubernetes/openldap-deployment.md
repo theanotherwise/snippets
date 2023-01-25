@@ -45,7 +45,6 @@ metadata:
 spec:
   selector:
     app: openldap
-  type: ClusterIP
   ports:
     - protocol: TCP
       port: 1389
