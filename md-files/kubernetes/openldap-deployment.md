@@ -47,8 +47,7 @@ spec:
     app: openldap
   type: ClusterIP
   ports:
-    - name: ldap
-      protocol: TCP
+    - protocol: TCP
       port: 1389
       targetPort: 1389
 ```
