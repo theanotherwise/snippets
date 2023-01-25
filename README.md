@@ -57,8 +57,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
   - [Patch Resource](md-files/kubernetes/patch-resource.md)
   - [PSP Usage](md-files/kubernetes/psp-usage.md)
   - [Role RoleBinding](md-files/kubernetes/role-rolebinding.md)
-  - [Nginx Short Deployment](md-files/kubernetes/nginx-short-deployment.md)
-  - [Nginx Custom Deployment](md-files/kubernetes/nginx-custom-deployment.md)
+  - [Nginx Deployment](md-files/kubernetes/nginx-deployment.md)
   - [Find Service Account Bindings](md-files/kubernetes/find-service-account-bindings.md)
   - [Test Service Account](md-files/kubernetes/test-service-account.md)
 - Maven
