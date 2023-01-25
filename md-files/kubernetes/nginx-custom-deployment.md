@@ -1,21 +1,25 @@
 ```yaml
 apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nginx
+automountServiceAccountToken: true
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
+  labels:
+    app: nginx
 spec:
+  serviceAccountName: nginx
+  automountServiceAccountToken: true
   containers:
     - name: nginx
       image: nginx:latest
       ports:
         - name: http
           containerPort: 8080
-      securityContext:
-        runAsUser: 0
-        runAsGroup: 0
-        runAsNonRoot: false
-        privileged: false
-        allowPrivilegeEscalation: false
       volumeMounts:
         - name: entrypointd
           mountPath: /docker-entrypoint.d/
@@ -29,8 +33,8 @@ spec:
           subPath: default.conf
           mountPath: /etc/nginx/conf.d/default.conf
         - name: config
-          subPath: nginx.conf
-          mountPath: /etc/nginx/nginx.conf
+          subPath: index.html
+          mountPath: /usr/share/nginx/html/index.html
   initContainers:
     - name: chmod
       image: debian:bullseye-slim
@@ -72,30 +76,8 @@ data:
             index  index.html;
         }
     }
-  nginx.conf: |
-    worker_processes  1;
-
-    error_log /dev/stdout info;
-    pid       /var/run/nginx/nginx.pid;
-
-    events {
-        worker_connections  1024;
-    }
-
-    http {
-        include       /etc/nginx/mime.types;
-        default_type  application/octet-stream;
-
-        log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                          '$status $body_bytes_sent "$http_referer" '
-                          '"$http_user_agent" "$http_x_forwarded_for"';
-
-        access_log /dev/stdout main;
-        sendfile        on;
-        keepalive_timeout  65;
-
-        include /etc/nginx/conf.d/*.conf;
-    }
+  index.html: |
+    Hello World!
 ---
 apiVersion: v1
 kind: Service
