@@ -1,4 +1,10 @@
 ```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nginx
+automountServiceAccountToken: true
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,6 +21,8 @@ spec:
       labels:
         app: openldap
     spec:
+      serviceAccountName: nginx
+      automountServiceAccountToken: true
       containers:
         - name: openldap
           image: docker.io/bitnami/openldap:latest
