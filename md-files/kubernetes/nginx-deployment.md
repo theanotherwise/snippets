@@ -86,7 +86,6 @@ metadata:
 spec:
   selector:
     app: nginx
-  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8080
