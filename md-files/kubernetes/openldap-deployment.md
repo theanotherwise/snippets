@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: nginx
+  name: openldap
 automountServiceAccountToken: true
 ---
 apiVersion: v1
