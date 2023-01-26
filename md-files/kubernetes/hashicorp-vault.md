@@ -1,3 +1,15 @@
+```yaml
+annotations:
+  vault.hashicorp.com/role: 'ns-vault_system-sa-nginx'
+  vault.hashicorp.com/agent-inject: 'true'
+  vault.hashicorp.com/agent-inject-secret-config: 'kv-foo/data/credentials/apps/foo'
+  vault.hashicorp.com/agent-inject-template-config: |
+    {{ with secret "kv-foo/data/credentials/apps/foo" -}}
+    USERNAME="{{ .Data.data.USERNAME}}"
+    PASSWORD="{{ .Data.data.PASSWORD }}"
+    {{- end }}
+```
+
 ```bash
 kubectl exec -ti vault-0 -- vault login -method=token
 
