@@ -9,7 +9,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
 ## Index
 
 - Azure CLI
-  - [Upload to Storage](md-files/azure-cli/upload-to-storage.md)
+  - [Storage Container SAS Token](md-files/azure-cli/storage-container-sas-token.md)
 - KVM
   - [General](md-files/kvm/general.md)
 - Google Cloud
