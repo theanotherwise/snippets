@@ -1,13 +1,9 @@
 ```bash
-STORE_NAME=""
-CONTAINER_NAME=""
-ACCOUNT_NAME=""
-ACCOUNT_KEY=""
+ACCOUNT_NAME="XXXXX"
+CONTAINER_NAME="XXXXX"
+ACCOUNT_KEY="XXXXX"
 START_DATE=`date +"%Y-%m-%d"`
 END_DATE=$(date -d "`date +'%Y-%m-%d'` 1 month" +%Y-%m-%d)
-
-echo "${START_DATE}"
-echo "${END_DATE}"
 
 SAS_TOKEN=$(az storage container generate-sas \
 --name "${CONTAINER_NAME}" \
@@ -19,6 +15,8 @@ SAS_TOKEN=$(az storage container generate-sas \
 --output tsv)
 
 echo "${SAS_TOKEN}"
+```
 
-azcopy copy filt.txt "https://${STORE_NAME}.blob.core.windows.net/${CONTAINER_NAME}?${SAS_TOKEN}"
+```bash
+./azcopy copy NOTICE.txt "https://${ACCOUNT_NAME}.blob.core.windows.net/${CONTAINER_NAME}?${SAS_TOKEN}" --blob-type=BlockBlob
 ```
