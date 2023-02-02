@@ -18,5 +18,6 @@ echo "${SAS_TOKEN}"
 ```
 
 ```bash
-./azcopy copy NOTICE.txt "https://${ACCOUNT_NAME}.blob.core.windows.net/${CONTAINER_NAME}?${SAS_TOKEN}" --blob-type=BlockBlob
+./azcopy copy NOTICE.txt "https://${ACCOUNT_NAME}.blob.core.windows.net/${CONTAINER_NAME}?${SAS_TOKEN}" \
+  --blob-type=BlockBlob
 ```
