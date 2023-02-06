@@ -33,6 +33,7 @@
 
 ## Ingress
 
-| Operator Namespace         | Managed by Operator                        |
-|----------------------------|--------------------------------------------|
-| openshift-ingress-operator | openshift-ingress openshift-ingress-canary |
+| Operator Namespace         | Managed by Operator      |
+|----------------------------|--------------------------|
+| openshift-ingress-operator | openshift-ingress        |
+|                            | openshift-ingress-canary |
