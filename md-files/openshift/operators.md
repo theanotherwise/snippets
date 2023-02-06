@@ -19,12 +19,14 @@
 
 ## API Server
 
-| openshift-apiserver-operator | openshift-kube-apiserver-operator |
-|------------------------------|-----------------------------------|
-| openshift-apiserver          | openshift-kube-apiserver          |
+| Operator Namespace                | Managed by Operator      |
+|-----------------------------------|--------------------------|
+| openshift-apiserver-operator      | openshift-apiserver      |
+| openshift-kube-apiserver-operator | openshift-kube-apiserver |
 
 ## Controll Manager
 
-| openshift-controller-manager-operator | openshift-kube-controller-manager-operator |
-|---------------------------------------|--------------------------------------------|
-| openshift-controller-manager          | openshift-kube-controller-manager          |
+| Operator Namespace                         | Managed by Operator               |
+|--------------------------------------------|-----------------------------------|
+| openshift-controller-manager-operator      | openshift-controller-manager      |
+| openshift-kube-controller-manager-operator | openshift-kube-controller-manager | 
