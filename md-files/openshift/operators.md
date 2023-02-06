@@ -5,7 +5,7 @@
 | Service CA                   | openshift-service-ca-operator                    | openshift-service-ca                    |
 | DNS                          | openshift-dns-operator                           | openshift-dns                           |
 | ETCD                         | openshift-etcd-operator                          | openshift-etcd                          |
-| Ingress                      | openshift-ingress-operator                       | openshift-ingress                       |
+| Ingress                      |                        |                        |
 | Console                      | openshift-console-operator                       | openshift-console                       |
 | Kube Scheduler               | openshift-kube-scheduler-operator                | openshift-kube-scheduler                |
 | Kube Storage Version Migrate | openshift-kube-storage-version-migrator-operator | openshift-kube-storage-version-migrator |
@@ -30,3 +30,9 @@
 |--------------------------------------------|-----------------------------------|
 | openshift-controller-manager-operator      | openshift-controller-manager      |
 | openshift-kube-controller-manager-operator | openshift-kube-controller-manager | 
+
+## Ingress
+
+| Operator Namespace         | Managed by Operator                        |
+|----------------------------|--------------------------------------------|
+| openshift-ingress-operator | openshift-ingress openshift-ingress-canary |
