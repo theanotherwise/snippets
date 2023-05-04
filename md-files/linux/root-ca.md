@@ -2,7 +2,7 @@
 openssl req -nodes -x509 -days 3650 -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root" \
   -keyout ca.key.pem -out ca.crt.pem
 
-openssl req -nodes -new -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root/CN=*.localhost" \
+openssl req -nodes -new -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root/CN=client" \
   -keyout tls.key.pem -out tls.csr.pem
 
 openssl x509 -req -days 730 \
@@ -13,15 +13,15 @@ rm -f tls.csr.pem
 ```
 
 ```bash
-openssl x509 -text -noout -in tls.crt.pem 
-
-openssl x509 -noout -modulus -in tls.crt.pem | openssl md5
-openssl rsa -noout -modulus -in tls.key.pem | openssl md5
-```
-
-```bash
 openssl x509 -text -noout -in ca.crt.pem 
 
 openssl x509 -noout -modulus -in ca.crt.pem | openssl md5
 openssl rsa -noout -modulus -in ca.key.pem | openssl md5
+```
+
+```bash
+openssl x509 -text -noout -in tls.crt.pem 
+
+openssl x509 -noout -modulus -in tls.crt.pem | openssl md5
+openssl rsa -noout -modulus -in tls.key.pem | openssl md5
 ```
