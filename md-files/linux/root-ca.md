@@ -25,9 +25,3 @@ openssl x509 -text -noout -in ca.crt.pem
 openssl x509 -noout -modulus -in ca.crt.pem | openssl md5
 openssl rsa -noout -modulus -in ca.key.pem | openssl md5
 ```
-
-```bash
-kubectl create secret tls application-tls \
-  --key=tls.key.pem \
-  --cert=tls.crt.pem
-```
