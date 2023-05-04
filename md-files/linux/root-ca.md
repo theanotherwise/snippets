@@ -1,5 +1,7 @@
+### CA Certificate
+
 ```bash
-openssl req -nodes -x509 -days 3650 -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root" \
+openssl req -nodes -x509 -days 3650 -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root/CN=Root CA" \
   -keyout ca.key.pem -out ca.crt.pem
 ```
 
@@ -10,8 +12,10 @@ openssl x509 -noout -modulus -in ca.crt.pem | openssl md5
 openssl rsa -noout -modulus -in ca.key.pem | openssl md5
 ```
 
+### Leaf Certificate
+
 ```bash
-openssl req -nodes -new -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root/CN=client" \
+openssl req -nodes -new -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root/CN=Leaf" \
   -keyout tls.key.pem -out tls.csr.pem
 
 openssl x509 -req -days 730 \
