@@ -1,12 +1,4 @@
 ```bash
-openssl x509 -subject -nameopt RFC2253 -noout -in tls.crt.pem
-openssl x509 -text -noout -in tls.crt.pem 
-
-openssl x509 -noout -modulus -in tls.crt.pem | openssl md5
-openssl rsa -noout -modulus -in tls.key.pem | openssl md5
-```
-
-```bash
 openssl req -nodes -x509 -days 3650 -newkey rsa:2048 -subj "/C=US/ST=Mazovia/L=Warsaw/O=Seems Cloud/OU=Root" \
   -keyout ca.key.pem -out ca.crt.pem
 
@@ -21,9 +13,17 @@ rm -f tls.csr.pem
 ```
 
 ```bash
-openssl x509 -noout -text -in ca.crt.pem
+openssl x509 -text -noout -in tls.crt.pem 
 
-openssl x509 -noout -text -in tls.crt.pem
+openssl x509 -noout -modulus -in tls.crt.pem | openssl md5
+openssl rsa -noout -modulus -in tls.key.pem | openssl md5
+```
+
+```bash
+openssl x509 -text -noout -in ca.crt.pem 
+
+openssl x509 -noout -modulus -in ca.crt.pem | openssl md5
+openssl rsa -noout -modulus -in ca.key.pem | openssl md5
 ```
 
 ```bash
