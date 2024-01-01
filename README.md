@@ -6,37 +6,38 @@ apt-get install pwgen xkcdpass -y
 echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 -c 1``pwgen 4 -c -n -y -s -1 -v`"
 ```
 
-| Group            | Name            | Details              | Documentation                                                                           |
-|------------------|-----------------|----------------------|-----------------------------------------------------------------------------------------|
-| Linux            | Networking      | IP                   | [IP](md-files/linux/ip.md)                                                              |
-|                  |                 | iptables             | [iptables](md-files/firewalls/iptables.md)                                              |
-|                  |                 | firewalld            | [Firewalld](md-files/firewalls/firewalld.md)                                            |
-|                  | Parsing         | Here Doc             | [Here Doc](md-files/linux/here-doc.md)                                                  |
-|                  | Setup           | Igintion             | [Fedora CoreOS Install](md-files/linux/fedora-coreos-install.md)                        |
-|                  | General         | General              | [General](md-files/linux/general.md)                                                    |
-|                  |                 | Luks                 | [Crypto Setup](md-files/linux/crypt-setup.md)                                           |
-|                  | RedHat          | Subscription Manager | [Subscription Manager](md-files/linux/subscription-manager.md)                          |
-| Cloud CLI        | Azure CLI       | Blob by CLI          | [Storage Container SAS Token](md-files/azure-cli/storage-container-sas-token.md)        |
-|                  | gcloud          | Switch proj/acc      | [Setup](md-files/google-cloud/gcloud-setup.md)                                          |
-| Containerization | Docker          | General              | [General](md-files/docker/general.md)                                                   |
-|                  |                 | Cleanup              | [Cleanup](md-files/docker/cleanup.md)                                                   |
-|                  |                 | Docker Compose       | [Docker Compose](md-files/docker/docker-compose.md)                                     |
-|                  |                 | Settings             | [Docker Engine](md-files/docker/settings.md)                                            |
-| Virtualization   | KVM             | General              | [General](md-files/kvm/general.md)                                                      |
-|                  | VMware          | Shrink VMDK          | [VMware Shrink VMDK](md-files/vmware/shrink-vmdk.md)                                    |
-| Kubernetes       | HashiCorp Vault | Setup                | [HashiCorp Vault](md-files/kubernetes/hashicorp-vault.md)                               |
-|                  | Speedup         | Cleanup Pods         | [Cleanup Pods](md-files/kubernetes/cleanup-pods.md)                                     |
-|                  |                 | Patch Resources      | [Patch Resource](md-files/kubernetes/patch-resource.md)                                 |
-| Applications     | Logstash        | Detect Field Type    | [Field multiple types workaround](md-files/logstash/field-multiple-types-workaround.md) |
-|                  | Kafka           | Perf Test            | [Performance tests](md-files/kafka/performance-tests.md)                                |
-| Templating       | HELM            | Double Range         | [Double Range](md-files/helm/double-range.md)                                           |
-| Programming      | Ruby On Rails   | Comparison Functions | [Comparison Functions](md-files/ruby/comparsion-functions.md)                           |
-| Crack            | Networking      | SSL Decrypt          | [TLS decrypt](md-files/tls/decrypt.md)                                                  |
-|                  |                 |                      |                                                                                         |
-|                  |                 |                      |                                                                                         |
-|                  |                 |                      |                                                                                         |
-|                  |                 |                      |                                                                                         |
-|                  |                 |                      |                                                                                         |
-|                  |                 |                      |                                                                                         |
-|                  |                 |                      |                                                                                         |
-|                  |                 |                      |                                                                                         |
+| Group            | Name            | Details              | Documentation                                                    |
+|------------------|-----------------|----------------------|------------------------------------------------------------------|
+| Linux            | Networking      | IP                   | [IP](md-docs/Linux/Networking/1000.md))                          |
+|                  |                 | iptables             | [iptables](md-docs/Linux/Networking/1000.md))                    |
+|                  |                 | firewalld            | [Firewalld](md-docs/Linux/Networking/1000.md))                   |
+|                  | Parsing         | Here Doc             | [Here Doc](md-docs/Linux/Parsing/1000.md))                       |
+|                  | Setup           | CoreOS Ignition      | [CoreOS Ignition](md-docs/Linux/Setup/1000.md))                  |
+|                  | General         | General              | [General](md-docs/Linux/General/1000.md))                        |
+|                  |                 | Luks Setup           | [Luks Setup](md-docs/Linux/General/1000.md))                     |
+|                  | RedHat          | Subscription Manager | [Subscription Manager](md-docs/Linux/RedHat/1000.md))            |
+| Cloud CLI        | Azure           | Blob by CLI          | [Storage Container SAS Token](md-docs/CloudCLI/Azure/1000.md))   |
+|                  | Google          | Switch proj/acc      | [Setup](md-docs/CloudCLI/Google/1000.md)                         |
+| Containerization | Docker          | General              | [General](md-docs/Containerization/Docker/1000.md))              |
+|                  |                 | Cleanup              | [Cleanup](md-docs/Containerization/Docker/1000.md))              |
+|                  |                 | Docker Compose       | [Docker Compose](md-docs/Containerization/Docker/1000.md))       |
+|                  |                 | Settings             | [Docker Engine](md-docs/Containerization/Docker/1000.md))        |
+| Virtualization   | KVM             | General              | [General](md-docs/Virtualization/KVM/1000.md))                   |
+|                  | VMware          | Shrink               | [General](md-docs/Virtualization/VMware/1000.md))                |
+| Kubernetes       | HashiCorp Vault | Setup                | [HashiCorp Vault](md-docs/Kubernetes/HashiCorpVault/1000.md))    |
+|                  | Speedup         | Cleanup Pods         | [Cleanup Pods](md-docs/Kubernetes/Speedup/1000.md))              |
+|                  | Openshift       | Debugging            | [Cleanup Pods](md-docs/Kubernetes/Openshift/1000.md))            |
+|                  |                 | Patch Resources      | [Patch Resource](md-docs/Kubernetes/Openshift/1000.md)           |
+| Applications     | Logstash        | Detect Field Type    | [Detect Field Type](md-docs/Applications/Logstash/1000.md))      |
+|                  | Kafka           | Perf Test            | [Performance tests](md-docs/Applications/Kafka/1000.md))         |
+| YAML Templating  | Helm            | Double Range         | [Double Range](md-docs/YAMLTemplating/Helm/1000.md)              |
+| Programming      | Ruby On Rails   | Comparison Functions | [Comparison Functions](md-docs/Programming/RubyOnRails/1000.md)) |
+| Cracking         | Networking      | SSL Decrypt          | [TLS decrypt](md-docs/Cracking/Networking/1000.md))              |
+|                  |                 |                      |                                                                  |
+|                  |                 |                      |                                                                  |
+|                  |                 |                      |                                                                  |
+|                  |                 |                      |                                                                  |
+|                  |                 |                      |                                                                  |
+|                  |                 |                      |                                                                  |
+|                  |                 |                      |                                                                  |
+|                  |                 |                      |                                                                  |
