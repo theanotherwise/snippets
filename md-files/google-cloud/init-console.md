@@ -4,12 +4,19 @@ https://cloud.google.com/sdk/docs/install
 
 ```bash
 gcloud init --console-only
+```
 
-gcloud auth login
+```bash
+gcloud auth application-default login
+```
+
+```bash
+gcloud auth list
+gcloud config set account
 
 gcloud projects list
-gcloud config set project project_id
+gcloud config set project
 
 gcloud container clusters list
-gcloud container clusters get-credentials --region XXX XXX
+gcloud container clusters get-credentials --region
 ```
