@@ -12,7 +12,7 @@ echo "`pwgen 4 -c -n -y -s -1 -v``xkcdpass --min 6 --max 8 -d '-' -C first -n 2 
     - [Storage Container SAS Token](md-files/azure-cli/storage-container-sas-token.md)
 - KVM
     - [General](md-files/kvm/general.md)
-- [Google Cloud `gcloud` Setup](md-files/google-cloud-gcloud-management.md)
+- [Google Cloud `gcloud` Setup](md-files/google-cloud/gcloud-setup.md)
 - WSL
     - [General](md-files/wsl/general.md)
     - [Enable / Disable](md-files/wsl/enable-disable.md)
