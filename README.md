@@ -22,6 +22,7 @@ echo "$(pwgen 4 -c -n -y -s -1 -v)$(xkcdpass --min 6 --max 8 -d '-' -C first -n 
 |                  | RedHat          | - [Subscription Manager](md-docs/Linux/RedHat/1000.md)            |
 | Cloud CLI        | Azure           | - [Storage Container SAS Token](md-docs/Cloud-CLI/Azure/1000.md)  |
 |                  | Google          | - [Setup Project/Account](md-docs/Cloud-CLI/Google/1000.md)       |
+|                  | Google          | - [Setup Service Account](md-docs/Cloud-CLI/Google/1001.md)       |
 |                  | AWS             |                                                                   |
 | Containerization | Docker          | - [General](md-docs/Containerization/Docker/1002.md)              |
 |                  |                 | - [Cleanup](md-docs/Containerization/Docker/1000.md)              |
