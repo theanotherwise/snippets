@@ -29,8 +29,7 @@ echo "$(pwgen 4 -c -n -y -s -1 -v)$(xkcdpass --min 6 --max 8 -d '-' -C first -n 
 |                  |                 | - [Docker Engine](md-docs/Containerization/Docker/1003.md)        |
 | Virtualization   | KVM             | - [General](md-docs/Virtualization/KVM/1000.md)                   |
 |                  | VMware          | - [General](md-docs/Virtualization/VMware/1000.md)                |
-| IaC              | Terraform       | - [Remap Map of Objects](md-docs/IaC/Terraform/1000.md)           |
-|                  |                 | - [Conditional Map via dynamic](md-docs/IaC/Terraform/1000.md)    |
+| IaC              | Terraform       | - [Usage](md-docs/IaC/Terraform/1000.md)                          |
 | Kubernetes       | HashiCorp Vault | - [HashiCorp Vault](md-docs/Kubernetes/HashiCorpVault/1000.md)    |
 | HTTP Servers     | Nginx           | - [Nginx Rewerite to Proxy](md-docs/HTTP-Servers/Nginx/1000.md)   |
 |                  | Speedup         | - [Cleanup Pods](md-docs/Kubernetes/Speedup/1000.md)              |
