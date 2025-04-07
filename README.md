@@ -22,6 +22,7 @@ echo "$(pwgen 4 -c -n -y -s -1 -v)$(xkcdpass --min 6 --max 8 -d '-' -C first -n 
 |                  |                 | - [Prepare Files](md-docs/Linux/Parsing/1001.md)                  |
 |                  | Disk Mgmt       | - [Disk Mgmt](md-docs/Linux/Disk-Mgmt/1001.md)                    |
 |                  | Setup           | - [CoreOS Ignition](md-docs/Linux/Setup/1000.md)                  |
+|                  | Grub            | - [Reinstall](md-docs/Linux/Grub/1000.md)                         |
 |                  |                 | - [Luks Setup](md-docs/Linux/General/1001.md)                     |
 |                  | RedHat          | - [Subscription Manager](md-docs/Linux/RedHat/1000.md)            |
 | Cloud CLI        | Azure           | - [Storage Container SAS Token](md-docs/Cloud-CLI/Azure/1000.md)  |
