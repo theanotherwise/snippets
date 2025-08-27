@@ -18,6 +18,7 @@ echo "$(pwgen 4 -c -n -y -s -1 -v)$(xkcdpass --min 6 --max 8 -d '-' -C first -n 
 |                  | Archivization   | - [Compression](md-docs/Linux/Archivization/1000.md)              |
 |                  | Encryption      | - [GPG](md-docs/Linux/Encryption/1000.md)                         |
 |                  | General         | - [General](md-docs/Linux/General/1000.md)                        |
+|                  | Helpers         | - [Baseic](md-docs/Linux/Helpers/1000.md)                         |
 |                  | Parsing         | - [Here Doc](md-docs/Linux/Parsing/1000.md)                       |
 |                  |                 | - [Prepare Files](md-docs/Linux/Parsing/1001.md)                  |
 |                  | Disk Mgmt       | - [Disk Mgmt](md-docs/Linux/Disk-Mgmt/1001.md)                    |
