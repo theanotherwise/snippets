@@ -1,15 +1,3 @@
-# Snippets
-
-## Password
-
-```bash
-apt-get install pwgen xkcdpass -y
-
-echo "$(pwgen 4 -c -n -y -s -1 -v)$(xkcdpass --min 6 --max 8 -d '-' -C first -n 2 -c 1)$(pwgen 4 -c -n -y -s -1 -v)"
-```
-
-## Content Table
-
 | Group            | Name            | Documentation                                                     |
 |------------------|-----------------|-------------------------------------------------------------------|
 | Linux            | Networking      | - [IP](md-docs/Linux/Networking/1000.md)                          |
