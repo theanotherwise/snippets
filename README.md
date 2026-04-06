@@ -33,7 +33,6 @@
 |                  | Openshift       | - [Debugging](md-docs/Kubernetes/Openshift/1000.md)               |
 | HTTP Servers     | Nginx           | - [Nginx Rewerite to Proxy](md-docs/HTTP-Servers/Nginx/1000.md)   |
 | Logging          | Logstash        | - [Detect Field Type](md-docs/Logging/Logstash/1000.md)           |
-| Queues           | Kafka           | - [Performance tests](md-docs/Queues/Kafka/performance-tests.md)  |
 | Programming      | Ruby On Rails   | - [Comparison Functions](md-docs/Programming/RubyOnRails/1000.md) |
 | Cracking         | TLS             | - [Browser TLS](md-docs/Cracking/TLS/1000.md)                     |
 |                  | Passwords       | - [Hashcat Examples](md-docs/Cracking/Passwords/1000.md)          |
